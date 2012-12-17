@@ -4,11 +4,14 @@
 		<north height="100px" border="none" >
 			<include src="/layout/banner.zul"/>
 		</north>
-		<west width="300px" collapsible="true" splittable="true" minsize="300">
-			Side-bar
+		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+			<include src="/layout/sidebar.zul"/>
 		</west>
-		<center>
-			Content
+		<center autoscroll="true">
+			<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px" >
+				<image src="/zklogo2.png" />
+				<label value="Welcome to ZK Tutorial 2012" sclass="head1"/>
+			</vbox>
 		</center>
 		<south height="50px" border="none">
 			<include src="/layout/footer.zul"/>
