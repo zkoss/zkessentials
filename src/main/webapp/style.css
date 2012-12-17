@@ -3,6 +3,9 @@
 	color: white;
 	padding: 5px 10px;
 }
+.banner-head{
+	font-size: 2.4em;
+}
 
 .footer {
 	background-color:#102d35;
@@ -10,9 +13,19 @@
 	padding-top: 5px;
 }
 
-.footer a,a:VISITED {
+.footer a,.footer a:VISITED {
 	color: white;	
 }
+
+.sidebar a,.sidebar a:VISITED {
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar-fn{
+	cursor: pointer;
+}
+
 
 .head1{
 	font-size: large;

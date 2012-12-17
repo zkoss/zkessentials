@@ -1,13 +1,29 @@
-<grid hflex="1" vflex="1">
-	<zscript><![CDATA[
-	String[] items = new String[100];
-	for(int i=0;i<items.length;i++){
-		items[i] = "Item "+i;
-	}
-	]]></zscript>
+<grid hflex="1" vflex="1" sclass="sidebar">
+	<zscript>
+		//zscript code, it runs on server site
+		void redirect(String loc){
+			if("zk".equals(loc)){
+				execution.sendRedirect("http://www.zkoss.org/");
+			}else if("demo".equals(loc)){
+				execution.sendRedirect("http://www.zkoss.org/zkdemo");
+			}else if("devref".equals(loc)){
+				execution.sendRedirect("http://books.zkoss.org/wiki/ZK_Developer's_Reference");
+			}
+		}
+	</zscript>
+	<columns>
+		<column width="36px"/>
+		<column/>
+	</columns>
 	<rows>
-		<row forEach="${items}">
-			<a href="">${each}</a>
+		<row sclass="sidebar-fn" onClick='redirect("zk")'>
+			<image src="/imgs/site.png"/><a onClick='redirect("zk")'>ZK</a>
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("demo")'>
+			<image src="/imgs/demo.png"/><a onClick='redirect("demo")'>ZK Demo</a>
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("devref")'>
+			<image src="/imgs/doc.png"/><a onClick='redirect("devref")'>ZK Developer Reference</a>
 		</row>
 	</rows>
 </grid>
