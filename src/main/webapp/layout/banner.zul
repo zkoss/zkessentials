@@ -1,0 +1,8 @@
+<div hflex="1" vflex="1" sclass="banner">
+	<hbox hflex="1" vflex="1" align="center">
+		<image src="/zklogo.png" width="90px"  />
+		<hbox hflex="1" vflex="1" pack="end" align="end" style="">
+			<button label="login"/>
+		</hbox>
+	</hbox>
+</div>

@@ -1,0 +1,15 @@
+.banner {
+	background-color:#102d35;
+	color: white;
+	padding: 5px 10px;
+}
+
+.footer {
+	background-color:#102d35;
+	color: white;
+	padding-top: 5px;
+}
+
+.footer a,a:VISITED {
+	color: white;	
+}
