@@ -3,8 +3,11 @@
 		<a href="http://www.zkoss.org/">
 			<image src="/imgs/zklogo.png" width="90px" />
 		</a>
-		<label value="Application Name" sclass="banner-head"/>
-		<hbox hflex="1" vflex="1" pack="end" align="end" style="">
+		<div width="400px">
+			<label value="Application Name" sclass="banner-head" />
+		</div>
+		
+		<hbox hflex="1" vflex="1" pack="end" align="end">
 			<button label="Login" onClick='alert("Ooops, does not ready yet")'/>
 		</hbox>
 	</hbox>
