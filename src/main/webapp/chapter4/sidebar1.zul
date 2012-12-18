@@ -8,6 +8,10 @@
 				execution.sendRedirect("http://www.zkoss.org/zkdemo");
 			}else if("devref".equals(loc)){
 				execution.sendRedirect("http://books.zkoss.org/wiki/ZK_Developer's_Reference");
+			}else if("case2".equals(loc)){
+				execution.sendRedirect("index-case2.zul");
+			}else if("case3".equals(loc)){
+				execution.sendRedirect("index-case3.zul");
 			}
 		}
 	</zscript>
@@ -24,6 +28,12 @@
 		</row>
 		<row sclass="sidebar-fn" onClick='redirect("devref")'>
 			<image src="/imgs/doc.png"/><a onClick='redirect("devref")'>ZK Developer Reference</a>
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("case2")'>
+			<image src="/imgs/fn.png"/><a onClick='redirect("case2")'>Sidebar Case2</a>
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("case3")'>
+			<image src="/imgs/fn.png"/><a onClick='redirect("case3")'>Sidebar Case3</a>
 		</row>
 	</rows>
 </grid>
