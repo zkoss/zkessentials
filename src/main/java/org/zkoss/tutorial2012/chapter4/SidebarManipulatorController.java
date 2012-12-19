@@ -13,7 +13,7 @@ import org.zkoss.zul.Image;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarManipulatorCtrl extends SelectorComposer<Component>{
+public class SidebarManipulatorController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire

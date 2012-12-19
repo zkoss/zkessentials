@@ -14,7 +14,7 @@ import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.RowRenderer;
 
-public class SidebarRendererCtrl extends SelectorComposer<Component>{
+public class SidebarRendererController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 	@Wire
 	Grid fnList;

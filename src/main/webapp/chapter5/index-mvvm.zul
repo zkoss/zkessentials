@@ -8,7 +8,7 @@
 			<include src="/layout/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none">
-			<include src="/chapter5/profile-mvc.zul"/>
+			<include src="/chapter5/profile-mvvm.zul"/>
 		</center>
 		<south height="50px" border="none">
 			<include src="/layout/footer.zul"/>
