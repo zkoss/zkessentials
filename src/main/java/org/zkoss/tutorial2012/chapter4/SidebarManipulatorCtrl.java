@@ -13,7 +13,7 @@ import org.zkoss.zul.Image;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class Sidebar2Ctrl extends SelectorComposer<Component>{
+public class SidebarManipulatorCtrl extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
@@ -35,10 +35,10 @@ public class Sidebar2Ctrl extends SelectorComposer<Component>{
 		row = constructFunctionRow("ZK Developer Reference","/imgs/doc.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference");
 		rows.appendChild(row);
 		
-		row = constructFunctionRow("Sidebar Case1","/imgs/fn.png","index.zul");
+		row = constructFunctionRow("Sidebar","/imgs/fn.png","index.zul");
 		rows.appendChild(row);
 		
-		row = constructFunctionRow("Sidebar Case3","/imgs/fn.png","index-case3.zul");
+		row = constructFunctionRow("Sidebar Renderer","/imgs/fn.png","index-renderer.zul");
 		rows.appendChild(row);
 				
 	}

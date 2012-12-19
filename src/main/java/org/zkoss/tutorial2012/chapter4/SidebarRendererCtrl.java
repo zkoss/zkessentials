@@ -14,7 +14,7 @@ import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.RowRenderer;
 
-public class Sidebar3Ctrl extends SelectorComposer<Component>{
+public class SidebarRendererCtrl extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 	@Wire
 	Grid fnList;
@@ -30,8 +30,8 @@ public class Sidebar3Ctrl extends SelectorComposer<Component>{
 		model.add(new Site("www.zkoss.org","/imgs/site.png","http://www.zkoss.org/"));
 		model.add(new Site("ZK Demo","/imgs/demo.png","http://www.zkoss.org/zkdemo"));
 		model.add(new Site("ZK Developer Reference","/imgs/doc.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
-		model.add(new Site("Sidebar Case1","/imgs/fn.png","index.zul"));
-		model.add(new Site("Sidebar Case2","/imgs/fn.png","index-case2.zul"));
+		model.add(new Site("Sidebar","/imgs/fn.png","index.zul"));
+		model.add(new Site("Sidebar Manipulator","/imgs/fn.png","index-manipulator.zul"));
 		
 		
 		//set model
