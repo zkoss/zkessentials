@@ -30,3 +30,15 @@
 .head1{
 	font-size: large;
 }
+
+.row-title .z-label{
+	font-weight: bold;
+	color:#636363;
+}
+
+.fn-caption{
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: medium;
+	color: #636363;
+}
