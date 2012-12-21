@@ -24,6 +24,7 @@ import org.zkoss.zul.ext.Selectable;
 public class ProfileViewController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 
+	//wire component
 	@Wire
 	Label account;
 	@Wire
@@ -37,6 +38,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	@Wire
 	Textbox bio;
 	
+	//wire service
 	AuthenticationService authService = new AuthenticationServiceImpl();
 	UserInfoService userInfoService = new UserInfoServiceImpl();
 	

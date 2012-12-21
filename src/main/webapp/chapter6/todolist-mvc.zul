@@ -1,17 +1,9 @@
+<?xel-method prefix="util" name="toArray" class="org.zkoss.tutorial2012.util.XelUtil"
+    signature="java.lang.Object[] toArray(java.lang.Object,java.lang.Object)"?>
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window apply="org.zkoss.tutorial2012.chapter6.mvc.TodoListController" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto" 
 	xmlns:w="client">
-	<zscript>
-        String[] todos = new String[30];
-    </zscript>
-    <script type="text/javascript">
-    	var fadeout = function(checkbox){
-    		if(checkbox.isChecked()){
-    			jq(checkbox.parent.parent).fadeOut()
-    		}
-    	} 
-    </script>
 	<caption width="0px">
 		<hbox align="center">
 			<image src="/imgs/profile.png"/>
@@ -21,33 +13,37 @@
 	<hlayout vflex="1">
 		<vlayout vflex="1" hflex="3">
 			<hbox align="center" hflex="1" >
-				<textbox hflex="1" placeholder="What needs to be done?" />
-				<button label="+"/>
+				<checkbox id="showAll" label="Show all"/>
+				<textbox id="todoSubject" hflex="1" placeholder="What needs to be done?" />
+				<button id="addTodo" label="+"/>
 			</hbox>		
-			<listbox vflex="1">
+			<listbox id="todoListbox" vflex="1">
 				<listhead>
 					<listheader width="30px" />
 					<listheader/>
 					<listheader hflex="min"/>
 				</listhead>
-				<listitem forEach="${todos}">
-					<listcell>
-						<checkbox w:onCheck="fadeout(this)"/>
-					</listcell>
-					<listcell>
-						<textbox inplace="true" value="Buy some milk.."  hflex="1" />
-					</listcell>
-					<listcell>
-						<button label="-"/>
-					</listcell>
-				</listitem>
+				<template name="model">
+					<listitem>
+						<listcell>
+							<checkbox forward="onCheck=todoListbox.onTodoCheck(${util:toArray(each,self)})" checked="${each.complete}"/>
+						</listcell>
+						<listcell>
+							<textbox inplace="true" value="${each.subject}" hflex="1" />
+						</listcell>
+						<listcell>
+							<button label="-" forward="onClick=todoListbox.onTodoDelete(${each})"/>
+						</listcell>
+					</listitem>
+				</template>
 			</listbox>
 		</vlayout>
 		
 		
-		<vlayout hflex="2">
+		<vlayout id="selectedTodoBlock" hflex="2">
 			<hbox align="center"  hflex="1">
-				<checkbox/> <textbox value="Buy some milk.." hflex="1" />
+				<checkbox id="selectedTodoCheck"/> 
+				<textbox id="selectedTodoSubject" value="Buy some milk.." hflex="1" />
 			</hbox>		
 			<grid hflex="1">
 				<columns>
@@ -58,7 +54,7 @@
 					<row>
 						<cell sclass="row-title">Priority :</cell>
 						<cell>
-							<radiogroup>
+							<radiogroup id="selectedTodoPriority">
 								<radio label="High"/>
 								<radio label="Medium"/>
 								<radio label="Low"/>
@@ -67,18 +63,18 @@
 					</row>
 					<row>
 						<cell sclass="row-title">Date :</cell>
-						<cell><datebox width="200px"/></cell>
+						<cell><datebox id="selectedTodoDate" width="200px"/></cell>
 					</row>
 					<row>
 						<cell sclass="row-title">Description :</cell>
 						<cell>
-							<textbox id="descrpition" multiline="true" hflex="1" height="200px" />
+							<textbox id="selectedTodoDescription" multiline="true" hflex="1" height="200px" />
 						</cell>
 					</row>
 				</rows>
 			</grid>
 			<hlayout>
-				<button label="Update"/>
+				<button id="updateSelectedTodo" label="Update"/>
 			</hlayout>
 		</vlayout>
 	</hlayout>
