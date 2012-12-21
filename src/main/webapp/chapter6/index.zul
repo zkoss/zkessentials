@@ -1,0 +1,17 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+	<borderlayout hflex="1" vflex="1">
+		<north height="100px" border="none" >
+			<include src="/layout/banner.zul"/>
+		</north>
+		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+			<include src="/layout/sidebar.zul"/>
+		</west>
+		<center id="mainContent" autoscroll="true" border="none">
+			<include src="/chapter6/todolist-mvc.zul"/>
+		</center>
+		<south height="50px" border="none">
+			<include src="/layout/footer.zul"/>
+		</south>
+	</borderlayout>
+</zk>

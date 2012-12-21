@@ -1,0 +1,85 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<window apply="org.zkoss.tutorial2012.chapter6.mvc.TodoListController" 
+	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto" 
+	xmlns:w="client">
+	<zscript>
+        String[] todos = new String[30];
+    </zscript>
+    <script type="text/javascript">
+    	var fadeout = function(checkbox){
+    		if(checkbox.isChecked()){
+    			jq(checkbox.parent.parent).fadeOut()
+    		}
+    	} 
+    </script>
+	<caption width="0px">
+		<hbox align="center">
+			<image src="/imgs/profile.png"/>
+			<label sclass="fn-caption" value="Todolist (MVC)"/>
+		</hbox> 
+	</caption>
+	<hlayout vflex="1">
+		<vlayout vflex="1" hflex="3">
+			<hbox align="center" hflex="1" >
+				<textbox hflex="1" placeholder="What needs to be done?" />
+				<button label="+"/>
+			</hbox>		
+			<listbox vflex="1">
+				<listhead>
+					<listheader width="30px" />
+					<listheader/>
+					<listheader hflex="min"/>
+				</listhead>
+				<listitem forEach="${todos}">
+					<listcell>
+						<checkbox w:onCheck="fadeout(this)"/>
+					</listcell>
+					<listcell>
+						<textbox inplace="true" value="Buy some milk.."  hflex="1" />
+					</listcell>
+					<listcell>
+						<button label="-"/>
+					</listcell>
+				</listitem>
+			</listbox>
+		</vlayout>
+		
+		
+		<vlayout hflex="2">
+			<hbox align="center"  hflex="1">
+				<checkbox/> <textbox value="Buy some milk.." hflex="1" />
+			</hbox>		
+			<grid hflex="1">
+				<columns>
+					<column align="right" hflex="min"/>
+					<column/>
+				</columns>
+				<rows>
+					<row>
+						<cell sclass="row-title">Priority :</cell>
+						<cell>
+							<radiogroup>
+								<radio label="High"/>
+								<radio label="Medium"/>
+								<radio label="Low"/>
+							</radiogroup>
+						</cell>
+					</row>
+					<row>
+						<cell sclass="row-title">Date :</cell>
+						<cell><datebox width="200px"/></cell>
+					</row>
+					<row>
+						<cell sclass="row-title">Description :</cell>
+						<cell>
+							<textbox id="descrpition" multiline="true" hflex="1" height="200px" />
+						</cell>
+					</row>
+				</rows>
+			</grid>
+			<hlayout>
+				<button label="Update"/>
+			</hlayout>
+		</vlayout>
+	</hlayout>
+</window>
