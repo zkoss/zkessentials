@@ -17,6 +17,7 @@ public class TodoListServiceImpl implements TodoListService {
 		todoList.add(new Todo(todoId++,"Buy some milk",Priority.LOW,null,null));
 		todoList.add(new Todo(todoId++,"Dennis' birthday gift",Priority.MEDIUM,dayAfter(10),null));
 		todoList.add(new Todo(todoId++,"Pay credit-card bill",Priority.HIGH,dayAfter(5),"$1,000"));
+		
 		for(int i=0;i<500;i++){
 			todoList.add(new Todo(todoId++,"Todo "+i,Priority.HIGH,dayAfter(5),"This is todo "+i));
 		}

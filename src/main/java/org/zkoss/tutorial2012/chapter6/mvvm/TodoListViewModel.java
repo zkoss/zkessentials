@@ -108,7 +108,7 @@ public class TodoListViewModel implements Serializable{
 		//update the model, by using ListModelList, you don't need to notify todoListModel change
 		todoListModel.remove(todo);
 		
-		if(selectedTodo.equals(todo)){
+		if(todo.equals(selectedTodo)){
 			//refresh selected todo view
 			selectedTodo = null;
 			//for the case that notification is decided dynamically

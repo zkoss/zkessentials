@@ -1,12 +1,7 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window apply="org.zkoss.tutorial2012.chapter5.mvc.ProfileViewController" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
-	<caption width="0px">
-		<hbox align="center">
-			<image src="/imgs/profile.png"/>
-			<label sclass="fn-caption" value="Profile (MVC)"/>
-		</hbox> 
-	</caption>
+	<caption src="/imgs/profile.png" sclass="fn-caption" label="Profile (MVC)"/>
 	<vlayout>
 		<grid width="500px">
 			<columns>

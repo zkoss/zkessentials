@@ -2,12 +2,7 @@
 <window	apply="org.zkoss.bind.BindComposer" 
 	viewModel="@id('vm') @init('org.zkoss.tutorial2012.chapter6.mvvm.TodoListViewModel')" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
-	<caption width="0px">
-		<hbox align="center">
-			<image src="/imgs/todo.png"/>
-			<label sclass="fn-caption" value="Todo List (MVVM)"/>
-		</hbox> 
-	</caption>
+	<caption src="/imgs/todo.png" sclass="fn-caption" label="Todo List (MVVM)"/>
 	<borderlayout>
 		<center autoscroll="true" border="none">
 			<vlayout hflex="1" vflex="1">

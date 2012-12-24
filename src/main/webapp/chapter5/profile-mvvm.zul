@@ -2,12 +2,7 @@
 <window apply="org.zkoss.bind.BindComposer"
 	viewModel="@id('vm') @init('org.zkoss.tutorial2012.chapter5.mvvm.ProfileViewModel')" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
-	<caption width="0px">
-		<hbox align="center">
-			<image src="/imgs/profile.png"/>
-			<label sclass="fn-caption" value="Profile (MVVM)"/>
-		</hbox> 
-	</caption>
+	<caption src="/imgs/profile.png" sclass="fn-caption" label="Profile (MVVM)"/>
 	<vlayout>
 		<grid width="500px" form="@id('fx') @load(vm.profiledUser) @save(vm.profiledUser, before='save')">
 			<columns>

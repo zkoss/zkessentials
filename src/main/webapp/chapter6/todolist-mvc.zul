@@ -3,12 +3,7 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window apply="org.zkoss.tutorial2012.chapter6.mvc.TodoListController" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
-	<caption width="0px">
-		<hbox align="center">
-			<image src="/imgs/todo.png"/>
-			<label sclass="fn-caption" value="Todo List (MVC)"/>
-		</hbox> 
-	</caption>
+	<caption src="/imgs/todo.png" sclass="fn-caption" label="Todo List (MVC)"/>
 	<borderlayout>
 		<center autoscroll="true" border="none">
 			<vlayout hflex="1" vflex="1">
