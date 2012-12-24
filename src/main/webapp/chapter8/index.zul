@@ -1,0 +1,7 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?init class="org.zkoss.tutorial2012.chapter8.AuthenticationInit" authentication="true"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template.zul"?>
+
+<zk>
+	<include self="@define(content)" src="/chapter8/home.zul"/>
+</zk>

@@ -1,0 +1,25 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template-anonymous.zul"?>
+<zk>
+	<vbox self="@define(content)" vflex="1" hflex="1" align="center" pack="center" spacing="20px">
+		<window title="Login" border="normal" hflex="min">
+			<grid hflex="min">
+				<columns>
+					<column hflex="min"/>
+					<column/>
+				</columns>
+				<rows>
+					<row>
+						Name : 
+						<textbox width="200px"/>
+					</row>
+					<row>
+						Password : 
+						<textbox type="password" width="200px"/>
+					</row>
+				</rows>
+			
+			</grid>
+		</window>
+	</vbox>
+</zk>
