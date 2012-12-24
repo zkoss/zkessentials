@@ -4,9 +4,8 @@ import java.util.List;
 
 import org.zkoss.lang.Strings;
 import org.zkoss.tutorial2012.chapter6.TodoListServiceImpl;
+import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
-import org.zkoss.tutorial2012.services.CommonInfoService;
-import org.zkoss.tutorial2012.services.CommonInfoService.Priority;
 import org.zkoss.tutorial2012.services.TodoListService;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.ForwardEvent;
@@ -66,7 +65,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		todoListModel = new ListModelList<Todo>(todoList);
 		todoListbox.setModel(todoListModel);
 		
-		priorityListModel = new ListModelList<Priority>(CommonInfoService.getPriorityList());
+		priorityListModel = new ListModelList<Priority>(Priority.values());
 		selectedTodoPriority.setModel(priorityListModel);
 	}
 	
@@ -159,7 +158,7 @@ public class TodoListController extends SelectorComposer<Component>{
 			selectedTodoDescription.setValue(selectedTodo.getDescription());
 			updateSelectedTodo.setDisabled(false);
 			
-			priorityListModel.addToSelection(CommonInfoService.getPriority(selectedTodo.getPriority()));
+			priorityListModel.addToSelection(selectedTodo.getPriority());
 		}
 	}
 	
@@ -175,7 +174,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		selectedTodo.setSubject(selectedTodoSubject.getValue());
 		selectedTodo.setDate(selectedTodoDate.getValue());
 		selectedTodo.setDescription(selectedTodoDescription.getValue());
-		selectedTodo.setPriority(priorityListModel.getSelection().iterator().next().getPriority());
+		selectedTodo.setPriority(priorityListModel.getSelection().iterator().next());
 		
 		//save data
 		todoListService.updateTodo(selectedTodo);
@@ -187,4 +186,9 @@ public class TodoListController extends SelectorComposer<Component>{
 		Clients.showNotification("Todo saved");
 	}
 	
+	//when user clicks the update button
+	@Listen("onClick = #reloadSelectedTodo")
+	public void doReloadClick(){
+		updateDetailView();
+	}
 }

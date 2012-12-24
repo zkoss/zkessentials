@@ -3,17 +3,22 @@ package org.zkoss.tutorial2012.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * An entity 
+ */
 public class Todo implements Serializable, Cloneable {
 	private static final long serialVersionUID = 1L;
 
 	boolean complete;
 	String subject;
-	int priority;
+	Priority priority;
 	Date date;
 	String description;
 	Integer id;
+	
+	
 
-	public Todo(Integer id, String subject, int priority, Date date, String description) {
+	public Todo(Integer id, String subject, Priority priority, Date date, String description) {
 		this.id = id;
 		this.subject = subject;
 		this.priority = priority;
@@ -22,7 +27,7 @@ public class Todo implements Serializable, Cloneable {
 	}
 	public Todo(String subject) {
 		this.subject = subject;
-		this.priority = 3;
+		this.priority = Priority.LOW;
 	}
 
 	public Integer getId() {
@@ -49,11 +54,11 @@ public class Todo implements Serializable, Cloneable {
 		this.subject = subject;
 	}
 
-	public int getPriority() {
+	public Priority getPriority() {
 		return priority;
 	}
 
-	public void setPriority(int priority) {
+	public void setPriority(Priority priority) {
 		this.priority = priority;
 	}
 

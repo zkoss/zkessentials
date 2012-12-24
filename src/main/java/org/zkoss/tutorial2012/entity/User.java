@@ -2,7 +2,9 @@ package org.zkoss.tutorial2012.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ * An entity
+ */
 public class User implements Serializable,Cloneable {
 	private static final long serialVersionUID = 1L;
 	String account;

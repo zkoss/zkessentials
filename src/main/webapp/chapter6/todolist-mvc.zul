@@ -5,7 +5,7 @@
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
 	<caption width="0px">
 		<hbox align="center">
-			<image src="/imgs/profile.png"/>
+			<image src="/imgs/todo.png"/>
 			<label sclass="fn-caption" value="Todo List (MVC)"/>
 		</hbox> 
 	</caption>
@@ -74,6 +74,7 @@
 				</grid>
 				<hlayout>
 					<button id="updateSelectedTodo" label="Update"/>
+					<button id="reloadSelectedTodo" label="Reload"/>
 				</hlayout>
 			</vlayout>
 		</east>

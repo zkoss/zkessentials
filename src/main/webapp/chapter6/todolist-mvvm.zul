@@ -1,0 +1,82 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<window	apply="org.zkoss.bind.BindComposer" 
+	viewModel="@id('vm') @init('org.zkoss.tutorial2012.chapter6.mvvm.TodoListViewModel')" 
+	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
+	<caption width="0px">
+		<hbox align="center">
+			<image src="/imgs/todo.png"/>
+			<label sclass="fn-caption" value="Todo List (MVVM)"/>
+		</hbox> 
+	</caption>
+	<borderlayout>
+		<center autoscroll="true" border="none">
+			<vlayout hflex="1" vflex="1">
+				<hbox align="center" hflex="1" >
+					<textbox value="@bind(vm.subject)" onOK="@command('addTodo')" hflex="1" placeholder="What needs to be done?" />
+					<button onClick="@command('addTodo')" image="/imgs/plus.png" width="36px"/>
+				</hbox>		
+				<listbox id="todoListbox" vflex="1" model="@bind(vm.todoListModel)" selectedItem="@bind(vm.selectedTodo)">
+					<listhead>
+						<listheader width="30px" />
+						<listheader/>
+						<listheader hflex="min"/>
+					</listhead>
+					<template name="model">
+						<listitem>
+							<listcell>
+								<checkbox checked="@bind(each.complete)" onCheck="@command('completeTodo',todo=each)"/>
+							</listcell>
+							<listcell>
+								<label value="@bind(each.subject)"/>
+							</listcell>
+							<listcell>
+								<button onClick="@command('deleteTodo',todo=each)" image="/imgs/cross.png" width="36px"/>
+							</listcell>
+						</listitem>
+					</template>
+				</listbox>
+			</vlayout>
+		</center>
+		<east width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
+			<vlayout id="selectedTodoBlock" visible="@bind(not empty vm.selectedTodo)"
+				form="@id('fx') @load(vm.selectedTodo) @save(vm.selectedTodo, before='updateTodo') @validator(vm.todoValidator)">
+				<hbox align="center"  hflex="1">
+					<checkbox checked="@bind(fx.complete)"/> 
+					<textbox value="@bind(fx.subject)" hflex="1" />
+				</hbox>		
+				<grid hflex="1">
+					<columns>
+						<column align="right" hflex="min"/>
+						<column/>
+					</columns>
+					<rows>
+						<row>
+							<cell sclass="row-title">Priority :</cell>
+							<cell>
+								<radiogroup id="selectedTodoPriority" model="@bind(vm.priorityList)" selectedItem="@bind(fx.priority)">
+									<template name="model">
+										<radio label="@bind(each.label)"/>	
+									</template>
+								</radiogroup>
+							</cell>
+						</row>
+						<row>
+							<cell sclass="row-title">Date :</cell>
+							<cell><datebox value="@bind(fx.date)" width="200px"/></cell>
+						</row>
+						<row>
+							<cell sclass="row-title">Description :</cell>
+							<cell>
+								<textbox value="@bind(fx.description)" multiline="true" hflex="1" height="200px" />
+							</cell>
+						</row>
+					</rows>
+				</grid>
+				<hlayout>
+					<button onClick="@command('updateTodo')" label="Update"/>
+					<button onClick="@command('reloadTodo')" label="Reload"/>
+				</hlayout>
+			</vlayout>
+		</east>
+	</borderlayout>
+</window>

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.zkoss.tutorial2012.services.CommonInfoService.Priority;
-
 public class CommonInfoService {
 
 	static List<String> countryList = new ArrayList<String>();
@@ -258,38 +256,5 @@ public class CommonInfoService {
 	
 	public static List<String> getCountryList() {
 		return countryList;
-	}
-
-	
-	public static class Priority {
-		int priority;
-		String label;
-		public Priority(int priority,String label){
-			this.priority = priority;
-			this.label = label;
-		}
-		public int getPriority() {
-			return priority;
-		}
-		public String getLabel() {
-			return label;
-		}
-	}
-	static List<Priority> priorityList = new ArrayList<Priority>();
-	static{
-		priorityList.add(new Priority(0,"High"));
-		priorityList.add(new Priority(1,"Medium"));
-		priorityList.add(new Priority(2,"Low"));
-		priorityList = Collections.unmodifiableList(priorityList);
-	}
-	public static List<Priority> getPriorityList() {
-		return priorityList;
-	}
-	public static Priority getPriority(int priority) {
-		for(Priority p:priorityList){
-			if(priority == p.priority)
-				return p;
-		}
-		return priorityList.get(priorityList.size()-1);
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
 
@@ -13,9 +14,12 @@ public class TodoListServiceImpl implements TodoListService {
 	static int todoId = 0;
 	static List<Todo> todoList = new ArrayList<Todo>();  
 	static{
-		todoList.add(new Todo(todoId++,"Buy some milk",3,null,null));
-		todoList.add(new Todo(todoId++,"Dennis' birthday gift",2,dayAfter(10),null));
-		todoList.add(new Todo(todoId++,"Pay credit-card bill",1,dayAfter(5),"$1,000"));
+		todoList.add(new Todo(todoId++,"Buy some milk",Priority.LOW,null,null));
+		todoList.add(new Todo(todoId++,"Dennis' birthday gift",Priority.MEDIUM,dayAfter(10),null));
+		todoList.add(new Todo(todoId++,"Pay credit-card bill",Priority.HIGH,dayAfter(5),"$1,000"));
+		for(int i=0;i<500;i++){
+			todoList.add(new Todo(todoId++,"Todo "+i,Priority.HIGH,dayAfter(5),"This is todo "+i));
+		}
 	}
 	
 	
