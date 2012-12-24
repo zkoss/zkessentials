@@ -2,80 +2,80 @@
     signature="java.lang.Object[] toArray(java.lang.Object,java.lang.Object)"?>
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window apply="org.zkoss.tutorial2012.chapter6.mvc.TodoListController" 
-	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto" 
-	xmlns:w="client">
+	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
 	<caption width="0px">
 		<hbox align="center">
 			<image src="/imgs/profile.png"/>
-			<label sclass="fn-caption" value="Todolist (MVC)"/>
+			<label sclass="fn-caption" value="Todo List (MVC)"/>
 		</hbox> 
 	</caption>
-	<hlayout vflex="1">
-		<vlayout vflex="1" hflex="3">
-			<hbox align="center" hflex="1" >
-				<checkbox id="showAll" label="Show all"/>
-				<textbox id="todoSubject" hflex="1" placeholder="What needs to be done?" />
-				<button id="addTodo" label="+"/>
-			</hbox>		
-			<listbox id="todoListbox" vflex="1">
-				<listhead>
-					<listheader width="30px" />
-					<listheader/>
-					<listheader hflex="min"/>
-				</listhead>
-				<template name="model">
-					<listitem>
-						<listcell>
-							<checkbox forward="onCheck=todoListbox.onTodoCheck(${util:toArray(each,self)})" checked="${each.complete}"/>
-						</listcell>
-						<listcell>
-							<textbox inplace="true" value="${each.subject}" hflex="1" />
-						</listcell>
-						<listcell>
-							<button label="-" forward="onClick=todoListbox.onTodoDelete(${each})"/>
-						</listcell>
-					</listitem>
-				</template>
-			</listbox>
-		</vlayout>
-		
-		
-		<vlayout id="selectedTodoBlock" hflex="2">
-			<hbox align="center"  hflex="1">
-				<checkbox id="selectedTodoCheck"/> 
-				<textbox id="selectedTodoSubject" value="Buy some milk.." hflex="1" />
-			</hbox>		
-			<grid hflex="1">
-				<columns>
-					<column align="right" hflex="min"/>
-					<column/>
-				</columns>
-				<rows>
-					<row>
-						<cell sclass="row-title">Priority :</cell>
-						<cell>
-							<radiogroup id="selectedTodoPriority">
-								<radio label="High"/>
-								<radio label="Medium"/>
-								<radio label="Low"/>
-							</radiogroup>
-						</cell>
-					</row>
-					<row>
-						<cell sclass="row-title">Date :</cell>
-						<cell><datebox id="selectedTodoDate" width="200px"/></cell>
-					</row>
-					<row>
-						<cell sclass="row-title">Description :</cell>
-						<cell>
-							<textbox id="selectedTodoDescription" multiline="true" hflex="1" height="200px" />
-						</cell>
-					</row>
-				</rows>
-			</grid>
-			<hlayout>
-				<button id="updateSelectedTodo" label="Update"/>
-			</hlayout>
-		</vlayout>
-	</hlayout>
+	<borderlayout>
+		<center autoscroll="true" border="none">
+			<vlayout hflex="1" vflex="1">
+				<hbox align="center" hflex="1" >
+					<textbox id="todoSubject" hflex="1" placeholder="What needs to be done?" />
+					<button id="addTodo" image="/imgs/plus.png" width="36px"/>
+				</hbox>		
+				<listbox id="todoListbox" vflex="1">
+					<listhead>
+						<listheader width="30px" />
+						<listheader/>
+						<listheader hflex="min"/>
+					</listhead>
+					<template name="model">
+						<listitem>
+							<listcell>
+								<checkbox forward="onCheck=todoListbox.onTodoCheck(${util:toArray(each,self)})" checked="${each.complete}"/>
+							</listcell>
+							<listcell>
+								<label value="${each.subject}"/>
+							</listcell>
+							<listcell>
+								<button forward="onClick=todoListbox.onTodoDelete(${each})" image="/imgs/cross.png" width="36px"/>
+							</listcell>
+						</listitem>
+					</template>
+				</listbox>
+			</vlayout>
+		</center>
+		<east width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
+			<vlayout id="selectedTodoBlock" visible="false">
+				<hbox align="center"  hflex="1">
+					<checkbox id="selectedTodoCheck"/> 
+					<textbox id="selectedTodoSubject" hflex="1" />
+				</hbox>		
+				<grid hflex="1">
+					<columns>
+						<column align="right" hflex="min"/>
+						<column/>
+					</columns>
+					<rows>
+						<row>
+							<cell sclass="row-title">Priority :</cell>
+							<cell>
+								<radiogroup id="selectedTodoPriority">
+									<template name="model">
+										<radio label="${each.label}"/>	
+									</template>
+								</radiogroup>
+							</cell>
+						</row>
+						<row>
+							<cell sclass="row-title">Date :</cell>
+							<cell><datebox id="selectedTodoDate" width="200px"/></cell>
+						</row>
+						<row>
+							<cell sclass="row-title">Description :</cell>
+							<cell>
+								<textbox id="selectedTodoDescription" multiline="true" hflex="1" height="200px" />
+							</cell>
+						</row>
+					</rows>
+				</grid>
+				<hlayout>
+					<button id="updateSelectedTodo" label="Update"/>
+				</hlayout>
+			</vlayout>
+		</east>
+	</borderlayout>
 </window>

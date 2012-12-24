@@ -25,12 +25,10 @@ public class TodoListServiceImpl implements TodoListService {
 		return c.getTime();
 	}
 	
-	public synchronized List<Todo>getTodoList(boolean all) {
+	public synchronized List<Todo>getTodoList() {
 		List<Todo> list = new ArrayList<Todo>();
 		for(Todo todo:todoList){
-			if(all || !todo.isComplete()){
-				list.add(Todo.clone(todo));
-			}
+			list.add(Todo.clone(todo));
 		}
 		return list;
 	}
@@ -46,17 +44,37 @@ public class TodoListServiceImpl implements TodoListService {
 		return null;
 	}
 	
-	public synchronized void updateTodo(Todo todo){
+	public synchronized Todo saveTodo(Todo todo){
 		todo = Todo.clone(todo);
+		todo.setId(todoId++);
+		todoList.add(todo);
+		return todo;
+	}
+	
+	public synchronized void updateTodo(Todo todo){
 		if(todo.getId()==null){
-			todo.setId(todoId++);
+			throw new IllegalArgumentException("cann't save a null-id todo, save it first");
 		}else{
+			todo = Todo.clone(todo);
 			int size = todoList.size();
 			for(int i=0;i<size;i++){
 				Todo t = todoList.get(i);
 				if(t.getId().equals(todo.getId())){
 					todoList.set(i, todo);
 					break;
+				}
+			}
+		}
+	}
+	
+	public synchronized void deleteTodo(Todo todo){
+		if(todo.getId()!=null){
+			int size = todoList.size();
+			for(int i=0;i<size;i++){
+				Todo t = todoList.get(i);
+				if(t.getId().equals(todo.getId())){
+					todoList.remove(i);
+					return;
 				}
 			}
 		}

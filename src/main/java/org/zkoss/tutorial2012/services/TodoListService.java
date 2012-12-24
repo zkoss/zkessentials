@@ -6,7 +6,10 @@ import org.zkoss.tutorial2012.entity.Todo;
 
 public interface TodoListService {
 
-	List<Todo> getTodoList(boolean all);
-	public Todo getTodo(Integer id);
-	public void updateTodo(Todo todo);
+	List<Todo> getTodoList();
+	Todo getTodo(Integer id);
+	Todo saveTodo(Todo todo);
+	void updateTodo(Todo todo);
+	void deleteTodo(Todo todo);
+	
 }

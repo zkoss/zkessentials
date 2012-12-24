@@ -20,6 +20,10 @@ public class Todo implements Serializable, Cloneable {
 		this.date = date;
 		this.description = description;
 	}
+	public Todo(String subject) {
+		this.subject = subject;
+		this.priority = 3;
+	}
 
 	public Integer getId() {
 		return id;
