@@ -41,3 +41,7 @@
 	font-size: medium;
 	color: #636363;
 }
+
+.complete-todo .z-label{
+	text-decoration: line-through;
+}

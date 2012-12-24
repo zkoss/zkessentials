@@ -18,7 +18,7 @@
 						<listheader hflex="min"/>
 					</listhead>
 					<template name="model">
-						<listitem>
+						<listitem sclass="${each.complete?'complete-todo':''}">
 							<listcell>
 								<checkbox forward="onCheck=todoListbox.onTodoCheck(${util:toArray(each,self)})" checked="${each.complete}"/>
 							</listcell>
@@ -33,8 +33,8 @@
 				</listbox>
 			</vlayout>
 		</center>
-		<east width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
-			<vlayout id="selectedTodoBlock" visible="false">
+		<east id="selectedTodoBlock" visible="false" width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
+			<vlayout >
 				<hbox align="center"  hflex="1">
 					<checkbox id="selectedTodoCheck"/> 
 					<textbox id="selectedTodoSubject" hflex="1" />

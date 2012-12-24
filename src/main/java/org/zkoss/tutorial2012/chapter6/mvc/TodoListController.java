@@ -18,6 +18,7 @@ import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Datebox;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
+import org.zkoss.zul.Listitem;
 import org.zkoss.zul.Radiogroup;
 import org.zkoss.zul.Textbox;
 
@@ -97,7 +98,8 @@ public class TodoListController extends SelectorComposer<Component>{
 		//get data from event
 		Object[] param = (Object[])evt.getData();
 		Todo todo = (Todo)param[0];
-		boolean checked = ((Checkbox)param[1]).isChecked();
+		Checkbox cbox = ((Checkbox)param[1]);
+		boolean checked = cbox.isChecked();
 		todo.setComplete(checked);
 		
 		//save data
@@ -106,6 +108,8 @@ public class TodoListController extends SelectorComposer<Component>{
 			//refresh detail view
 			updateDetailView();
 		}
+		//update listitem style
+		((Listitem)cbox.getParent().getParent()).setSclass(checked?"complete-todo":"");
 	}
 	
 	//when user clicks the delete button of each todo on the list

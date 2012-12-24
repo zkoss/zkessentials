@@ -10,14 +10,14 @@
 					<textbox value="@bind(vm.subject)" onOK="@command('addTodo')" hflex="1" placeholder="What needs to be done?" />
 					<button onClick="@command('addTodo')" image="/imgs/plus.png" width="36px"/>
 				</hbox>		
-				<listbox id="todoListbox" vflex="1" model="@bind(vm.todoListModel)" selectedItem="@bind(vm.selectedTodo)">
+				<listbox model="@bind(vm.todoListModel)" selectedItem="@bind(vm.selectedTodo)" vflex="1" >
 					<listhead>
 						<listheader width="30px" />
 						<listheader/>
 						<listheader hflex="min"/>
 					</listhead>
 					<template name="model">
-						<listitem>
+						<listitem sclass="@bind(each.complete?'complete-todo':'')">
 							<listcell>
 								<checkbox checked="@bind(each.complete)" onCheck="@command('completeTodo',todo=each)"/>
 							</listcell>
@@ -32,8 +32,8 @@
 				</listbox>
 			</vlayout>
 		</center>
-		<east width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
-			<vlayout id="selectedTodoBlock" visible="@bind(not empty vm.selectedTodo)"
+		<east visible="@bind(not empty vm.selectedTodo)" width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
+			<vlayout 
 				form="@id('fx') @load(vm.selectedTodo) @save(vm.selectedTodo, before='updateTodo') @validator(vm.todoValidator)">
 				<hbox align="center"  hflex="1">
 					<checkbox checked="@bind(fx.complete)"/> 
@@ -48,7 +48,7 @@
 						<row>
 							<cell sclass="row-title">Priority :</cell>
 							<cell>
-								<radiogroup id="selectedTodoPriority" model="@bind(vm.priorityList)" selectedItem="@bind(fx.priority)">
+								<radiogroup model="@bind(vm.priorityList)" selectedItem="@bind(fx.priority)">
 									<template name="model">
 										<radio label="@bind(each.label)"/>	
 									</template>
