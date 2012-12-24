@@ -15,7 +15,7 @@ import org.zkoss.zul.Include;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarController extends SelectorComposer<Component>{
+public class SingleDesktopNavController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
@@ -70,7 +70,7 @@ public class SidebarController extends SelectorComposer<Component>{
 				//redirect current url to new location
 				if(locationUri.startsWith("http")){
 					//open a new browser tab
-					Executions.getCurrent().sendRedirect(locationUri,"_blank");
+					Executions.getCurrent().sendRedirect(locationUri);
 				}else{
 					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainContent include").iterator().next();
 					include.setSrc(locationUri);
