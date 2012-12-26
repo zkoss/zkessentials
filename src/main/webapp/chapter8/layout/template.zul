@@ -14,4 +14,7 @@
 			<include src="/layout/footer.zul"/>
 		</south>
 	</borderlayout>
+	<div hflex="1" vflex="1" if="${sessionScope.currentUser.anonymous}">
+		Redirect to authentication page.....
+	</div>
 </zk>

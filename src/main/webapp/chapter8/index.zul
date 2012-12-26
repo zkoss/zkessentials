@@ -1,5 +1,6 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <?init class="org.zkoss.tutorial2012.chapter8.AuthenticationInit" authentication="true"?>
+<!-- authentication init have to locate before composition -->
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template.zul"?>
 
 <zk>

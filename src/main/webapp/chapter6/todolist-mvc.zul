@@ -1,5 +1,3 @@
-<?xel-method prefix="util" name="toArray" class="org.zkoss.tutorial2012.util.XelUtil"
-    signature="java.lang.Object[] toArray(java.lang.Object,java.lang.Object)"?>
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window apply="org.zkoss.tutorial2012.chapter6.mvc.TodoListController" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
@@ -18,15 +16,15 @@
 						<listheader hflex="min"/>
 					</listhead>
 					<template name="model">
-						<listitem sclass="${each.complete?'complete-todo':''}">
+						<listitem sclass="${each.complete?'complete-todo':''}" value="${each}">
 							<listcell>
-								<checkbox forward="onCheck=todoListbox.onTodoCheck(${util:toArray(each,self)})" checked="${each.complete}"/>
+								<checkbox forward="onCheck=todoListbox.onTodoCheck" checked="${each.complete}"/>
 							</listcell>
 							<listcell>
 								<label value="${each.subject}"/>
 							</listcell>
 							<listcell>
-								<button forward="onClick=todoListbox.onTodoDelete(${each})" image="/imgs/cross.png" width="36px"/>
+								<button forward="onClick=todoListbox.onTodoDelete" image="/imgs/cross.png" width="36px"/>
 							</listcell>
 						</listitem>
 					</template>

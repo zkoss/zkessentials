@@ -8,6 +8,7 @@ import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.ForwardEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
@@ -96,10 +97,11 @@ public class TodoListController extends SelectorComposer<Component>{
 	@Listen("onTodoCheck = #todoListbox")
 	public void doTodoCheck(ForwardEvent evt){
 		//get data from event
-		Object[] param = (Object[])evt.getData();
-		Todo todo = (Todo)param[0];
-		Checkbox cbox = ((Checkbox)param[1]);
+		Checkbox cbox = (Checkbox)evt.getOrigin().getTarget();
+		Listitem litem = (Listitem)cbox.getParent().getParent();
+		
 		boolean checked = cbox.isChecked();
+		Todo todo = (Todo)litem.getValue();
 		todo.setComplete(checked);
 		
 		//save data
@@ -115,7 +117,10 @@ public class TodoListController extends SelectorComposer<Component>{
 	//when user clicks the delete button of each todo on the list
 	@Listen("onTodoDelete = #todoListbox")
 	public void doTodoDelete(ForwardEvent evt){
-		Todo todo = (Todo)evt.getData();
+		Button btn = (Button)evt.getOrigin().getTarget();
+		Listitem litem = (Listitem)btn.getParent().getParent();
+		
+		Todo todo = (Todo)litem.getValue();
 		
 		//save data
 		todoListService.deleteTodo(todo);

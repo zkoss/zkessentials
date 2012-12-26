@@ -8,7 +8,7 @@
 		</div>
 		
 		<hbox hflex="1" vflex="1" pack="end" align="end">
-			<button label="Login" onClick='alert("Ooops, does not ready yet")'/>
+			<label value="${sessionScope.currentUser.name}"/>
 		</hbox>
 	</hbox>
 </div>
