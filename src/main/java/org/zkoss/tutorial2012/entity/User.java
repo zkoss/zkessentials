@@ -65,7 +65,14 @@ public class User implements Serializable,Cloneable {
 	public void setBio(String bio) {
 		this.bio = bio;
 	}
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	@Override
 	public int hashCode() {

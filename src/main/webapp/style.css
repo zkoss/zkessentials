@@ -45,3 +45,7 @@
 .complete-todo .z-label{
 	text-decoration: line-through;
 }
+
+.warn{
+	color:red;
+}

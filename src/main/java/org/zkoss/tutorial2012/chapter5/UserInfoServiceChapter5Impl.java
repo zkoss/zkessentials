@@ -7,14 +7,14 @@ import java.util.List;
 import org.zkoss.tutorial2012.entity.User;
 import org.zkoss.tutorial2012.services.UserInfoService;
 
-public class UserInfoServiceImpl implements UserInfoService,Serializable{
+public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	static List<User> userList = new ArrayList<User>();  
+	static protected List<User> userList = new ArrayList<User>();  
 	static{
 		userList.add(new User("anonymous","1234","Anonymous","anonumous@your.com"));
 		userList.add(new User("admin","1234","Admin","admin@your.com"));
-		userList.add(new User("zkoss","1234","zkoss","info@zkoss.org"));
+		userList.add(new User("zkoss","1234","ZKOSS","info@zkoss.org"));
 	}
 	
 	

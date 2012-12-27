@@ -9,7 +9,7 @@ import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
 
-public class TodoListServiceImpl implements TodoListService {
+public class TodoListServiceChapter6Impl implements TodoListService {
 
 	static int todoId = 0;
 	static List<Todo> todoList = new ArrayList<Todo>();  

@@ -1,12 +1,16 @@
 package org.zkoss.tutorial2012.services;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class UserCredential implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	String account;
 	String name;
+	
+	Set<String> roles = new HashSet<String>();
 
 	public UserCredential(String account, String name) {
 		this.account = account;
@@ -16,10 +20,11 @@ public class UserCredential implements Serializable{
 	public UserCredential() {
 		this.account = "anonymous";
 		this.name = "Anonymous";
+		roles.add("anonymous");
 	}
 
 	public boolean isAnonymous() {
-		return "anonymous".equals(account);
+		return hasRole("anonymous");
 	}
 
 	public String getAccount() {
@@ -36,6 +41,14 @@ public class UserCredential implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public boolean hasRole(String role){
+		return roles.contains(role);
+	}
+	
+	public void addRole(String role){
+		roles.add(role);
 	}
 
 }

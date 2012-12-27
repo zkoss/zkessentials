@@ -2,8 +2,8 @@ package org.zkoss.tutorial2012.chapter5.mvc;
 
 import java.util.Set;
 
-import org.zkoss.tutorial2012.chapter5.AuthenticationServiceImpl;
-import org.zkoss.tutorial2012.chapter5.UserInfoServiceImpl;
+import org.zkoss.tutorial2012.chapter5.AuthenticationServiceChapter5Impl;
+import org.zkoss.tutorial2012.chapter5.UserInfoServiceChapter5Impl;
 import org.zkoss.tutorial2012.entity.User;
 import org.zkoss.tutorial2012.services.AuthenticationService;
 import org.zkoss.tutorial2012.services.CommonInfoService;
@@ -39,8 +39,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	Textbox bio;
 	
 	//wire service
-	AuthenticationService authService = new AuthenticationServiceImpl();
-	UserInfoService userInfoService = new UserInfoServiceImpl();
+	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
+	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{
@@ -55,8 +55,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	
 	@Listen("onClick=#saveProfile")
 	public void doSaveProfile(){
-		UserCredential cer = authService.getCurrentUserCredential();
-		User user = userInfoService.findUser(cer.getAccount());
+		UserCredential cre = authService.getUserCredential();
+		User user = userInfoService.findUser(cre.getAccount());
 		
 		
 		//apply component value to bean
@@ -83,8 +83,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	}
 
 	private void reloadViewData() {
-		UserCredential cer = authService.getCurrentUserCredential();
-		User user = userInfoService.findUser(cer.getAccount());
+		UserCredential cre = authService.getUserCredential();
+		User user = userInfoService.findUser(cre.getAccount());
 		if(user==null){
 			//TODO handle un-authenticated access 
 			return;

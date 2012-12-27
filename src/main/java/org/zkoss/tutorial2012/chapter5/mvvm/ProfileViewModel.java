@@ -6,8 +6,8 @@ import java.util.List;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
-import org.zkoss.tutorial2012.chapter5.AuthenticationServiceImpl;
-import org.zkoss.tutorial2012.chapter5.UserInfoServiceImpl;
+import org.zkoss.tutorial2012.chapter5.AuthenticationServiceChapter5Impl;
+import org.zkoss.tutorial2012.chapter5.UserInfoServiceChapter5Impl;
 import org.zkoss.tutorial2012.entity.User;
 import org.zkoss.tutorial2012.services.AuthenticationService;
 import org.zkoss.tutorial2012.services.CommonInfoService;
@@ -20,8 +20,8 @@ public class ProfileViewModel implements Serializable{
 	
 	User profiledUser;
 	
-	AuthenticationService authService = new AuthenticationServiceImpl();
-	UserInfoService userInfoService = new UserInfoServiceImpl();
+	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
+	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
 	
 	public User getProfiledUser(){
 		return profiledUser;
@@ -33,8 +33,8 @@ public class ProfileViewModel implements Serializable{
 	
 	@Init
 	public void init(){
-		UserCredential cer = authService.getCurrentUserCredential();
-		profiledUser = userInfoService.findUser(cer.getAccount());
+		UserCredential cre = authService.getUserCredential();
+		profiledUser = userInfoService.findUser(cre.getAccount());
 	}
 
 	@Command
@@ -46,7 +46,7 @@ public class ProfileViewModel implements Serializable{
 
 	@Command @NotifyChange("profiledUser")
 	public void reload(){
-		UserCredential cer = authService.getCurrentUserCredential();
-		profiledUser = userInfoService.findUser(cer.getAccount());
+		UserCredential cre = authService.getUserCredential();
+		profiledUser = userInfoService.findUser(cre.getAccount());
 	}
 }

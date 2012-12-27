@@ -3,7 +3,7 @@ package org.zkoss.tutorial2012.chapter6.mvc;
 import java.util.List;
 
 import org.zkoss.lang.Strings;
-import org.zkoss.tutorial2012.chapter6.TodoListServiceImpl;
+import org.zkoss.tutorial2012.chapter6.TodoListServiceChapter6Impl;
 import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
@@ -50,7 +50,7 @@ public class TodoListController extends SelectorComposer<Component>{
 	Button updateSelectedTodo;
 	
 	//wire service
-	TodoListService todoListService = new TodoListServiceImpl();
+	TodoListService todoListService = new TodoListServiceChapter6Impl();
 	
 	//model for the view
 	ListModelList<Todo> todoListModel;
