@@ -1,39 +1,9 @@
-<grid hflex="1" vflex="1" sclass="sidebar">
-	<zscript>
-		//zscript code, it runs on server site
-		void redirect(String loc){
-			if("zk".equals(loc)){
-				execution.sendRedirect("http://www.zkoss.org/");
-			}else if("demo".equals(loc)){
-				execution.sendRedirect("http://www.zkoss.org/zkdemo");
-			}else if("devref".equals(loc)){
-				execution.sendRedirect("http://books.zkoss.org/wiki/ZK_Developer's_Reference");
-			}else if("manipulator".equals(loc)){
-				execution.sendRedirect("index-manipulator.zul");
-			}else if("renderer".equals(loc)){
-				execution.sendRedirect("index-renderer.zul");
-			}
-		}
-	</zscript>
+<grid hflex="1" vflex="1" sclass="sidebar" 
+	id="fnList" 
+	apply="org.zkoss.tutorial2012.chapter4.SidebarChapter4Controller">
 	<columns>
 		<column width="36px"/>
 		<column/>
 	</columns>
-	<rows>
-		<row sclass="sidebar-fn" onClick='redirect("zk")'>
-			<image src="/imgs/site.png"/><a onClick='redirect("zk")'>ZK</a>
-		</row>
-		<row sclass="sidebar-fn" onClick='redirect("demo")'>
-			<image src="/imgs/demo.png"/><a onClick='redirect("demo")'>ZK Demo</a>
-		</row>
-		<row sclass="sidebar-fn" onClick='redirect("devref")'>
-			<image src="/imgs/doc.png"/><a onClick='redirect("devref")'>ZK Developer Reference</a>
-		</row>
-		<row sclass="sidebar-fn" onClick='redirect("manipulator")'>
-			<image src="/imgs/fn.png"/><a onClick='redirect("manipulator")'>Sidebar Manipulator</a>
-		</row>
-		<row sclass="sidebar-fn" onClick='redirect("renderer")'>
-			<image src="/imgs/fn.png"/><a onClick='redirect("renderer")'>Sidebar Renderer</a>
-		</row>
-	</rows>
+	<rows/>
 </grid>

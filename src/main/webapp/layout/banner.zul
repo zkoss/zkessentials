@@ -8,7 +8,7 @@
 		</div>
 		
 		<hbox hflex="1" vflex="1" pack="end" align="end">
-			<label value="${userCredential.name}"/>
+			Anonymous
 		</hbox>
 	</hbox>
 </div>

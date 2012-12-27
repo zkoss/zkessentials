@@ -1,4 +1,8 @@
 Goal:
 	* basic view construction
-	* layout components introduction
-	* include component introduction
+		* index.zul
+		* banner.zul, footer.zul
+		* sidebar.zul
+	* layout components introduce
+	* component introduce
+	* include component introduce

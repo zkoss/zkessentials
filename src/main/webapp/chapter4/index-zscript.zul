@@ -5,12 +5,12 @@
 			<include src="/layout/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter4/sidebar-manipulator.zul"/>
+			<include src="/chapter4/sidebar-zscript.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true">
 			<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px" >
 				<image src="/imgs/zklogo2.png" />
-				<label value="Welcome to ZK Tutorial 2012" sclass="head1"/>
+				<label value="Chapter 4 - Controll UI" sclass="head1"/>
 			</vbox>
 		</center>
 		<south height="50px" border="none">

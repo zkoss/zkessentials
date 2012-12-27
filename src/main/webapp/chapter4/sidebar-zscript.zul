@@ -1,0 +1,33 @@
+<grid hflex="1" vflex="1" sclass="sidebar">
+	<zscript><![CDATA[
+		//zscript code, it runs on server site, use it for fast prototyping
+		java.util.Map sites = new java.util.HashMap();
+		
+		sites.put("zk","http://www.zkoss.org/");
+		sites.put("demo","http://www.zkoss.org/zkdemo");
+		sites.put("devref","http://books.zkoss.org/wiki/ZK_Developer's_Reference");
+		
+		
+		void redirect(String name){
+			String loc = sites.get(name);
+			if(loc!=null){
+				execution.sendRedirect(loc);
+			}
+		}
+	]]></zscript>
+	<columns>
+		<column width="36px"/>
+		<column/>
+	</columns>
+	<rows>
+		<row sclass="sidebar-fn" onClick='redirect("zk")'>
+			<image src="/imgs/site.png"/> ZK
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("demo")'>
+			<image src="/imgs/demo.png"/> ZK Demo
+		</row>
+		<row sclass="sidebar-fn" onClick='redirect("devref")'>
+			<image src="/imgs/doc.png"/> ZK Developer Reference
+		</row>
+	</rows>
+</grid>

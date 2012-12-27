@@ -1,6 +1,7 @@
 package org.zkoss.tutorial2012.chapter7.single;
 
-import org.zkoss.tutorial2012.chapter7.single.BookmarkableFunctions.BookmarkableFunction;
+import org.zkoss.tutorial2012.services.SidebarPage;
+import org.zkoss.tutorial2012.services.SidebarPageConfig;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.BookmarkEvent;
 import org.zkoss.zk.ui.event.EventListener;
@@ -11,6 +12,9 @@ import org.zkoss.zul.Include;
 public class BookmarkChangeController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 
+	
+	SidebarPageConfig pageConfig = new SidebarPageConfigSingleDesktopImpl();
+	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
@@ -21,13 +25,13 @@ public class BookmarkChangeController extends SelectorComposer<Component> {
 		comp.addEventListener("onBookmarkChange", new EventListener<BookmarkEvent>() {
 			public void onEvent(BookmarkEvent event) throws Exception {
 				String bookmark = event.getBookmark();
-				if(bookmark.startsWith("fn_")){
-					String fn = bookmark.substring(3);
-					BookmarkableFunction sf = BookmarkableFunctions.getFunction(fn);
+				if(bookmark.startsWith("p_")){
+					String p = bookmark.substring("p_".length());
+					SidebarPage page = pageConfig.getPage(p);
 					
-					if(sf!=null){
+					if(page!=null){
 						Include include = (Include)Selectors.iterable(getPage(), "#mainContent include").iterator().next();
-						include.setSrc(sf.getUri());
+						include.setSrc(page.getUri());
 					}
 				}
 			}
