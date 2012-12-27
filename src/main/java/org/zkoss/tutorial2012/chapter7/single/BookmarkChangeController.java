@@ -2,12 +2,10 @@ package org.zkoss.tutorial2012.chapter7.single;
 
 import org.zkoss.tutorial2012.chapter7.single.BookmarkableFunctions.BookmarkableFunction;
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.BookmarkEvent;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Include;
 
 public class BookmarkChangeController extends SelectorComposer<Component> {

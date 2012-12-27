@@ -1,8 +1,6 @@
 package org.zkoss.tutorial2012.chapter8;
 
 
-import org.zkoss.lang.Strings;
-import org.zkoss.tutorial2012.chapter5.AuthenticationServiceChapter5Impl;
 import org.zkoss.tutorial2012.services.AuthenticationService;
 import org.zkoss.tutorial2012.services.UserCredential;
 import org.zkoss.zk.ui.Component;
