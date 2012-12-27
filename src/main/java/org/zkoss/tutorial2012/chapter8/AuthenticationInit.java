@@ -17,12 +17,6 @@ public class AuthenticationInit implements Initiator {
 		UserCredential cre = authService.getUserCredential();
 		if("true".equalsIgnoreCase((String)args.get("authentication"))){
 			if(cre==null || cre.isAnonymous()){
-				
-				//for redirect back after login
-				authService.setLastUnauthUri(page.getDesktop().getRequestPath());
-				
-				
-				
 				Executions.sendRedirect("/chapter8/login.zul");
 				return;
 			}

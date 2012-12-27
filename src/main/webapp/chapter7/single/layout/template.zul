@@ -1,5 +1,5 @@
 <zk>
-	<borderlayout hflex="1" vflex="1">
+	<borderlayout hflex="1" vflex="1" apply="org.zkoss.tutorial2012.chapter7.single.BookmarkChangeController">
 		<north height="100px" border="none" >
 			<include src="/layout/banner.zul"/>
 		</north>

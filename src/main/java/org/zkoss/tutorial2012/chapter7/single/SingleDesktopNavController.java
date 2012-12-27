@@ -1,5 +1,6 @@
 package org.zkoss.tutorial2012.chapter7.single;
 
+import org.zkoss.tutorial2012.chapter7.single.BookmarkableFunctions.BookmarkableFunction;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
@@ -28,30 +29,22 @@ public class SingleDesktopNavController extends SelectorComposer<Component>{
 		//to initial view after view constructed.
 		Rows rows = fnList.getRows();
 		
-		Row row = constructFunctionRow("www.zkoss.org","/imgs/site.png","http://www.zkoss.org/");
+		Row row = constructFunctionRow(null,"www.zkoss.org","/imgs/site.png","http://www.zkoss.org/");
 		rows.appendChild(row);
 		
-		row = constructFunctionRow("ZK Demo","/imgs/demo.png","http://www.zkoss.org/zkdemo");
+		row = constructFunctionRow(null,"ZK Demo","/imgs/demo.png","http://www.zkoss.org/zkdemo");
 		rows.appendChild(row);
 		
-		row = constructFunctionRow("ZK Developer Reference","/imgs/doc.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference");
+		row = constructFunctionRow(null,"ZK Developer Reference","/imgs/doc.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference");
 		rows.appendChild(row);
 		
-		row = constructFunctionRow("Profile (MVC)","/imgs/fn.png","/chapter5/profile-mvc.zul");
-		rows.appendChild(row);
-		
-		row = constructFunctionRow("Profile (MVVM)","/imgs/fn.png","/chapter5/profile-mvvm.zul");
-		rows.appendChild(row);
-		
-		row = constructFunctionRow("Todo List (MVC)","/imgs/fn.png","/chapter6/todolist-mvc.zul");
-		rows.appendChild(row);
-		
-		row = constructFunctionRow("Todo List (MVVM)","/imgs/fn.png","/chapter6/todolist-mvvm.zul");
-		rows.appendChild(row);
-				
+		for(BookmarkableFunction fn:BookmarkableFunctions.getFunctions()){
+			row = constructFunctionRow(fn.getBookmark(),fn.getLabel(),fn.getIconUri(),fn.getUri());
+			rows.appendChild(row);
+		}		
 	}
 
-	private Row constructFunctionRow(String label, String imageSrc, final String locationUri) {
+	private Row constructFunctionRow(final String bookmark,String label, String imageSrc, final String locationUri) {
 		
 		//construct component and hierarchy
 		Row row = new Row();
@@ -74,6 +67,11 @@ public class SingleDesktopNavController extends SelectorComposer<Component>{
 				}else{
 					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainContent include").iterator().next();
 					include.setSrc(locationUri);
+					
+					//bookmark with a prefix
+					if(bookmark!=null){
+						getPage().getDesktop().setBookmark("fn_"+bookmark);
+					}
 				}
 			}
 		};		

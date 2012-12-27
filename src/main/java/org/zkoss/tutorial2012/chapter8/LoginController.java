@@ -41,13 +41,7 @@ public class LoginController extends SelectorComposer<Component> {
 		message.setValue("Welcom back "+cre.getName());
 		message.setSclass("");
 		
-		String lastUnauthUri = authService.getLastUnauthUri();
-		if(Strings.isBlank(lastUnauthUri)){
-			Executions.sendRedirect("/chapter8/");
-		}else{
-			authService.setLastUnauthUri(null);
-			Executions.sendRedirect(lastUnauthUri);
-		}
+		Executions.sendRedirect("/chapter8/");
 		
 	}
 }

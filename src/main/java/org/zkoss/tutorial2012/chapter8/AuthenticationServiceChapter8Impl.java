@@ -34,17 +34,4 @@ public class AuthenticationServiceChapter8Impl extends AuthenticationServiceChap
 		Session sess = Sessions.getCurrent();
 		sess.removeAttribute("userCredential");
 	}
-
-	@Override
-	public void setLastUnauthUri(String uri) {
-		Session sess = Sessions.getCurrent();
-		sess.setAttribute("lastUnauthUri", uri);
-	}
-
-	@Override
-	public String getLastUnauthUri() {
-		Session sess = Sessions.getCurrent();
-		return (String)sess.getAttribute("lastUnauthUri");
-	}
-
 }
