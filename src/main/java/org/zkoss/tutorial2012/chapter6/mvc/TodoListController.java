@@ -2,8 +2,8 @@ package org.zkoss.tutorial2012.chapter6.mvc;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.lang.Strings;
-import org.zkoss.tutorial2012.chapter6.TodoListServiceChapter6Impl;
 import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
@@ -11,8 +11,11 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.ForwardEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Datebox;
@@ -22,6 +25,7 @@ import org.zkoss.zul.Listitem;
 import org.zkoss.zul.Radiogroup;
 import org.zkoss.zul.Textbox;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class TodoListController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 
@@ -49,7 +53,8 @@ public class TodoListController extends SelectorComposer<Component>{
 	Button updateSelectedTodo;
 	
 	//wire service
-	TodoListService todoListService = new TodoListServiceChapter6Impl();
+	@WireVariable
+	TodoListService todoListService;
 	
 	//model for the view
 	ListModelList<Todo> todoListModel;

@@ -1,13 +1,18 @@
-package org.zkoss.tutorial2012.chapter7.single;
+package org.zkoss.tutorial2012.services.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Service;
 import org.zkoss.tutorial2012.services.SidebarPage;
 import org.zkoss.tutorial2012.services.SidebarPageConfig;
 
+@Service("sidebarPageConfigSingleDesktop")
+@Scope(value="request",proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class SidebarPageConfigSingleDesktopImpl implements SidebarPageConfig{
 	
 	HashMap<String,SidebarPage> pageMap = new LinkedHashMap<String,SidebarPage>();

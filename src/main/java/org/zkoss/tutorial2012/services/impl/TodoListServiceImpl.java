@@ -1,15 +1,20 @@
-package org.zkoss.tutorial2012.chapter6;
+package org.zkoss.tutorial2012.services.impl;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Service;
 import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
 
-public class TodoListServiceChapter6Impl implements TodoListService {
+@Service("todoListService")
+@Scope(value="singleton",proxyMode=ScopedProxyMode.TARGET_CLASS)
+public class TodoListServiceImpl implements TodoListService {
 
 	static int todoId = 0;
 	static List<Todo> todoList = new ArrayList<Todo>();  

@@ -1,13 +1,18 @@
-package org.zkoss.tutorial2012.chapter5;
+package org.zkoss.tutorial2012.services.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Service;
 import org.zkoss.tutorial2012.entity.User;
 import org.zkoss.tutorial2012.services.UserInfoService;
 
-public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable{
+@Service("userInfoService")
+@Scope(value="singleton",proxyMode=ScopedProxyMode.TARGET_CLASS)
+public class UserInfoServiceImpl implements UserInfoService,Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	static protected List<User> userList = new ArrayList<User>();  

@@ -6,12 +6,17 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class LogoutController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 	
 	//wire service
-	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
+	@WireVariable
+	AuthenticationService authService;
 	
 	@Listen("onClick=#logout")
 	public void doLogout(){

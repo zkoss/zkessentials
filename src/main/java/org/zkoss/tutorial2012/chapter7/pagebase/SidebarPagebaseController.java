@@ -1,5 +1,6 @@
 package org.zkoss.tutorial2012.chapter7.pagebase;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.tutorial2012.services.SidebarPage;
 import org.zkoss.tutorial2012.services.SidebarPageConfig;
 import org.zkoss.zk.ui.Component;
@@ -8,13 +9,17 @@ import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.select.SelectorComposer;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class SidebarPagebaseController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
@@ -22,7 +27,8 @@ public class SidebarPagebaseController extends SelectorComposer<Component>{
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigPagebaseImpl();
+	@WireVariable("sidebarPageConfigPagebase")
+	SidebarPageConfig pageConfig;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

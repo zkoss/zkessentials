@@ -131,6 +131,35 @@
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>
+	
+	<!-- Spring configuration -->
+	<!-- Initialize spring context -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- Enable webapp Scopes-->
+	 <listener>
+    	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	
+	<!-- applicationContext.xml
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	 -->
+	
+	<!-- 
+	<filter>
+	    <filter-name>OpenSessionInViewFilter</filter-name>
+	    <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>OpenSessionInViewFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	
 
 	<!-- [Optional] MIME mapping -->
 	<mime-mapping>

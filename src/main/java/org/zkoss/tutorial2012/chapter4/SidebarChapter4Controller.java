@@ -8,13 +8,17 @@ import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.select.SelectorComposer;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class SidebarChapter4Controller extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
@@ -22,7 +26,8 @@ public class SidebarChapter4Controller extends SelectorComposer<Component>{
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigChapter4Impl();
+	@WireVariable("sidebarPageConfigChapter4")
+	SidebarPageConfig pageConfig;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

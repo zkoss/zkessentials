@@ -2,8 +2,6 @@ package org.zkoss.tutorial2012.chapter5.mvc;
 
 import java.util.Set;
 
-import org.zkoss.tutorial2012.chapter5.AuthenticationServiceChapter5Impl;
-import org.zkoss.tutorial2012.chapter5.UserInfoServiceChapter5Impl;
 import org.zkoss.tutorial2012.entity.User;
 import org.zkoss.tutorial2012.services.AuthenticationService;
 import org.zkoss.tutorial2012.services.CommonInfoService;
@@ -12,8 +10,11 @@ import org.zkoss.tutorial2012.services.UserInfoService;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.Datebox;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
@@ -21,6 +22,7 @@ import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Textbox;
 import org.zkoss.zul.ext.Selectable;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class ProfileViewController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 
@@ -39,8 +41,10 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	Textbox bio;
 	
 	//wire service
-	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
-	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
+	@WireVariable
+	AuthenticationService authService;
+	@WireVariable
+	UserInfoService userInfoService;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

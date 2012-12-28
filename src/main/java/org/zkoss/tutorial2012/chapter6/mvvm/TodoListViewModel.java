@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.bind.BindUtils;
 import org.zkoss.bind.Property;
 import org.zkoss.bind.ValidationContext;
@@ -15,18 +16,22 @@ import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
 import org.zkoss.bind.validator.AbstractValidator;
 import org.zkoss.lang.Strings;
-import org.zkoss.tutorial2012.chapter6.TodoListServiceChapter6Impl;
 import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.ListModelList;
 
+@VariableResolver(DelegatingVariableResolver.class)
 public class TodoListViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//wire service
-	TodoListService todoListService = new TodoListServiceChapter6Impl();
+	@WireVariable
+	TodoListService todoListService;
 	
 	//model for the view
 	String subject;
