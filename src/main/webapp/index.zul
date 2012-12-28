@@ -14,7 +14,8 @@
 				
 				<label value="Chapter 4 - View Control" sclass="head2"/>
 				<hlayout>
-					<a href="/chapter3/">Demo</a>
+					<a href="/chapter4/index-zscript.zul">ZScript</a>
+					<a href="/chapter4/index.zul">Java</a>
 				</hlayout>
 				
 				<label value="Chapter 5 - Form base page Handling" sclass="head2"/>
