@@ -1,8 +1,8 @@
 Goal:
-	* learning single desktop and multiple desktop applications
+	* learning page-base and single desktop applications
+	* page base
+		* index page	
 	* single desktop
 		* include dynamic src
 		* Selectors
 		* bookmark change 
-	* multiple desktop
-		* index page

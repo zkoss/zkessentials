@@ -30,6 +30,9 @@
 .head1{
 	font-size: large;
 }
+.head2{
+	font-size: medium;
+}
 
 .row-title .z-label{
 	font-weight: bold;
@@ -48,4 +51,10 @@
 
 .warn{
 	color:red;
+}
+
+.demo-main a,.demo-main a:VISITED{
+	color:#636363;
+	text-decoration: underline;
+	font-size: smaller;	
 }

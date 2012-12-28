@@ -1,4 +1,4 @@
-package org.zkoss.tutorial2012.chapter7.multiple;
+package org.zkoss.tutorial2012.chapter7.pagebase;
 
 import org.zkoss.tutorial2012.services.SidebarPage;
 import org.zkoss.tutorial2012.services.SidebarPageConfig;
@@ -15,14 +15,14 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarMultipleDesktopController extends SelectorComposer<Component>{
+public class SidebarPagebaseController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigMultipleDesktopImpl();
+	SidebarPageConfig pageConfig = new SidebarPageConfigPagebaseImpl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

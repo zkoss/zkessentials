@@ -8,7 +8,6 @@ import org.zkoss.tutorial2012.entity.Priority;
 import org.zkoss.tutorial2012.entity.Todo;
 import org.zkoss.tutorial2012.services.TodoListService;
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.ForwardEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
