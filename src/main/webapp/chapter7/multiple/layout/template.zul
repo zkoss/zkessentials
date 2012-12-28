@@ -1,7 +1,7 @@
 <zk>
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
-			<include src="/layout/banner.zul"/>
+			<include src="/chapter3/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
 			<include src="/chapter7/multiple/layout/sidebar.zul"/>
@@ -9,7 +9,7 @@
 		<center id="mainContent" autoscroll="true" border="none" self="@insert(content)">
 		</center>
 		<south height="50px" border="none">
-			<include src="/layout/footer.zul"/>
+			<include src="/chapter3/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>
