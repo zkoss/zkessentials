@@ -7,7 +7,7 @@
 			<label value="Application Name" sclass="banner-head" />
 		</div>
 		
-		<hbox apply="org.zkoss.tutorial2012.chapter8.LogoutController" 
+		<hbox apply="org.zkoss.tutorial.chapter8.LogoutController" 
 			hflex="1" vflex="1" pack="end" align="end" >
 			<label value="${userCredential.name}"/>
 			<button id="logout" label="Logout" if="${not userCredential.anonymous}"/>

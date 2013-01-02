@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss</groupId>
-	<artifactId>tutorial2012</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>tutorial</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 	<properties>
 		<zk.version>6.5.2-SNAPSHOT</zk.version>
 		<commons-io>1.3.1</commons-io>
@@ -11,8 +11,8 @@
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
-	<name>The tutorial2012 Project</name>
-	<description>The tutorial2012 Project</description>
+	<name>The ZK Tutorial Project</name>
+	<description>The ZK Tutorial Project</description>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
@@ -133,7 +133,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<finalName>tutorial2012${packname}</finalName>
+							<finalName>tutorial${packname}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly/webapp.xml</descriptor>
