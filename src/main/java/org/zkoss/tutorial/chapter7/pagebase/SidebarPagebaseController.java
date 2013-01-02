@@ -1,6 +1,5 @@
 package org.zkoss.tutorial.chapter7.pagebase;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
 import org.zkoss.zk.ui.Component;

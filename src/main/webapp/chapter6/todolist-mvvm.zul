@@ -1,6 +1,6 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <window	apply="org.zkoss.bind.BindComposer" 
-	viewModel="@id('vm') @init('org.zkoss.tutorial2012.chapter6.mvvm.TodoListViewModel')" 
+	viewModel="@id('vm') @init('org.zkoss.tutorial.chapter6.mvvm.TodoListViewModel')" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
 	<caption src="/imgs/todo.png" sclass="fn-caption" label="Todo List (MVVM)"/>
 	<borderlayout>

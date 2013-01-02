@@ -1,6 +1,6 @@
 <grid hflex="1" vflex="1" sclass="sidebar" 
 	id="fnList" 
-	apply="org.zkoss.tutorial2012.chapter7.pagebase.SidebarPagebaseController">
+	apply="org.zkoss.tutorial.chapter7.pagebase.SidebarPagebaseController">
 	<columns>
 		<column width="36px"/>
 		<column/>

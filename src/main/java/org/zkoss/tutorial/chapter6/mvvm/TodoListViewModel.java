@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.bind.BindUtils;
 import org.zkoss.bind.Property;
 import org.zkoss.bind.ValidationContext;

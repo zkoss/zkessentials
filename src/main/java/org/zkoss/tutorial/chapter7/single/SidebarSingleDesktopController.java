@@ -13,10 +13,10 @@ import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zkplus.spring.DelegatingVariableResolver;
-import org.zkoss.zul.A;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Include;
+import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
@@ -49,10 +49,10 @@ public class SidebarSingleDesktopController extends SelectorComposer<Component>{
 		//construct component and hierarchy
 		Row row = new Row();
 		Image image = new Image(imageSrc);
-		A a = new A(label);
+		Label lab = new Label(label);
 		
 		row.appendChild(image);
-		row.appendChild(a);
+		row.appendChild(lab);
 		
 		//set style attribute
 		row.setSclass("sidebar-fn");
@@ -76,7 +76,6 @@ public class SidebarSingleDesktopController extends SelectorComposer<Component>{
 			}
 		};		
 		row.addEventListener(Events.ON_CLICK, onActionListener);
-		a.addEventListener(Events.ON_CLICK, onActionListener);
 
 		return row;
 	}

@@ -2,7 +2,6 @@ package org.zkoss.tutorial.chapter6.mvc;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.zkoss.lang.Strings;
 import org.zkoss.tutorial.entity.Priority;
 import org.zkoss.tutorial.entity.Todo;

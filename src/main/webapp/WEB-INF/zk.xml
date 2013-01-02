@@ -2,6 +2,6 @@
 
 <zk>
 	<listener>
-    	<listener-class>org.zkoss.tutorial2012.chapter8.AuthenticationVariableResolver</listener-class>
+    	<listener-class>org.zkoss.tutorial.chapter8.AuthenticationVariableResolver</listener-class>
 	</listener>
 </zk>
