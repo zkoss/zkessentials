@@ -42,15 +42,16 @@ public class UserInfoServiceImpl implements UserInfoService,Serializable{
 		return null;
 	}
 	
-	public synchronized void updateUser(User user){
+	public synchronized User updateUser(User user){
 		//do nothing
 		int s = userList.size();
 		for(int i=0;i<s;i++){
 			User u = userList.get(i);
 			if(user.getAccount().equals(u.getAccount())){
 				userList.set(i,User.clone(user));
-				break;
+				return u;
 			}
 		}
+		throw new RuntimeException("user not found "+user.getAccount());
 	}
 }

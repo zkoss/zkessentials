@@ -34,7 +34,7 @@ import org.zkoss.zul.ext.Selectable;
 public class ProfileViewController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 
-	//wire component
+	//wire components
 	@Wire
 	Label account;
 	@Wire
@@ -48,7 +48,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	@Wire
 	Textbox bio;
 	
-	//wire service
+	//wire services
 	@WireVariable
 	AuthenticationService authService;
 	@WireVariable
@@ -69,7 +69,10 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	public void doSaveProfile(){
 		UserCredential cre = authService.getUserCredential();
 		User user = userInfoService.findUser(cre.getAccount());
-		
+		if(user==null){
+			//TODO handle un-authenticated access 
+			return;
+		}
 		
 		//apply component value to bean
 		user.setFullName(fullName.getValue());

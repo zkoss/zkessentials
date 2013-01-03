@@ -22,7 +22,7 @@ import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 public class LogoutController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 	
-	//wire service
+	//wire services
 	@WireVariable
 	AuthenticationService authService;
 	

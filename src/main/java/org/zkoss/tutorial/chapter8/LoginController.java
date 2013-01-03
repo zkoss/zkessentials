@@ -33,7 +33,7 @@ public class LoginController extends SelectorComposer<Component> {
 	@Wire
 	Label message;
 	
-	//wire service
+	//wire services
 	@WireVariable
 	AuthenticationService authService;
 

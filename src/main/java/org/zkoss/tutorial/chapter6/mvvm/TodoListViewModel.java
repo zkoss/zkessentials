@@ -36,11 +36,11 @@ import org.zkoss.zul.ListModelList;
 public class TodoListViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	//wire service
+	//wire services
 	@WireVariable
 	TodoListService todoListService;
 	
-	//model for the view
+	//data for the view
 	String subject;
 	ListModelList<Todo> todoListModel;
 	Todo selectedTodo;
@@ -72,7 +72,7 @@ public class TodoListViewModel implements Serializable{
 	
 	
 	
-	@Init // @Init marks a initial method
+	@Init // @Init annotates a initial method
 	public void init(){
 		//get data from service and wrap it to model for the view
 		List<Todo> todoList = todoListService.getTodoList();
@@ -80,11 +80,11 @@ public class TodoListViewModel implements Serializable{
 		todoListModel = new ListModelList<Todo>(todoList);
 	}
 
-	@Command //@Command marks a command method 
-	@NotifyChange({"selectedTodo","subject"})//@NotifyChange marks data changed notification after calling this method 
+	@Command //@Command annotates a command method 
+	@NotifyChange({"selectedTodo","subject"}) //@NotifyChange annotates data changed notification after calling this method 
 	public void addTodo(){
 		if(Strings.isBlank(subject)){
-			Clients.showNotification("Todo subject is blank, nothing to do ?");
+			Clients.showNotification("Subject is blank, nothing to do ?");
 		}else{
 			//save data
 			selectedTodo = todoListService.saveTodo(new Todo(subject));
@@ -100,7 +100,7 @@ public class TodoListViewModel implements Serializable{
 	
 
 	@Command 
-	//@NotifyChange("selectedTodo")
+	//@NotifyChange("selectedTodo") //use postnotifyChange to notify dynamically
 	public void completeTodo(@BindingParam("todo") Todo todo){
 		//save data
 		todoListService.updateTodo(todo);
@@ -112,7 +112,7 @@ public class TodoListViewModel implements Serializable{
 	}
 	
 	@Command 
-	//@NotifyChange("selectedTodo")
+	//@NotifyChange("selectedTodo") //use postnotifyChange to notify dynamically
 	public void deleteTodo(@BindingParam("todo") Todo todo){
 		//save data
 		todoListService.deleteTodo(todo);
@@ -145,7 +145,7 @@ public class TodoListViewModel implements Serializable{
 		//do nothing, the selectedTodo will reload by notify change
 	}
 	
-	//the validator to validate data before save to todo
+	//the validator is the class to validate data before set ui data back to todo
 	public Validator getTodoValidator(){
 		return new AbstractValidator() {
 			
@@ -157,7 +157,7 @@ public class TodoListViewModel implements Serializable{
 				//the value to apply to base.subject
 				String subject = (String)properties.get("subject").getValue();
 				if(Strings.isBlank(subject)){
-					Clients.showNotification("Todo subject is blank, nothing to do ?");
+					Clients.showNotification("Subject is blank, nothing to do ?");
 					//mark the validation is invalid, so the data will not update to bean
 					//and the further command will be skipped.
 					ctx.setInvalid();

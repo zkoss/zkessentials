@@ -14,5 +14,5 @@ public interface UserInfoService {
 
 	public User findUser(String account);
 	
-	public void updateUser(User user);
+	public User updateUser(User user);
 }

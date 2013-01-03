@@ -78,7 +78,7 @@ public class TodoListServiceImpl implements TodoListService {
 					return todo;
 				}
 			}
-			return null;
+			throw new RuntimeException("Todo not found "+todo.getId());
 		}
 	}
 	
