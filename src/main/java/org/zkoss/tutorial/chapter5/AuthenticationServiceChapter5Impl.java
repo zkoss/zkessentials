@@ -38,15 +38,4 @@ public class AuthenticationServiceChapter5Impl implements AuthenticationService,
 	public void logout() {
 		// will be implemented in chapter 8
 	}
-
-	public void setLastUnauthUri(String uri) {
-		// will be implemented in chapter 8
-	}
-
-	public String getLastUnauthUri() {
-		// will be implemented in chapter 8
-		return null;
-	}
-
-
 }
