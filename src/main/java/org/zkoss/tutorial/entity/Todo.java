@@ -3,28 +3,52 @@ package org.zkoss.tutorial.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  * An entity 
  */
+@Entity
+@Table(name="apptodo")
 public class Todo implements Serializable, Cloneable {
 	private static final long serialVersionUID = 1L;
 
-	boolean complete;
-	String subject;
-	Priority priority;
-	Date date;
-	String description;
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	Integer id;
 	
+	boolean complete;
 	
-
-	public Todo(Integer id, String subject, Priority priority, Date date, String description) {
-		this.id = id;
-		this.subject = subject;
-		this.priority = priority;
-		this.date = date;
-		this.description = description;
-	}
+	@Column(nullable=false,length=128)
+	String subject;
+	
+	@Column(nullable=false,length=128)
+	@Enumerated(EnumType.ORDINAL)
+	Priority priority;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	Date date;
+	
+	String description;
+	
+	public Todo(){}
+//	public Todo(Integer id, String subject, Priority priority, Date date, String description) {
+//		this.id = id;
+//		this.subject = subject;
+//		this.priority = priority;
+//		this.date = date;
+//		this.description = description;
+//	}
+	
 	public Todo(String subject) {
 		this.subject = subject;
 		this.priority = Priority.LOW;
@@ -103,13 +127,13 @@ public class Todo implements Serializable, Cloneable {
 		return true;
 	}
 
-	public static Todo clone(Todo todo) {
-		try {
-			return (Todo) todo.clone();
-		} catch (CloneNotSupportedException e) {
-			// not possible
-		}
-		return null;
-	}
+//	public static Todo clone(Todo todo) {
+//		try {
+//			return (Todo) todo.clone();
+//		} catch (CloneNotSupportedException e) {
+//			// not possible
+//		}
+//		return null;
+//	}
 
 }
