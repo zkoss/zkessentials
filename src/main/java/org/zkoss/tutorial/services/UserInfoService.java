@@ -12,7 +12,7 @@ import org.zkoss.tutorial.entity.User;
 
 public interface UserInfoService {
 
-	/** fine user by account **/
+	/** find user by account **/
 	public User findUser(String account);
 	
 	/** update user **/
