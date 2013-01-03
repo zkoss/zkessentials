@@ -119,8 +119,8 @@ public class TodoListViewModel implements Serializable{
 	@Command 
 	@NotifyChange("selectedTodo")
 	public void updateTodo(){
-		//save data
-		todoListService.updateTodo(selectedTodo);
+		//update data
+		selectedTodo = todoListService.updateTodo(selectedTodo);
 		
 		//update the model, by using ListModelList, you don't need to notify todoListModel change
 		//by reseting an item , it make listbox only refresh one item
