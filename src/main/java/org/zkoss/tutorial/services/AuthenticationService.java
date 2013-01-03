@@ -10,8 +10,13 @@ package org.zkoss.tutorial.services;
 
 public interface AuthenticationService {
 
-	public boolean login(String nm, String pd);
+	/**login with account and password**/
+	public boolean login(String account, String password);
+	
+	/**logout current user**/
 	public void logout();
+	
+	/**get current user credential**/
 	public UserCredential getUserCredential();
 	
 }
