@@ -1,5 +1,12 @@
-package org.zkoss.tutorial.services;
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
 
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
+package org.zkoss.tutorial.services;
 
 public interface AuthenticationService {
 

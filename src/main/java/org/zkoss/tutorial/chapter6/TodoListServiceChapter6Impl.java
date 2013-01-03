@@ -1,3 +1,11 @@
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
+
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
 package org.zkoss.tutorial.chapter6;
 
 import java.util.ArrayList;
@@ -17,10 +25,6 @@ public class TodoListServiceChapter6Impl implements TodoListService {
 		todoList.add(new Todo(todoId++,"Buy some milk",Priority.LOW,null,null));
 		todoList.add(new Todo(todoId++,"Dennis' birthday gift",Priority.MEDIUM,dayAfter(10),null));
 		todoList.add(new Todo(todoId++,"Pay credit-card bill",Priority.HIGH,dayAfter(5),"$1,000"));
-		
-//		for(int i=0;i<500;i++){
-//			todoList.add(new Todo(todoId++,"Todo "+i,Priority.HIGH,dayAfter(5),"This is todo "+i));
-//		}
 	}
 	
 	

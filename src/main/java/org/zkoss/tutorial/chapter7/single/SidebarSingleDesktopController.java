@@ -1,3 +1,11 @@
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
+
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
 package org.zkoss.tutorial.chapter7.single;
 
 import org.zkoss.tutorial.services.SidebarPage;
@@ -10,7 +18,6 @@ import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zul.A;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Include;
