@@ -42,7 +42,7 @@ public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable
 		for(int i=0;i<s;i++){
 			User u = userList.get(i);
 			if(user.getAccount().equals(u.getAccount())){
-				userList.set(i,User.clone(user));
+				userList.set(i,u = User.clone(user));
 				return u;
 			}
 		}
