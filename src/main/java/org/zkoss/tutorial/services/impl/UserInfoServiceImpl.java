@@ -43,7 +43,6 @@ public class UserInfoServiceImpl implements UserInfoService,Serializable{
 	}
 	
 	public synchronized User updateUser(User user){
-		//do nothing
 		int s = userList.size();
 		for(int i=0;i<s;i++){
 			User u = userList.get(i);
