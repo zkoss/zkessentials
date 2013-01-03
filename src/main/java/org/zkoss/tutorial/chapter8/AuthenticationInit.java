@@ -26,20 +26,14 @@ public class AuthenticationInit implements Initiator {
 	@WireVariable
 	AuthenticationService authService;
 	
-	
-	public AuthenticationInit(){
-		
-	}
-	
 	public void doInit(Page page, Map<String, Object> args) throws Exception {
+		//wire service manually by calling Selectors API
 		Selectors.wireVariables(page, this, Selectors.newVariableResolvers(getClass(), null));
 		
 		UserCredential cre = authService.getUserCredential();
-		if("true".equalsIgnoreCase((String)args.get("authentication"))){
-			if(cre==null || cre.isAnonymous()){
-				Executions.sendRedirect("/chapter8/login.zul");
-				return;
-			}
+		if(cre==null || cre.isAnonymous()){
+			Executions.sendRedirect("/chapter8/login.zul");
+			return;
 		}
 	}
 }

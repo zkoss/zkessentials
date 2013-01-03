@@ -6,7 +6,6 @@
 		<div width="400px">
 			<label value="Application Name" sclass="banner-head" />
 		</div>
-		
 		<hbox hflex="1" vflex="1" pack="end" align="end">
 			Anonymous
 		</hbox>

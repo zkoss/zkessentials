@@ -1,4 +1,7 @@
 Goal:
-	* form-basic page handling in MVC and MVVM
-	* input handling and constraint
-	* @Listen and @Command
+	* form-base page handling in MVC
+		* @Wire, @Listen
+	* form-base page handling in MVVM
+		* apply, viewModel, @id ...etc
+		* @Init, @Command, @NotifyChange
+	* Input handling and constraint

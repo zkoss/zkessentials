@@ -36,7 +36,7 @@ import org.zkoss.zul.Textbox;
 public class TodoListController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
 
-	//wire component
+	//wire components
 	@Wire
 	Textbox todoSubject;
 	@Wire
@@ -59,11 +59,11 @@ public class TodoListController extends SelectorComposer<Component>{
 	@Wire
 	Button updateSelectedTodo;
 	
-	//wire service
+	//wire services
 	@WireVariable
 	TodoListService todoListService;
 	
-	//model for the view
+	//data for the view
 	ListModelList<Todo> todoListModel;
 	ListModelList<Priority> priorityListModel;
 	Todo selectedTodo;
@@ -73,7 +73,7 @@ public class TodoListController extends SelectorComposer<Component>{
 	public void doAfterCompose(Component comp) throws Exception{
 		super.doAfterCompose(comp);
 		
-		//get data from service and wrap it to model for the view
+		//get data from service and wrap it to list-model for the view
 		List<Todo> todoList = todoListService.getTodoList();
 		todoListModel = new ListModelList<Todo>(todoList);
 		todoListbox.setModel(todoListModel);
@@ -82,18 +82,19 @@ public class TodoListController extends SelectorComposer<Component>{
 		selectedTodoPriority.setModel(priorityListModel);
 	}
 	
-	//when user clicks on the button or enter on the textbox
+	//when user clicks on the button or enters on the textbox
 	@Listen("onClick = #addTodo; onOK = #todoSubject")
 	public void doTodoAdd(){
 		//get user input from view
 		String subject = todoSubject.getValue();
 		if(Strings.isBlank(subject)){
-			Clients.showNotification("Nothing to do ?","info",todoSubject,"after_start",10,true);
+			Clients.showNotification("Nothing to do ?",todoSubject);
 		}else{
 			//save data
 			selectedTodo = todoListService.saveTodo(new Todo(subject));
 			//update the model of listbox
 			todoListModel.add(selectedTodo);
+			//set the new selection
 			todoListModel.addToSelection(selectedTodo);
 			
 			//refresh detail view
@@ -133,7 +134,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		
 		Todo todo = (Todo)litem.getValue();
 		
-		//save data
+		//delete data
 		todoListService.deleteTodo(todo);
 		
 		//update the model of listbox

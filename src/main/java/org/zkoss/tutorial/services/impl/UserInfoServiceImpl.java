@@ -27,15 +27,11 @@ public class UserInfoServiceImpl implements UserInfoService,Serializable{
 	@Autowired
 	UserDao dao;
 	
-	public UserInfoServiceImpl(){
-		System.out.println(">>>> "+this);
-	}
-	
 	public User findUser(String account){
 		return dao.get(account);
 	}
 	
-	public void updateUser(User user){
-		dao.update(user);
+	public User updateUser(User user){
+		return dao.update(user);
 	}
 }

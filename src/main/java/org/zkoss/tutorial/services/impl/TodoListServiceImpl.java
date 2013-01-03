@@ -24,10 +24,6 @@ public class TodoListServiceImpl implements TodoListService {
 	@Autowired
 	TodoDao dao;
 	
-	public TodoListServiceImpl(){
-		System.out.println(">>>> "+this);
-	}
-	
 	public List<Todo>getTodoList() {
 		return dao.queryAll();
 	}
