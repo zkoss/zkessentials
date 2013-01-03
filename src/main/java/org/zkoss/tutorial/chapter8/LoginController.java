@@ -36,7 +36,7 @@ public class LoginController extends SelectorComposer<Component> {
 			return;
 		}
 		UserCredential cre= authService.getUserCredential();
-		message.setValue("Welcom back "+cre.getName());
+		message.setValue("Welcome, "+cre.getName());
 		message.setSclass("");
 		
 		Executions.sendRedirect("/chapter8/");
