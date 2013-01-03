@@ -61,7 +61,7 @@ public class TodoListServiceImpl implements TodoListService {
 		return todo;
 	}
 	
-	public synchronized void updateTodo(Todo todo){
+	public synchronized Todo updateTodo(Todo todo){
 		if(todo.getId()==null){
 			throw new IllegalArgumentException("cann't save a null-id todo, save it first");
 		}else{
@@ -71,9 +71,10 @@ public class TodoListServiceImpl implements TodoListService {
 				Todo t = todoList.get(i);
 				if(t.getId().equals(todo.getId())){
 					todoList.set(i, todo);
-					break;
+					return todo;
 				}
 			}
+			return null;
 		}
 	}
 	

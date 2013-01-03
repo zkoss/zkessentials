@@ -9,7 +9,7 @@ public interface TodoListService {
 	List<Todo> getTodoList();
 	Todo getTodo(Integer id);
 	Todo saveTodo(Todo todo);
-	void updateTodo(Todo todo);
+	Todo updateTodo(Todo todo);
 	void deleteTodo(Todo todo);
 	
 }
