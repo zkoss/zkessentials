@@ -31,7 +31,7 @@
 					
 				</vbox>
 			</window>
-			(use name='zkoss' and password='1234' to login)
+			(use account='zkoss' and password='1234' to login)
 		</vlayout>
 	</hbox>
 </zk>
