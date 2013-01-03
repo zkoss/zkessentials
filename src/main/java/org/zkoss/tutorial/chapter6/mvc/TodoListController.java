@@ -1,3 +1,11 @@
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
+
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
 package org.zkoss.tutorial.chapter6.mvc;
 
 import java.util.List;
@@ -89,7 +97,7 @@ public class TodoListController extends SelectorComposer<Component>{
 			todoListModel.addToSelection(selectedTodo);
 			
 			//refresh detail view
-			updateDetailView();
+			refreshDetailView();
 			
 			//reset value for fast typing.
 			todoSubject.setValue("");
@@ -108,10 +116,10 @@ public class TodoListController extends SelectorComposer<Component>{
 		todo.setComplete(checked);
 		
 		//save data
-		todoListService.updateTodo(todo);
+		todo = todoListService.updateTodo(todo);
 		if(todo.equals(selectedTodo)){
 			//refresh detail view
-			updateDetailView();
+			refreshDetailView();
 		}
 		//update listitem style
 		((Listitem)cbox.getParent().getParent()).setSclass(checked?"complete-todo":"");
@@ -134,7 +142,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		if(todo.equals(selectedTodo)){
 			//refresh selected todo view
 			selectedTodo = null;
-			updateDetailView();
+			refreshDetailView();
 		}
 	}
 
@@ -147,11 +155,11 @@ public class TodoListController extends SelectorComposer<Component>{
 		}else{
 			selectedTodo = todoListModel.getSelection().iterator().next();
 		}
-		updateDetailView();
+		refreshDetailView();
 	}
 	
-	private void updateDetailView() {
-		//update the detail view of selected todo
+	private void refreshDetailView() {
+		//refresh the detail view of selected todo
 		if(selectedTodo==null){
 			//clean
 			selectedTodoBlock.setVisible(false);
@@ -189,7 +197,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		selectedTodo.setPriority(priorityListModel.getSelection().iterator().next());
 		
 		//save data
-		todoListService.updateTodo(selectedTodo);
+		selectedTodo = todoListService.updateTodo(selectedTodo);
 		
 		//refresh listmodel for only 1 item
 		todoListModel.set(todoListModel.indexOf(selectedTodo), selectedTodo);
@@ -201,6 +209,6 @@ public class TodoListController extends SelectorComposer<Component>{
 	//when user clicks the update button
 	@Listen("onClick = #reloadSelectedTodo")
 	public void doReloadClick(){
-		updateDetailView();
+		refreshDetailView();
 	}
 }

@@ -1,5 +1,12 @@
-package org.zkoss.tutorial.chapter8;
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
 
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
+package org.zkoss.tutorial.chapter8;
 
 import org.zkoss.tutorial.services.AuthenticationService;
 import org.zkoss.tutorial.services.UserCredential;
@@ -41,7 +48,7 @@ public class LoginController extends SelectorComposer<Component> {
 			return;
 		}
 		UserCredential cre= authService.getUserCredential();
-		message.setValue("Welcom back "+cre.getName());
+		message.setValue("Welcome, "+cre.getName());
 		message.setSclass("");
 		
 		Executions.sendRedirect("/chapter8/");

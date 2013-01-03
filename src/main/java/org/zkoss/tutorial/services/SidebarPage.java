@@ -1,6 +1,17 @@
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
+
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
 package org.zkoss.tutorial.services;
 
-public class SidebarPage {
+import java.io.Serializable;
+
+public class SidebarPage implements Serializable{
+	private static final long serialVersionUID = 1L;
 	String name;
 	String label;
 	String iconUri;
