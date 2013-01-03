@@ -15,6 +15,7 @@ import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zk.ui.event.SerializableEventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Grid;
@@ -26,17 +27,19 @@ import org.zkoss.zul.Rows;
 public class SidebarChapter4Controller extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
+	
+	//wire components
 	@Wire
 	Grid fnList;
 	
-	//wire service
+	//services
 	SidebarPageConfig pageConfig = new SidebarPageConfigChapter4Impl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{
 		super.doAfterCompose(comp);
 		
-		//to initial view after view constructed.
+		//initialize view after view construction.
 		Rows rows = fnList.getRows();
 		
 		for(SidebarPage page:pageConfig.getPages()){
@@ -57,8 +60,11 @@ public class SidebarChapter4Controller extends SelectorComposer<Component>{
 		
 		//set style attribute
 		row.setSclass("sidebar-fn");
-			
-		EventListener<Event> actionListener = new EventListener<Event>() {
+		
+		//create and register event listener
+		EventListener<Event> actionListener = new SerializableEventListener<Event>() {
+			private static final long serialVersionUID = 1L;
+
 			public void onEvent(Event event) throws Exception {
 				//redirect current url to new location
 				Executions.getCurrent().sendRedirect(locationUri);

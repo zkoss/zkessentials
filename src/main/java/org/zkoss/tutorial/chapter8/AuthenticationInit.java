@@ -18,16 +18,15 @@ import org.zkoss.zk.ui.util.Initiator;
 
 public class AuthenticationInit implements Initiator {
 
+	//services
 	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
 	
 	public void doInit(Page page, Map<String, Object> args) throws Exception {
 		
 		UserCredential cre = authService.getUserCredential();
-		if("true".equalsIgnoreCase((String)args.get("authentication"))){
-			if(cre==null || cre.isAnonymous()){
-				Executions.sendRedirect("/chapter8/login.zul");
-				return;
-			}
+		if(cre==null || cre.isAnonymous()){
+			Executions.sendRedirect("/chapter8/login.zul");
+			return;
 		}
 	}
 }

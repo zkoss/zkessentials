@@ -18,7 +18,7 @@ import org.zkoss.zk.ui.select.annotation.Listen;
 public class LogoutController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 	
-	//wire service
+	//services
 	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
 	
 	@Listen("onClick=#logout")

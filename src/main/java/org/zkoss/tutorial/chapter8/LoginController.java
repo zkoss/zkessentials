@@ -29,7 +29,7 @@ public class LoginController extends SelectorComposer<Component> {
 	@Wire
 	Label message;
 	
-	//wire service
+	//services
 	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
 
 	

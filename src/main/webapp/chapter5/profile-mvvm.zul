@@ -4,7 +4,7 @@
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
 	<caption src="/imgs/profile.png" sclass="fn-caption" label="Profile (MVVM)"/>
 	<vlayout>
-		<grid width="500px" form="@id('fx') @load(vm.profiledUser) @save(vm.profiledUser, before='save')">
+		<grid width="500px" form="@id('fx') @load(vm.currentUser) @save(vm.currentUser, before='save')">
 			<columns>
 				<column align="right" hflex="min"/>
 				<column/>

@@ -5,7 +5,7 @@
 	</columns>
 	<rows>
 		<row>
-			<image src="/imgs/site.png"/><a href="http://www.zkoss.org/">www.zkoss.org</a>
+			<image src="/imgs/site.png"/><a href="http://www.zkoss.org/">ZK</a>
 		</row>
 		<row>
 			<image src="/imgs/demo.png"/><a href="http://www.zkoss.org/zkdemo">ZK Demo</a>

@@ -15,6 +15,7 @@ import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zk.ui.event.SerializableEventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -61,7 +62,9 @@ public class SidebarSingleDesktopController extends SelectorComposer<Component>{
 		row.setSclass("sidebar-fn");
 		
 		//new and register listener for events
-		EventListener<Event> onActionListener = new EventListener<Event>(){
+		EventListener<Event> onActionListener = new SerializableEventListener<Event>(){
+			private static final long serialVersionUID = 1L;
+
 			public void onEvent(Event event) throws Exception {
 				//redirect current url to new location
 				if(locationUri.startsWith("http")){

@@ -26,35 +26,42 @@ import org.zkoss.zk.ui.util.Clients;
 public class ProfileViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	User profiledUser;
-	
+	//services
 	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
 	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
 	
-	public User getProfiledUser(){
-		return profiledUser;
+	//data for the view
+	User currentUser;
+	
+	public User getCurrentUser(){
+		return currentUser;
 	}
 	
 	public List<String> getCountryList(){
 		return CommonInfoService.getCountryList();
 	}
 	
-	@Init
+	@Init // @Init annotates a initial method
 	public void init(){
 		UserCredential cre = authService.getUserCredential();
-		profiledUser = userInfoService.findUser(cre.getAccount());
+		currentUser = userInfoService.findUser(cre.getAccount());
+		if(currentUser==null){
+			//TODO handle un-authenticated access 
+			return;
+		}
 	}
 
-	@Command
+	@Command //@Command annotates a command method 
+	@NotifyChange("currentUser") //@NotifyChange annotates data changed notification after calling this method 
 	public void save(){
-		userInfoService.updateUser(profiledUser);
-		
+		currentUser = userInfoService.updateUser(currentUser);
 		Clients.showNotification("Your profile is updated");
 	}
 
-	@Command @NotifyChange("profiledUser")
+	@Command 
+	@NotifyChange("currentUser")
 	public void reload(){
 		UserCredential cre = authService.getUserCredential();
-		profiledUser = userInfoService.findUser(cre.getAccount());
+		currentUser = userInfoService.findUser(cre.getAccount());
 	}
 }

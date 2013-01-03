@@ -6,6 +6,10 @@
 .banner-head{
 	font-size: 2.4em;
 }
+.banner .logout{
+	text-decoration: underline;
+	cursor: pointer;
+} 
 
 .footer {
 	background-color:#102d35;
