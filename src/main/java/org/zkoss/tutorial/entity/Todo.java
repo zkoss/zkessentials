@@ -49,13 +49,6 @@ public class Todo implements Serializable, Cloneable {
 	String description;
 	
 	public Todo(){}
-//	public Todo(Integer id, String subject, Priority priority, Date date, String description) {
-//		this.id = id;
-//		this.subject = subject;
-//		this.priority = priority;
-//		this.date = date;
-//		this.description = description;
-//	}
 	
 	public Todo(String subject) {
 		this.subject = subject;
