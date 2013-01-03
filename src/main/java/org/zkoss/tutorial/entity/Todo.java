@@ -1,10 +1,18 @@
+/* 
+	Description:
+		ZK Tutorial
+	History:
+		Created by dennis
+
+Copyright (C) 2012 Potix Corporation. All Rights Reserved.
+*/
 package org.zkoss.tutorial.entity;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * An entity 
+ * Todo entity 
  */
 public class Todo implements Serializable, Cloneable {
 	private static final long serialVersionUID = 1L;
