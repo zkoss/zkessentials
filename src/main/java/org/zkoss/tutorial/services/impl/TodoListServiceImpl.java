@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter6;
+package org.zkoss.tutorial.services.impl;
 
 import java.util.ArrayList;
 import java.util.Calendar;

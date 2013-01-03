@@ -15,11 +15,11 @@ import java.util.List;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
 
-@Service("sidebarPageConfigPagebase")
+@Component("sidebarPageConfigPagebase")
 @Scope(value="request",proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class SidebarPageConfigPagebaseImpl implements SidebarPageConfig{
 	
