@@ -39,6 +39,7 @@ public class TodoListServiceImpl implements TodoListService {
 		return c.getTime();
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized List<Todo>getTodoList() {
 		List<Todo> list = new ArrayList<Todo>();
 		for(Todo todo:todoList){
@@ -47,6 +48,7 @@ public class TodoListServiceImpl implements TodoListService {
 		return list;
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized Todo getTodo(Integer id){
 		int size = todoList.size();
 		for(int i=0;i<size;i++){
@@ -58,6 +60,7 @@ public class TodoListServiceImpl implements TodoListService {
 		return null;
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized Todo saveTodo(Todo todo){
 		todo = Todo.clone(todo);
 		todo.setId(todoId++);
@@ -65,6 +68,7 @@ public class TodoListServiceImpl implements TodoListService {
 		return todo;
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized Todo updateTodo(Todo todo){
 		if(todo.getId()==null){
 			throw new IllegalArgumentException("cann't save a null-id todo, save it first");
@@ -82,6 +86,7 @@ public class TodoListServiceImpl implements TodoListService {
 		}
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized void deleteTodo(Todo todo){
 		if(todo.getId()!=null){
 			int size = todoList.size();
