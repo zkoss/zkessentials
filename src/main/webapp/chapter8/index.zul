@@ -5,5 +5,5 @@
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template.zul"?>
 
 <zk>
-	<include self="@define(content)" src="/chapter8/home.zul"/>
+	<include id="mainInclude" self="@define(content)" src="/chapter8/home.zul"/>
 </zk>
