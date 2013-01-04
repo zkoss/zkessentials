@@ -15,4 +15,5 @@ Goal:
 		* persistence.xml
 		* applicationContext.xml
 		* Entity annotation for Todo & User
+		* Dao implementation
 	
