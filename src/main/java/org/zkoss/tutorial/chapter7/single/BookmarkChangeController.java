@@ -41,7 +41,7 @@ public class BookmarkChangeController extends SelectorComposer<Component> {
 					
 					if(page!=null){
 						//use iterable to find the first include only
-						Include include = (Include)Selectors.iterable(getPage(), "#mainContent #mainInclude").iterator().next();
+						Include include = (Include)Selectors.iterable(getPage(), "#mainInclude").iterator().next();
 						include.setSrc(page.getUri());
 					}
 				}
