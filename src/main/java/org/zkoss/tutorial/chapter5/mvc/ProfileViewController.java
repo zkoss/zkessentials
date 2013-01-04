@@ -57,7 +57,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		ListModelList<String> countryModel = new ListModelList<String>(CommonInfoService.getCountryList());
 		country.setModel(countryModel);
 		
-		reloadViewData();
+		refreshProfileView();
 	}
 	
 	
@@ -90,10 +90,10 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	
 	@Listen("onClick=#reloadProfile")
 	public void doReloadProfile(){
-		reloadViewData();
+		refreshProfileView();
 	}
 
-	private void reloadViewData() {
+	private void refreshProfileView() {
 		UserCredential cre = authService.getUserCredential();
 		User user = userInfoService.findUser(cre.getAccount());
 		if(user==null){

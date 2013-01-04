@@ -31,6 +31,10 @@ public class AuthenticationServiceChapter8Impl extends AuthenticationServiceChap
 		
 		Session sess = Sessions.getCurrent();
 		UserCredential cre = new UserCredential(user.getAccount(),user.getFullName());
+		//just in case for this demo.
+		if(cre.isAnonymous()){
+			return false;
+		}
 		sess.setAttribute("userCredential",cre);
 		
 		//TODO handle the role here for authorization

@@ -25,7 +25,7 @@ public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable
 		userList.add(new User("zkoss","1234","ZKOSS","info@zkoss.org"));
 	}
 	
-	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized User findUser(String account){
 		int s = userList.size();
 		for(int i=0;i<s;i++){
@@ -37,6 +37,7 @@ public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable
 		return null;
 	}
 	
+	/** synchronized is just because we use static userList in this demo to prevent concurrent access **/
 	public synchronized User updateUser(User user){
 		int s = userList.size();
 		for(int i=0;i<s;i++){

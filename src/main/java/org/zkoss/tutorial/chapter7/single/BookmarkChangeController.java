@@ -40,7 +40,8 @@ public class BookmarkChangeController extends SelectorComposer<Component> {
 					SidebarPage page = pageConfig.getPage(p);
 					
 					if(page!=null){
-						Include include = (Include)Selectors.iterable(getPage(), "#mainContent include").iterator().next();
+						//use iterable to find the first include only
+						Include include = (Include)Selectors.iterable(getPage(), "#mainContent #mainInclude").iterator().next();
 						include.setSrc(page.getUri());
 					}
 				}

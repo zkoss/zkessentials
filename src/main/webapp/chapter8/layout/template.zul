@@ -15,6 +15,6 @@
 		</south>
 	</borderlayout>
 	<div if="${userCredential.anonymous}">
-		Redirect to authentication page.....
+		Redirect to login page.....
 	</div>
 </zk>

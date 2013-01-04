@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.zkoss.bind.BindUtils;
+import org.zkoss.bind.Form;
 import org.zkoss.bind.Property;
 import org.zkoss.bind.ValidationContext;
 import org.zkoss.bind.Validator;
@@ -99,8 +100,9 @@ public class TodoListViewModel implements Serializable{
 	//@NotifyChange("selectedTodo") //use postnotifyChange to notify dynamically
 	public void completeTodo(@BindingParam("todo") Todo todo){
 		//save data
-		todoListService.updateTodo(todo);
+		todo = todoListService.updateTodo(todo);
 		if(todo.equals(selectedTodo)){
+			selectedTodo = todo;
 			//for the case that notification is decided dynamically
 			//you can use BindUtils.postNotifyChange to notify a value changed
 			BindUtils.postNotifyChange(null, null, this, "selectedTodo");
@@ -146,12 +148,11 @@ public class TodoListViewModel implements Serializable{
 		return new AbstractValidator() {
 			
 			public void validate(ValidationContext ctx) {
-				//the base to save to.
-				Todo todo = (Todo)ctx.getProperty().getBase();
-				//the properties to apply to base
-				Map<String,Property> properties = ctx.getProperties(todo);
-				//the value to apply to base.subject
-				String subject = (String)properties.get("subject").getValue();
+				//get the form that will be applied to todo
+				Form fx = (Form)ctx.getProperty().getValue();
+				//get filed subject of the form
+				String subject = (String)fx.getField("subject");
+				
 				if(Strings.isBlank(subject)){
 					Clients.showNotification("Subject is blank, nothing to do ?");
 					//mark the validation is invalid, so the data will not update to bean

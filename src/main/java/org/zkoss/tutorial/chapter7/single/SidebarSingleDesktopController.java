@@ -71,9 +71,11 @@ public class SidebarSingleDesktopController extends SelectorComposer<Component>{
 					//open a new browser tab
 					Executions.getCurrent().sendRedirect(locationUri);
 				}else{
-					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainContent include").iterator().next();
+					//use iterable to find the first include only
+					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainContent #mainInclude").iterator().next();
 					include.setSrc(locationUri);
 					
+					//advance bookmark control, 
 					//bookmark with a prefix
 					if(name!=null){
 						getPage().getDesktop().setBookmark("p_"+name);
