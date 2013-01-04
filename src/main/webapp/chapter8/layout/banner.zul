@@ -9,8 +9,8 @@
 		
 		<hbox apply="org.zkoss.tutorial.chapter8.LogoutController" 
 			hflex="1" vflex="1" pack="end" align="end" >
-			<label value="${userCredential.name}" if="${not userCredential.anonymous}"/>
-			<label id="logout" value="Logout" if="${not userCredential.anonymous}" sclass="logout"/>
+			<label value="${sessionScope.userCredential.name}" if="${not sessionScope.userCredential.anonymous}"/>
+			<label id="logout" value="Logout" if="${not sessionScope.userCredential.anonymous}" sclass="logout"/>
 		</hbox>
 	</hbox>
 </div>

@@ -1,6 +1,6 @@
 <zk>
 	<!-- create only when the currentUser is not an anonymous  -->
-	<borderlayout hflex="1" vflex="1" if="${not userCredential.anonymous}">
+	<borderlayout hflex="1" vflex="1" if="${not sessionScope.userCredential.anonymous}">
 		<north height="100px" border="none" >
 			<include src="/chapter8/layout/banner.zul"/>
 		</north>
@@ -14,7 +14,7 @@
 			<include src="/chapter3/footer.zul"/>
 		</south>
 	</borderlayout>
-	<div if="${userCredential.anonymous}">
+	<div if="${sessionScope.userCredential.anonymous}">
 		Redirect to login page.....
 	</div>
 </zk>

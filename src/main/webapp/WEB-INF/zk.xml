@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <zk>
-	<listener>
-    	<listener-class>org.zkoss.tutorial.chapter8.AuthenticationVariableResolver</listener-class>
-	</listener>
 </zk>
