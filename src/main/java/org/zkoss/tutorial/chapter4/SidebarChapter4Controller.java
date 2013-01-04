@@ -37,7 +37,7 @@ public class SidebarChapter4Controller extends SelectorComposer<Component>{
 	Grid fnList;
 	
 	//wire service
-	@WireVariable("sidebarPageConfigChapter4")
+	@WireVariable("sidebarPageConfigPagebase")
 	SidebarPageConfig pageConfig;
 	
 	@Override

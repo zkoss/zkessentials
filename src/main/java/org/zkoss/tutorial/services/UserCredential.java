@@ -32,7 +32,7 @@ public class UserCredential implements Serializable{
 	}
 
 	public boolean isAnonymous() {
-		return hasRole("anonymous");
+		return hasRole("anonymous") || "anonymous".equals(account);
 	}
 
 	public String getAccount() {

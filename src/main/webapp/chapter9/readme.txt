@@ -3,12 +3,11 @@ Goal:
 	Instated, it provide spring bean implementation of service and use these beans in controller or view-model.  
 	* Wire Spring Bean in Controller / @WireVariable
 	* Wire Spring Bean in Initiator / @WireVariable with Selectors manually
-	* Use SpringUtil in VariableResolver / SpringUtil.getBean(name)
 	
 	Following classes are removed and replaced by spring implementation
 	
 	org/zkoss/tutorial/chapter4/SidebarPageConfigChapter4Impl.java
-		>> org/zkoss/tutorial/services/impl/SidebarPageConfigChapter4Impl.java
+		>> org/zkoss/tutorial/services/impl/SidebarPageConfigPagebaseImpl.java
 		
 	org/zkoss/tutorial/chapter5/AuthenticationServiceChapter5Impl.java
 		>> org/zkoss/tutorial/services/impl/AuthenticationServiceImpl.java
@@ -25,3 +24,16 @@ Goal:
 	
 	org/zkoss/tutorial/chapter8/AuthenticationServiceChapter8Impl.java
 		>> org/zkoss/tutorial/services/impl/AuthenticationServiceImpl.java
+		
+	* basic spring configuration
+		* maven dependencies
+		* applicationContext.xml
+		* web.xml
+				<listener>
+					<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+				</listener>
+				<!-- Enable webapp Scopes-->
+				 <listener>
+			    	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+				</listener>
+		
