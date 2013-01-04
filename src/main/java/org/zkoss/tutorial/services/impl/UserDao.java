@@ -13,10 +13,6 @@ public class UserDao {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public UserDao(){
-		System.out.println(">>>> "+this);
-	}
-	
 	@Transactional(readOnly=true)
     public User get(String account){
         return em.find(User.class, account);

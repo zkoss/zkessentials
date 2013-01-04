@@ -16,10 +16,6 @@ public class TodoDao {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public TodoDao(){
-		System.out.println(">>>> "+this);
-	}
-	
 	@Transactional(readOnly=true)
     public List<Todo> queryAll() {
         Query query = em.createQuery("from Todo as todo");
