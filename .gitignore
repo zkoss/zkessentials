@@ -1,4 +1,4 @@
 .settings/
 assembly/
 target/
-data/
+/data
