@@ -1,0 +1,30 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+	<borderlayout height="450px">
+		<north title="North" maxsize="300" size="20%" splittable="true" collapsible="true">
+			<div style="background:#B8D335" vflex="1">
+				<label value="North" style="color:white;font-size:50px" />
+			</div>
+		</north>
+		<west maxsize="200" border="0" splittable="true">
+			<div style="background:#E6D92C" vflex="1">
+				<label value="West" style="color:white;font-size:50px" />
+			</div>
+		</west>
+		<center border="0">
+			<label value="Center" style="color:gray;font-size:80px" />
+		</center>
+		<east maxsize="200" border="0" splittable="true">
+			<div style="background:#E6D92C" vflex="1">
+				<label value="East" style="color:white;font-size:50px" />
+			</div>
+		</east>
+		<south title="South" size="20%" collapsible="true">
+			<div style="background:#B8D335" vflex="1">
+				<label value="South" style="color:white;font-size:50px" />
+			</div>
+		</south>
+	</borderlayout>
+
+</zk>
