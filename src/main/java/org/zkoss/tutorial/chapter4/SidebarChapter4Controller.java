@@ -43,12 +43,12 @@ public class SidebarChapter4Controller extends SelectorComposer<Component>{
 		Rows rows = fnList.getRows();
 		
 		for(SidebarPage page:pageConfig.getPages()){
-			Row row = constructSidebarRow(page.getName(),page.getLabel(),page.getIconUri(),page.getUri());
+			Row row = constructSidebarRow(page.getLabel(),page.getIconUri(),page.getUri());
 			rows.appendChild(row);
 		}
 	}
 
-	private Row constructSidebarRow(String name,String label, String imageSrc, final String locationUri) {
+	private Row constructSidebarRow(String label, String imageSrc, final String locationUri) {
 		
 		//construct component and hierarchy
 		Row row = new Row();
