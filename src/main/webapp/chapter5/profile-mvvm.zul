@@ -12,7 +12,7 @@
 			<rows>
 				<row>
 					<cell sclass="row-title">Account :</cell>
-					<cell><label value="@bind(fx.account)"/></cell>
+					<cell><label value="@load(fx.account)"/></cell>
 				</row>
 				<row>
 					<cell sclass="row-title">Full Name :</cell>
@@ -29,7 +29,7 @@
 				<row>
 					<cell sclass="row-title">Country :</cell>
 					<cell>
-						<listbox model="@bind(vm.countryList)" selectedItem="@bind(fx.country)" mold="select" width="200px">
+						<listbox model="@load(vm.countryList)" selectedItem="@bind(fx.country)" mold="select" width="200px">
 							<template name="model">
 								<listitem label="@load(each)" />
 							</template>
