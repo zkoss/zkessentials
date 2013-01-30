@@ -1,5 +1,5 @@
 <zk>
-	<!-- free to access tempate, without sidebar  -->
+	<!-- free to access template, without sidebar  -->
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
 			<include src="/chapter8/layout/banner.zul"/>
