@@ -1,4 +1,5 @@
 Goal:
+	* http://books.zkoss.org/wiki/Tutorial/Chapter7:Navigation
 	* idea of page-based and desktop-based navigation
 	* templating
 		* <?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/pagebase/layout/template.zul"?>

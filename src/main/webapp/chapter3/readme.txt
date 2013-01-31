@@ -1,4 +1,5 @@
 Goal:
+	* http://books.zkoss.org/wiki/Tutorial/Chapter3:User_Interface_and_Layout
 	* Introduce view construction
 		* index.zul
 		* banner.zul, footer.zul
