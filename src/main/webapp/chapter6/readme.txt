@@ -1,4 +1,5 @@
 Goal:
+	* http://books.zkoss.org/wiki/Tutorial/Chapter6:Implementing_CRUD
 	* master-detail CRUD page handling in MVC
 		* ListModel
 		* @Listen("onClick = #addTodo; onOK = #todoSubject")

@@ -1,4 +1,5 @@
 Goal:
+	* http://books.zkoss.org/wiki/Tutorial/Chapter8:Authentication
 	* Session concept
 	* The basic authentication in ZK
 		* <?init class="org.zkoss.tutorial.chapter8.AuthenticationInit"?>
@@ -8,5 +9,3 @@ Goal:
 			* template-anonymous.zul without sidebar
 		 	
 	* login / banner / logout 
-	
-	* [TODO] the basic authorization in ZK

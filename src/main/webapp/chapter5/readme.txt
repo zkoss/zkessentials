@@ -1,4 +1,5 @@
 Goal:
+	* http://books.zkoss.org/wiki/Tutorial/Chapter5:Handling_User_Input
 	* form-base page handling in MVC
 		* @Wire, @Listen
 		* ListModel
