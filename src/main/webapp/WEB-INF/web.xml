@@ -50,7 +50,15 @@
 	 <listener>
     	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
-	
+
+	<filter>
+		<filter-name>OpenEntityManagerInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenEntityManagerInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
 	<welcome-file-list>
 		<welcome-file>index.zul</welcome-file>
 	</welcome-file-list>
