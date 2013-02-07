@@ -27,7 +27,6 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Textbox;
-import org.zkoss.zul.ext.Selectable;
 
 public class ProfileViewController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
@@ -76,7 +75,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		user.setBirthday(birthday.getValue());
 		user.setBio(bio.getValue());
 		
-		Set<String> selection = ((Selectable)country.getModel()).getSelection();
+		Set<String> selection = ((ListModelList)country.getModel()).getSelection();
 		if(!selection.isEmpty()){
 			user.setCountry(selection.iterator().next());
 		}else{
@@ -108,6 +107,6 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		birthday.setValue(user.getBirthday());
 		bio.setValue(user.getBio());
 		
-		((Selectable)country.getModel()).addToSelection(user.getCountry());
+		((ListModelList)country.getModel()).addToSelection(user.getCountry());
 	}
 }
