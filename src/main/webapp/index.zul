@@ -24,7 +24,7 @@
 					<a href="/chapter5/index-mvvm.zul">MVVM</a>
 				</hlayout>
 				
-				<label value="Chapter 6 - :Implementing CRUD" sclass="head2"/>
+				<label value="Chapter 6 - Implementing CRUD" sclass="head2"/>
 				<hlayout>
 					<a href="/chapter6/index.zul">MVC</a>
 					<a href="/chapter6/index-mvvm.zul">MVVM</a>
