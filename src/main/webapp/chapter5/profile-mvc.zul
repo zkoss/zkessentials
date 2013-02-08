@@ -41,6 +41,7 @@
 				</row>
 			</rows>
 		</grid>
+		<div>You are editing <label id="nameLabel"/>'s profile.</div>
 		<hlayout>
 			<button id="saveProfile" label="Save"/>
 			<button id="reloadProfile" label="Reload"/>

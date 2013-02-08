@@ -7,24 +7,24 @@
 		<center id="mainContent" autoscroll="true">
 			<vbox vflex="1" hflex="1" align="center" spacing="20px"  sclass="demo-main">
 				<label value="Welcome to ZK Tutoial" sclass="head1"/>
-				<label value="Chapter 3 - View and Layout" sclass="head2"/>
+				<label value="Chapter 3 - User Interface and Layout" sclass="head2"/>
 				<hlayout>
 					<a href="/chapter3/">Demo</a>
 				</hlayout>
 				
-				<label value="Chapter 4 - View Control" sclass="head2"/>
+				<label value="Chapter 4 - Controlling Components" sclass="head2"/>
 				<hlayout>
 					<a href="/chapter4/index-zscript.zul">ZScript</a>
 					<a href="/chapter4/index.zul">Java</a>
 				</hlayout>
 				
-				<label value="Chapter 5 - Form base page Handling" sclass="head2"/>
+				<label value="Chapter 5 - Handling User Input" sclass="head2"/>
 				<hlayout>
 					<a href="/chapter5/index.zul">MVC</a>
 					<a href="/chapter5/index-mvvm.zul">MVVM</a>
 				</hlayout>
 				
-				<label value="Chapter 6 - CRUD base page Handling" sclass="head2"/>
+				<label value="Chapter 6 - Implementing CRUD" sclass="head2"/>
 				<hlayout>
 					<a href="/chapter6/index.zul">MVC</a>
 					<a href="/chapter6/index-mvvm.zul">MVVM</a>
