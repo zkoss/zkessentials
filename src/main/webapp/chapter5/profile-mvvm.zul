@@ -51,6 +51,7 @@
 				</row>
 			</rows>
 		</grid>
+		<div>You are editing <label value="@load(vm.currentUser.fullName)"/>'s profile.</div>
 		<hlayout>
 			<button onClick="@command('save')" label="Save"/>
 			<button onClick="@command('reload')" label="Reload"/>
