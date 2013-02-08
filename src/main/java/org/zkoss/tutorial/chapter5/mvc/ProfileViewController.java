@@ -44,6 +44,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	Listbox country;
 	@Wire
 	Textbox bio;
+	@Wire
+	Label nameLabel;
 	
 	//services
 	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
@@ -82,6 +84,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 			user.setCountry(null);
 		}
 		
+		nameLabel.setValue(fullName.getValue());
+		
 		userInfoService.updateUser(user);
 		
 		Clients.showNotification("Your profile is updated");
@@ -108,5 +112,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		bio.setValue(user.getBio());
 		
 		((ListModelList)country.getModel()).addToSelection(user.getCountry());
+
+		nameLabel.setValue(user.getFullName());
 	}
 }
