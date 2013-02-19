@@ -31,7 +31,8 @@
 				</listbox>
 			</vlayout>
 		</center>
-		<east id="selectedTodoBlock" visible="false" width="300px" border="none" collapsible="false" splittable="true" minsize="300" autoscroll="true">
+		<east id="selectedTodoBlock" visible="false" width="300px" border="none" collapsible="false" 
+		splittable="true" minsize="300" autoscroll="true">
 			<vlayout >
 				<hbox align="center"  hflex="1">
 					<checkbox id="selectedTodoCheck"/> 
