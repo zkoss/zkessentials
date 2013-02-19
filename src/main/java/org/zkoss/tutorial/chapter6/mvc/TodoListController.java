@@ -115,6 +115,7 @@ public class TodoListController extends SelectorComposer<Component>{
 		//save data
 		todo = todoListService.updateTodo(todo);
 		if(todo.equals(selectedTodo)){
+			selectedTodo = todo;
 			//refresh detail view
 			refreshDetailView();
 		}
@@ -193,10 +194,10 @@ public class TodoListController extends SelectorComposer<Component>{
 		selectedTodo.setDescription(selectedTodoDescription.getValue());
 		selectedTodo.setPriority(priorityListModel.getSelection().iterator().next());
 		
-		//save data
+		//save data and get updated Todo object
 		selectedTodo = todoListService.updateTodo(selectedTodo);
 		
-		//refresh listmodel for only 1 item
+		//replace original Todo object in listmodel with updated one
 		todoListModel.set(todoListModel.indexOf(selectedTodo), selectedTodo);
 		
 		//show message for user
