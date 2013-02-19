@@ -101,7 +101,7 @@ public class TodoListViewModel implements Serializable{
 	
 
 	@Command 
-	//@NotifyChange("selectedTodo") //use postnotifyChange to notify dynamically
+	//@NotifyChange("selectedTodo") //use postNotifyChange() to notify dynamically
 	public void completeTodo(@BindingParam("todo") Todo todo){
 		//save data
 		todo = todoListService.updateTodo(todo);
@@ -114,7 +114,7 @@ public class TodoListViewModel implements Serializable{
 	}
 	
 	@Command 
-	//@NotifyChange("selectedTodo") //use postnotifyChange to notify dynamically
+	//@NotifyChange("selectedTodo") //use postNotifyChange() to notify dynamically
 	public void deleteTodo(@BindingParam("todo") Todo todo){
 		//save data
 		todoListService.deleteTodo(todo);
