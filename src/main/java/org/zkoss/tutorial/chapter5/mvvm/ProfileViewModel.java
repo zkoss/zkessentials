@@ -22,9 +22,8 @@ import org.zkoss.tutorial.services.UserInfoService;
 import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zk.ui.util.Clients;
-import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 
-@VariableResolver(DelegatingVariableResolver.class)
+@VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
 public class ProfileViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 
