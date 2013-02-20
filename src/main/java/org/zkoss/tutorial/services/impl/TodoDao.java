@@ -18,7 +18,7 @@ public class TodoDao {
 	
 	@Transactional(readOnly=true)
     public List<Todo> queryAll() {
-        Query query = em.createQuery("from Todo as todo");
+        Query query = em.createQuery("SELECT t FROM Todo t");
         List<Todo> result = query.getResultList();
         return result;
     }
