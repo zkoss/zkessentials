@@ -62,3 +62,7 @@
 	text-decoration: underline;
 	font-size: smaller;	
 }
+
+.todo-box {
+	padding-right:4px;
+}
