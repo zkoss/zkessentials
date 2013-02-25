@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.ajaxbase;
+package org.zkoss.tutorial.chapter7.ajaxbased;
 
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
@@ -26,14 +26,14 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarAjaxbaseController extends SelectorComposer<Component>{
+public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBaseImpl();
+	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBasedImpl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{
