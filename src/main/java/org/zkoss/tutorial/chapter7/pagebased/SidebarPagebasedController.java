@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.pagebase;
+package org.zkoss.tutorial.chapter7.pagebased;
 
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
@@ -24,14 +24,14 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarPagebaseController extends SelectorComposer<Component>{
+public class SidebarPagebasedController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigPagebaseImpl();
+	SidebarPageConfig pageConfig = new SidebarPageConfigPagebasedImpl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

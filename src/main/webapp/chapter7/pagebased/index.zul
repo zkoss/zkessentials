@@ -1,0 +1,5 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/pagebased/layout/template.zul"?>
+<zk>
+	<include self="@define(content)" src="/chapter7/pagebased/home.zul"/>
+</zk>

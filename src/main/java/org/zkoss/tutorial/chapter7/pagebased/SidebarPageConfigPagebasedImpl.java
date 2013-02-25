@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.pagebase;
+package org.zkoss.tutorial.chapter7.pagebased;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,23 +16,23 @@ import java.util.List;
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
 
-public class SidebarPageConfigPagebaseImpl implements SidebarPageConfig{
+public class SidebarPageConfigPagebasedImpl implements SidebarPageConfig{
 	
 	HashMap<String,SidebarPage> pageMap = new LinkedHashMap<String,SidebarPage>();
-	public SidebarPageConfigPagebaseImpl(){		
+	public SidebarPageConfigPagebasedImpl(){		
 		pageMap.put("zk",new SidebarPage("zk","www.zkoss.org","/imgs/site.png","http://www.zkoss.org/"));
 		pageMap.put("demo",new SidebarPage("demo","ZK Demo","/imgs/demo.png","http://www.zkoss.org/zkdemo"));
 		pageMap.put("devref",new SidebarPage("devref","ZK Developer Reference","/imgs/doc.png"
 				,"http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
 		
 		pageMap.put("fn1",new SidebarPage("fn1","Profile (MVC)","/imgs/fn.png"
-				,"/chapter7/pagebase/index-profile-mvc.zul"));
+				,"/chapter7/pagebased/index-profile-mvc.zul"));
 		pageMap.put("fn2",new SidebarPage("fn2","Profile (MVVM)","/imgs/fn.png"
-				,"/chapter7/pagebase/index-profile-mvvm.zul"));
+				,"/chapter7/pagebased/index-profile-mvvm.zul"));
 		pageMap.put("fn3",new SidebarPage("fn3","Todo List (MVC)","/imgs/fn.png"
-				,"/chapter7/pagebase/index-todolist-mvc.zul"));
+				,"/chapter7/pagebased/index-todolist-mvc.zul"));
 		pageMap.put("fn4",new SidebarPage("fn4","Todo List (MVVM)","/imgs/fn.png"
-				,"/chapter7/pagebase/index-todolist-mvvm.zul"));
+				,"/chapter7/pagebased/index-todolist-mvvm.zul"));
 	}
 	
 	public List<SidebarPage> getPages(){
