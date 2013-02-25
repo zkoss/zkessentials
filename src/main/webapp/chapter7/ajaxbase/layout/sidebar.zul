@@ -1,6 +1,6 @@
 <grid hflex="1" vflex="1" sclass="sidebar" 
 	id="fnList" 
-	apply="org.zkoss.tutorial.chapter7.single.SidebarSingleDesktopController">
+	apply="org.zkoss.tutorial.chapter7.ajaxbase.SidebarAjaxbaseController">
 	<columns>
 		<column width="36px"/>
 		<column/>

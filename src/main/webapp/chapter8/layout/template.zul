@@ -5,7 +5,7 @@
 			<include src="/chapter8/layout/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter7/single/layout/sidebar.zul"/>
+			<include src="/chapter7/ajaxbase/layout/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none" self="@insert(content)">
 			<!-- the main content will be insert to here -->

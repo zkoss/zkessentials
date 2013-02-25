@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.single;
+package org.zkoss.tutorial.chapter7.ajaxbase;
 
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
@@ -15,18 +15,13 @@ import org.zkoss.zk.ui.event.BookmarkEvent;
 import org.zkoss.zk.ui.event.SerializableEventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zk.ui.select.annotation.VariableResolver;
-import org.zkoss.zk.ui.select.annotation.WireVariable;
-import org.zkoss.zkplus.spring.DelegatingVariableResolver;
 import org.zkoss.zul.Include;
 
-@VariableResolver(DelegatingVariableResolver.class)
 public class BookmarkChangeController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 
-	//wire services
-	@WireVariable("sidebarPageConfigSingleDesktop")
-	SidebarPageConfig pageConfig;
+	
+	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBaseImpl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
