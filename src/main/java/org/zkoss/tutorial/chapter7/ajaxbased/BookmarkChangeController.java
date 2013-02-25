@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.ajaxbase;
+package org.zkoss.tutorial.chapter7.ajaxbased;
 
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
@@ -21,7 +21,7 @@ public class BookmarkChangeController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 
 	
-	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBaseImpl();
+	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBasedImpl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
