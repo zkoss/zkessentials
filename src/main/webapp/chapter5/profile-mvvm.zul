@@ -38,7 +38,8 @@
 				<row>
 					<cell sclass="row-title">Country :</cell>
 					<cell>
-						<listbox model="@load(vm.countryList)" selectedItem="@bind(fx.country)" mold="select" width="200px">
+						<listbox model="@load(vm.countryList)" mold="select" width="200px"
+						 selectedItem="@bind(fx.country)">
 							<template name="model">
 								<listitem label="@load(each)" />
 							</template>
