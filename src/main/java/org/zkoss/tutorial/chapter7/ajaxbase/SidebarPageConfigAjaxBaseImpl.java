@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.tutorial.chapter7.single;
+package org.zkoss.tutorial.chapter7.ajaxbase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,10 +16,10 @@ import java.util.List;
 import org.zkoss.tutorial.services.SidebarPage;
 import org.zkoss.tutorial.services.SidebarPageConfig;
 
-public class SidebarPageConfigSingleDesktopImpl implements SidebarPageConfig{
+public class SidebarPageConfigAjaxBaseImpl implements SidebarPageConfig{
 	
 	HashMap<String,SidebarPage> pageMap = new LinkedHashMap<String,SidebarPage>();
-	public SidebarPageConfigSingleDesktopImpl(){		
+	public SidebarPageConfigAjaxBaseImpl(){		
 		pageMap.put("zk",new SidebarPage("zk","www.zkoss.org","/imgs/site.png","http://www.zkoss.org/"));
 		pageMap.put("demo",new SidebarPage("demo","ZK Demo","/imgs/demo.png","http://www.zkoss.org/zkdemo"));
 		pageMap.put("devref",new SidebarPage("devref","ZK Developer Reference","/imgs/doc.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
