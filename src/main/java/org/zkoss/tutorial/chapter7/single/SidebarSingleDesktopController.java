@@ -72,7 +72,8 @@ public class SidebarSingleDesktopController extends SelectorComposer<Component>{
 					Executions.getCurrent().sendRedirect(locationUri);
 				}else{
 					//use iterable to find the first include only
-					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainInclude").iterator().next();
+					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainInclude")
+							.iterator().next();
 					include.setSrc(locationUri);
 					
 					//advance bookmark control, 
