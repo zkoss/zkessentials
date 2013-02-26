@@ -32,8 +32,8 @@
 				
 				<label value="Chapter 7" sclass="head2"/>
 				<hlayout>
-					<a href="/chapter7/pagebase/index.zul">Page-based</a>
-					<a href="/chapter7/ajaxbase/index.zul">AJAX-based</a>
+					<a href="/chapter7/pagebased/index.zul">Page-based</a>
+					<a href="/chapter7/ajaxbased/index.zul">AJAX-based</a>
 				</hlayout>
 				
 				<label value="Chapter 8" sclass="head2"/>
