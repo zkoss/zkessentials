@@ -6,24 +6,24 @@ Goal:
 	
 	Following classes are removed and replaced by spring implementation
 	
-	org/zkoss/tutorial/chapter4/SidebarPageConfigChapter4Impl.java
-		>> org/zkoss/tutorial/services/impl/SidebarPageConfigPagebaseImpl.java
+	org/zkoss/essentials/chapter4/SidebarPageConfigChapter4Impl.java
+		>> org/zkoss/essentials/services/impl/SidebarPageConfigPagebaseImpl.java
 		
-	org/zkoss/tutorial/chapter5/AuthenticationServiceChapter5Impl.java
-		>> org/zkoss/tutorial/services/impl/AuthenticationServiceImpl.java
-	org/zkoss/tutorial/chapter5/UserInfoServiceChapter5Impl.java
-		>> org/zkoss/tutorial/services/impl/UserInfoServiceImpl.java
+	org/zkoss/essentials/chapter5/AuthenticationServiceChapter5Impl.java
+		>> org/zkoss/essentials/services/impl/AuthenticationServiceImpl.java
+	org/zkoss/essentials/chapter5/UserInfoServiceChapter5Impl.java
+		>> org/zkoss/essentials/services/impl/UserInfoServiceImpl.java
 
-	org/zkoss/tutorial/chapter6/TodoListServiceChapter6Impl.java
-		>> org/zkoss/tutorial/services/impl/TodoListServiceImpl.java
+	org/zkoss/essentials/chapter6/TodoListServiceChapter6Impl.java
+		>> org/zkoss/essentials/services/impl/TodoListServiceImpl.java
 
-	org/zkoss/tutorial/chapter7/pagebase/SidebarPageConfigPagebaseImpl.java
-		>> org/zkoss/tutorial/services/impl/SidebarPageConfigPagebaseImpl.java
-	org/zkoss/tutorial/chapter7/single/SidebarPageConfigSingleDesktopImpl.java
-		>> org/zkoss/tutorial/services/impl/SidebarPageConfigSingleDesktopImpl.java
+	org/zkoss/essentials/chapter7/pagebase/SidebarPageConfigPagebaseImpl.java
+		>> org/zkoss/essentials/services/impl/SidebarPageConfigPagebaseImpl.java
+	org/zkoss/essentials/chapter7/single/SidebarPageConfigSingleDesktopImpl.java
+		>> org/zkoss/essentials/services/impl/SidebarPageConfigSingleDesktopImpl.java
 	
-	org/zkoss/tutorial/chapter8/AuthenticationServiceChapter8Impl.java
-		>> org/zkoss/tutorial/services/impl/AuthenticationServiceImpl.java
+	org/zkoss/essentials/chapter8/AuthenticationServiceChapter8Impl.java
+		>> org/zkoss/essentials/services/impl/AuthenticationServiceImpl.java
 		
 	* basic spring configuration
 		* maven dependencies
