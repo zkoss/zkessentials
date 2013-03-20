@@ -1,6 +1,6 @@
 <grid hflex="1" vflex="1" sclass="sidebar" 
 	id="fnList" 
-	apply="org.zkoss.tutorial.chapter4.SidebarChapter4Controller">
+	apply="org.zkoss.essentials.chapter4.SidebarChapter4Controller">
 	<columns>
 		<column width="36px"/>
 		<column/>

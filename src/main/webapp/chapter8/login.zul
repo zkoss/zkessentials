@@ -6,7 +6,7 @@
 		pack="center" spacing="20px">
 		<vlayout>
 			<window id="loginWin"
-				apply="org.zkoss.tutorial.chapter8.LoginController"
+				apply="org.zkoss.essentials.chapter8.LoginController"
 				title="Login with you name" border="normal" hflex="min">
 				<vbox hflex="min" align="center">
 					<grid hflex="min">
