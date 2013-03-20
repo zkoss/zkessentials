@@ -4,11 +4,11 @@ Goal:
 
 	Following services are refined to use the new DAO
 	
-	org/zkoss/tutorial/services/impl/TodoListServiceImpl.java
-		>> org/zkoss/tutorial/services/impl/TodoDao.java
+	org/zkoss/essentials/services/impl/TodoListServiceImpl.java
+		>> org/zkoss/essentials/services/impl/TodoDao.java
 		
-	org/zkoss/tutorial/services/impl/UserInfoServiceImpl.java
-		>> org/zkoss/tutorial/services/impl/UserDao.java
+	org/zkoss/essentials/services/impl/UserInfoServiceImpl.java
+		>> org/zkoss/essentials/services/impl/UserDao.java
 	
 	Basic JPA(Hibernate) confugration
 		* maven dependencies
