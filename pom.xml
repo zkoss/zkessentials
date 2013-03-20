@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss</groupId>
-	<artifactId>tutorial</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>essentials</artifactId>
+	<version>1.0.0</version>
 	<properties>
 		<zk.version>6.5.1</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
-	<name>The ZK Tutorial Project</name>
-	<description>The ZK Tutorial Project</description>
+	<name>The ZK Essentials Example Project</name>
+	<description>The ZK Essentials Example Application</description>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
@@ -59,7 +59,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.10</version>
 				<configuration>
-					<contextPath>/tutorial</contextPath>
+					<contextPath>/essentials</contextPath>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
 					<stopPort>9999</stopPort>
@@ -113,7 +113,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<finalName>tutorial${packname}</finalName>
+							<finalName>essentials${packname}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly/webapp.xml</descriptor>
@@ -125,6 +125,6 @@
 		</plugins>
 	</build>
 	<scm>
-		<url>http://gitlab.potix.com:3000/tutorial2012</url>
+		<url>https://github.com/zkoss/zkessentials</url>
 	</scm>
 </project>
