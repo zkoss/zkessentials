@@ -1,5 +1,5 @@
 <zk>
-	<borderlayout hflex="1" vflex="1" apply="org.zkoss.tutorial.chapter7.ajaxbased.BookmarkChangeController">
+	<borderlayout hflex="1" vflex="1" apply="org.zkoss.essentials.chapter7.ajaxbased.BookmarkChangeController">
 		<north height="100px" border="none" >
 			<include src="/chapter3/banner.zul"/>
 		</north>
