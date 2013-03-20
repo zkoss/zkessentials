@@ -6,7 +6,7 @@
 		</north>
 		<center id="mainContent" autoscroll="true">
 			<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px"  sclass="demo-main">
-				<label value="Welcome to ZK Tutoial" sclass="head1"/>
+				<label value="Welcome to ZK Essentials" sclass="head1"/>
 				
 				<label value="Chapter 8" sclass="head2"/>
 				<hlayout>
