@@ -37,6 +37,10 @@ public class ProfileViewModel implements Serializable{
 		return currentUser;
 	}
 	
+	/**
+	 * Retrieve all known country names. 
+	 * @return a list of country name
+	 */
 	public List<String> getCountryList(){
 		return CommonInfoService.getCountryList();
 	}
