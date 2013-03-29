@@ -17,13 +17,16 @@ import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.event.SerializableEventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
+@VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
 public class SidebarPagebasedController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
@@ -31,7 +34,8 @@ public class SidebarPagebasedController extends SelectorComposer<Component>{
 	Grid fnList;
 	
 	//wire service
-	SidebarPageConfig pageConfig = new SidebarPageConfigPagebasedImpl();
+	@WireVariable("sidebarPageConfigPagebase")
+	SidebarPageConfig pageConfig;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{
