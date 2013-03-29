@@ -19,8 +19,8 @@ Goal:
 
 	org/zkoss/essentials/chapter7/pagebase/SidebarPageConfigPagebaseImpl.java
 		>> org/zkoss/essentials/services/impl/SidebarPageConfigPagebaseImpl.java
-	org/zkoss/essentials/chapter7/single/SidebarPageConfigSingleDesktopImpl.java
-		>> org/zkoss/essentials/services/impl/SidebarPageConfigSingleDesktopImpl.java
+	org/zkoss/essentials/chapter7/single/SidebarPageConfigAjaxbasedImpl.java
+		>> org/zkoss/essentials/services/impl/SidebarPageConfigAjaxbasedImpl.java
 	
 	org/zkoss/essentials/chapter8/AuthenticationServiceChapter8Impl.java
 		>> org/zkoss/essentials/services/impl/AuthenticationServiceImpl.java
