@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 import org.zkoss.essentials.services.SidebarPage;
 import org.zkoss.essentials.services.SidebarPageConfig;
 
-@Component("sidebarPageConfigSingleDesktop")
+@Component("sidebarPageConfigAjaxbased")
 @Scope(value="request",proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class SidebarPageConfigAjaxbasedImpl implements SidebarPageConfig{
 	
