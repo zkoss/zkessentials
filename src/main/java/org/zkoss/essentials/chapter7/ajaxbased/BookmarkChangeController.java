@@ -15,13 +15,16 @@ import org.zkoss.zk.ui.event.BookmarkEvent;
 import org.zkoss.zk.ui.event.SerializableEventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.Selectors;
+import org.zkoss.zk.ui.select.annotation.VariableResolver;
+import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Include;
 
+@VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
 public class BookmarkChangeController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 
-	
-	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBasedImpl();
+	@WireVariable("sidebarPageConfigAjaxbased")
+	SidebarPageConfig pageConfig;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
