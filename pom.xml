@@ -5,7 +5,7 @@
 	<artifactId>essentials</artifactId>
 	<version>1.0.0</version>
 	<properties>
-		<zk.version>6.5.1</zk.version>
+		<zk.version>7.0.0</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<spring.version>3.1.2.RELEASE</spring.version>
