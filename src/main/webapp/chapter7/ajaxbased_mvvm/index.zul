@@ -1,0 +1,7 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/ajaxbased_mvvm/layout/template.zul"?>
+<zk>
+	<include id="mainInclude" self="@define(content)" apply="org.zkoss.bind.BindComposer" 
+		viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.NavigationViewModel')" 
+		src="@load(vm.includeSrc)" />
+</zk>

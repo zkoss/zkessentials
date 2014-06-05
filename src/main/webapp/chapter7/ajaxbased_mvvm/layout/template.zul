@@ -1,0 +1,18 @@
+<zk>
+	<borderlayout hflex="1" vflex="1" apply="org.zkoss.bind.BindComposer" 
+			viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.BookmarkChangeViewModel')" 
+ 			onBookmarkChange="@command('onBookmarkNavigate', bookmark=event.bookmark)"> 
+		<north height="100px" border="none" >
+			<include src="/chapter3/banner.zul"/>
+		</north>
+		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+			<include src="/chapter7/ajaxbased_mvvm/layout/sidebar.zul"/>
+		</west>
+		<center id="mainContent" autoscroll="true" border="none" self="@insert(content)">
+			<!-- the main content will be insert to here -->
+		</center>
+		<south height="50px" border="none">
+			<include src="/chapter3/footer.zul"/>
+		</south>
+	</borderlayout>
+</zk>
