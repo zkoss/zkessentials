@@ -149,11 +149,9 @@ public class TodoListViewModel implements Serializable{
 			
 			public void validate(ValidationContext ctx) {
 				//get the form that will be applied to todo
-				Form fx = (Form)ctx.getProperty().getValue();
-				//get filed subject of the form
-				String subject = (String)fx.getField("subject");
+				Todo todo = (Todo)ctx.getProperty().getValue();
 				
-				if(Strings.isBlank(subject)){
+				if(Strings.isBlank(todo.getSubject())){
 					Clients.showNotification("Subject is blank, nothing to do ?");
 					//mark the validation is invalid, so the data will not update to bean
 					//and the further command will be skipped.

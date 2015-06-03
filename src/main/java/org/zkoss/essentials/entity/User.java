@@ -23,6 +23,9 @@ public class User implements Serializable,Cloneable {
 	String country;
 	String bio;
 
+	public User() {
+	}
+	
 	public User(String account, String password, String fullName,String email) {
 		this.account = account;
 		this.password = password;
