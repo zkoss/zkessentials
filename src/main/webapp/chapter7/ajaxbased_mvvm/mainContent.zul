@@ -1,0 +1,5 @@
+<zk>
+	<include id="mainInclude"
+		viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.NavigationViewModel')" 
+		src="@load(vm.includeSrc)" />
+</zk>

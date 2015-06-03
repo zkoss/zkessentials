@@ -1,7 +1,18 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
-<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/ajaxbased_mvvm/layout/template.zul"?>
 <zk>
-	<include id="mainInclude" self="@define(content)" apply="org.zkoss.bind.BindComposer" 
-		viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.NavigationViewModel')" 
-		src="@load(vm.includeSrc)" />
+	<borderlayout hflex="1" vflex="1" viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.BookmarkChangeViewModel')" 
+ 			onBookmarkChange="@command('onBookmarkNavigate', bookmark=event.bookmark)"> 
+		<north height="100px" border="none" >
+			<apply templateURI="/chapter3/banner.zul"/>
+		</north>
+		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+			<apply templateURI="/chapter7/ajaxbased_mvvm/sidebar.zul"/>
+		</west>
+		<center id="mainContent" autoscroll="true" border="none" >
+			<apply templateURI="/chapter7/ajaxbased_mvvm/mainContent.zul"/>
+		</center>
+		<south height="50px" border="none">
+			<apply templateURI="/chapter3/footer.zul"/>
+		</south>
+	</borderlayout>
 </zk>

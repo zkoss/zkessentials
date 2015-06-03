@@ -1,4 +1,4 @@
-<grid hflex="1" vflex="1" sclass="sidebar" id="fnList" apply="org.zkoss.bind.BindComposer"
+<grid hflex="1" vflex="1" sclass="sidebar" id="fnList" 
 	viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.SidebarAjaxbasedViewModel')"
 	model="@load(vm.sidebarPages)" >
 	<columns>
