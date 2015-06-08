@@ -1,5 +1,8 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
-<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/pagebased/layout/template.zul"?>
 <zk>
-	<include self="@define(content)" src="/chapter6/todolist-mvvm.zul"/>
+<div height="100%">
+	<template name="layout" src="/chapter7/pagebased/layout/template.zul"/>
+	<apply template="layout"/>
+	<template name="center" src="/chapter6/todolist-mvvm.zul"/>
+</div>
 </zk>
