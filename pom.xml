@@ -5,7 +5,7 @@
 	<artifactId>essentials</artifactId>
 	<version>1.0.0</version>
 	<properties>
-		<zk.version>7.0.0</zk.version>
+		<zk.version>8.0.0.FL.20150601-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
@@ -41,6 +41,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>${zk.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
@@ -49,6 +54,11 @@
 			<artifactId>zkplus</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+			<version>${zk.version}</version>
+		</dependency>		
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
