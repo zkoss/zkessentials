@@ -4,11 +4,20 @@
 		<div  height="100%">
 			<div  style="float:left">
 				<navbar id="navbar" orient="horizontal" collapsed="false" onSelect="@command('navigate')" >
-		
 					<apply template="iterate" menuItems="@ref(vm.menuHierarchy)"/>
 					<template name="iterate">
 						<forEach items="@load(menuItems)">
 							<apply template="@load(empty each.subMenus?'navitem':'nav')" menuItem="@ref(each)"/>
+							<!-- 
+							<choose>
+								<when test="@load(empty each.subMenus)">
+									<navitem label="@load(each.label)" />
+								</when>
+								<otherwise>
+									<nav label="@load(each.label)" iconSclass="@load(each.iconSclass)"/>
+								</otherwise>
+							</choose>
+							 -->
 						</forEach>
 					</template>
 				</navbar>
@@ -21,7 +30,7 @@
 					<navitem label="@load(menuItem.label)" />
 				</template>
 				
-				<div style="margin-top:50px">
+				<div style="margin-top:50px;height:50px; border:solid 1px">
 				<label value="@load(vm.currentPage)" style="font-size:30px"/>
 				</div>
 			</div>

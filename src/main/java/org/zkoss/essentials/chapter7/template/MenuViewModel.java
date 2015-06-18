@@ -1,14 +1,7 @@
 package org.zkoss.essentials.chapter7.template;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import org.zkoss.bind.annotation.BindingParam;
-import org.zkoss.bind.annotation.Command;
-import org.zkoss.bind.annotation.ContextParam;
-import org.zkoss.bind.annotation.ContextType;
-import org.zkoss.bind.annotation.Init;
-import org.zkoss.bind.annotation.SmartNotifyChange;
+import java.util.*;
+import org.zkoss.bind.annotation.*;
 import org.zkoss.zk.ui.event.SelectEvent;
 import org.zkoss.zkmax.zul.Navitem;
 
