@@ -11,7 +11,7 @@
 			<!-- the main content will be insert to here -->
 		</center>
 		<south height="50px" border="none">
-			<include src="/chapter3/footer.zul"/>
+			<include src="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 	<div if="${sessionScope.userCredential.anonymous}">

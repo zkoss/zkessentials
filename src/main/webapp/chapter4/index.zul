@@ -2,7 +2,7 @@
 <zk>
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
-			<include src="/chapter3/banner.zul"/>
+			<include src="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
 			<include src="/chapter4/sidebar.zul"/>
@@ -14,7 +14,7 @@
 			</vbox>
 		</center>
 		<south height="50px" border="none">
-			<include src="/chapter3/footer.zul"/>
+			<include src="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>

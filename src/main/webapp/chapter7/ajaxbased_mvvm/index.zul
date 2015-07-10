@@ -3,7 +3,7 @@
 	<borderlayout hflex="1" vflex="1" viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.ajaxbased.mvvm.BookmarkChangeViewModel')" 
  			onBookmarkChange="@command('onBookmarkNavigate', bookmark=event.bookmark)"> 
 		<north height="100px" border="none" >
-			<apply templateURI="/chapter3/banner.zul"/>
+			<apply templateURI="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
 			<apply templateURI="/chapter7/ajaxbased_mvvm/sidebar.zul"/>
@@ -12,7 +12,7 @@
 			<apply templateURI="/chapter7/ajaxbased_mvvm/mainContent.zul"/>
 		</center>
 		<south height="50px" border="none">
-			<apply templateURI="/chapter3/footer.zul"/>
+			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>
