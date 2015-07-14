@@ -14,8 +14,8 @@
 				
 				<label value="Chapter 4" sclass="head2"/>
 				<hlayout>
-					<a href="/chapter4/index-zscript.zul">ZScript</a>
-					<a href="/chapter4/index.zul">Java</a>
+					<a href="/chapter2/index-zscript.zul">ZScript</a>
+					<a href="/chapter2/index.zul">Java</a>
 				</hlayout>
 				
 				<label value="Chapter 5" sclass="head2"/>

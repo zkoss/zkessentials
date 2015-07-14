@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter4;
+package org.zkoss.essentials.chapter2;
 
 import org.zkoss.essentials.services.SidebarPage;
 import org.zkoss.essentials.services.SidebarPageConfig;
@@ -24,7 +24,7 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
 
-public class SidebarChapter4Controller extends SelectorComposer<Component>{
+public class SidebarChapter2Controller extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -33,7 +33,7 @@ public class SidebarChapter4Controller extends SelectorComposer<Component>{
 	Grid fnList;
 	
 	//services
-	SidebarPageConfig pageConfig = new SidebarPageConfigChapter4Impl();
+	SidebarPageConfig pageConfig = new SidebarPageConfigChapter2Impl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{
