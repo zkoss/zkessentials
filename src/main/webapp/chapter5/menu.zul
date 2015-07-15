@@ -1,6 +1,6 @@
 <zk>
 	<div id="container" sclass="vertical"
-		viewModel="@id('vm') @init('org.zkoss.essentials.chapter7.template.MenuViewModel')" >
+		viewModel="@id('vm') @init('org.zkoss.essentials.chapter5.MenuViewModel')" >
 		<div  height="100%">
 			<div  style="float:left">
 				<navbar id="navbar" orient="horizontal" collapsed="false" onSelect="@command('navigate')" >
