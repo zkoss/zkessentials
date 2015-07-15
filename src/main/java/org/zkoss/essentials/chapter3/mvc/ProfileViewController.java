@@ -6,12 +6,12 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter5.mvc;
+package org.zkoss.essentials.chapter3.mvc;
 
 import java.util.Set;
 
-import org.zkoss.essentials.chapter5.AuthenticationServiceChapter5Impl;
-import org.zkoss.essentials.chapter5.UserInfoServiceChapter5Impl;
+import org.zkoss.essentials.chapter3.AuthenticationServiceChapter3Impl;
+import org.zkoss.essentials.chapter3.UserInfoServiceChapter3Impl;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.AuthenticationService;
 import org.zkoss.essentials.services.CommonInfoService;
@@ -48,8 +48,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	Label nameLabel;
 	
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
-	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
+	AuthenticationService authService = new AuthenticationServiceChapter3Impl();
+	UserInfoService userInfoService = new UserInfoServiceChapter3Impl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter5;
+package org.zkoss.essentials.chapter3;
 
 import java.io.Serializable;
 
@@ -15,7 +15,7 @@ import org.zkoss.essentials.services.UserCredential;
 import org.zkoss.zk.ui.Session;
 import org.zkoss.zk.ui.Sessions;
 
-public class AuthenticationServiceChapter5Impl implements AuthenticationService,Serializable{
+public class AuthenticationServiceChapter3Impl implements AuthenticationService,Serializable{
 	private static final long serialVersionUID = 1L;
 
 	public UserCredential getUserCredential(){

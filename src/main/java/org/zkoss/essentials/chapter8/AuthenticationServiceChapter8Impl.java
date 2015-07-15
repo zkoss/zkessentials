@@ -8,8 +8,8 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter8;
 
-import org.zkoss.essentials.chapter5.AuthenticationServiceChapter5Impl;
-import org.zkoss.essentials.chapter5.UserInfoServiceChapter5Impl;
+import org.zkoss.essentials.chapter3.AuthenticationServiceChapter5Impl;
+import org.zkoss.essentials.chapter3.UserInfoServiceChapter5Impl;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.UserCredential;
 import org.zkoss.essentials.services.UserInfoService;

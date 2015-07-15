@@ -20,8 +20,8 @@
 				
 				<label value="Chapter 5" sclass="head2"/>
 				<hlayout>
-					<a href="/chapter5/index.zul">MVC</a>
-					<a href="/chapter5/index-mvvm.zul">MVVM</a>
+					<a href="/chapter3/index.zul">MVC</a>
+					<a href="/chapter3/index-mvvm.zul">MVVM</a>
 				</hlayout>
 				
 				<label value="Chapter 6" sclass="head2"/>

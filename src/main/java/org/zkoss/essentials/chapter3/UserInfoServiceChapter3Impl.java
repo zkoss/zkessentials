@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter5;
+package org.zkoss.essentials.chapter3;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.List;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.UserInfoService;
 
-public class UserInfoServiceChapter5Impl implements UserInfoService,Serializable{
+public class UserInfoServiceChapter3Impl implements UserInfoService,Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	static protected List<User> userList = new ArrayList<User>();  

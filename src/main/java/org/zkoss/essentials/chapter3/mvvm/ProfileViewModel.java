@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter5.mvvm;
+package org.zkoss.essentials.chapter3.mvvm;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,8 +14,8 @@ import java.util.List;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
-import org.zkoss.essentials.chapter5.AuthenticationServiceChapter5Impl;
-import org.zkoss.essentials.chapter5.UserInfoServiceChapter5Impl;
+import org.zkoss.essentials.chapter3.AuthenticationServiceChapter3Impl;
+import org.zkoss.essentials.chapter3.UserInfoServiceChapter3Impl;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.AuthenticationService;
 import org.zkoss.essentials.services.CommonInfoService;
@@ -27,8 +27,8 @@ public class ProfileViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter5Impl();
-	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
+	AuthenticationService authService = new AuthenticationServiceChapter3Impl();
+	UserInfoService userInfoService = new UserInfoServiceChapter3Impl();
 	
 	//data for the view
 	User currentUser;
