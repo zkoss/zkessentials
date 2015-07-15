@@ -4,7 +4,7 @@
 			<include src="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter7/pagebased/layout/sidebar.zul"/>
+			<include src="/chapter6/pagebased/layout/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none" >
 			<apply template="center"/>

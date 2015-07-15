@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter7.pagebased;
+package org.zkoss.essentials.chapter6.pagebased;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,13 +26,13 @@ public class SidebarPageConfigPagebasedImpl implements SidebarPageConfig{
 				,"http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
 		
 		pageMap.put("fn1",new SidebarPage("fn1","Profile (MVC)","/imgs/fn.png"
-				,"/chapter7/pagebased/index-profile-mvc.zul"));
+				,"/chapter6/pagebased/index-profile-mvc.zul"));
 		pageMap.put("fn2",new SidebarPage("fn2","Profile (MVVM)","/imgs/fn.png"
-				,"/chapter7/pagebased/index-profile-mvvm.zul"));
+				,"/chapter6/pagebased/index-profile-mvvm.zul"));
 		pageMap.put("fn3",new SidebarPage("fn3","Todo List (MVC)","/imgs/fn.png"
-				,"/chapter7/pagebased/index-todolist-mvc.zul"));
+				,"/chapter6/pagebased/index-todolist-mvc.zul"));
 		pageMap.put("fn4",new SidebarPage("fn4","Todo List (MVVM)","/imgs/fn.png"
-				,"/chapter7/pagebased/index-todolist-mvvm.zul"));
+				,"/chapter6/pagebased/index-todolist-mvvm.zul"));
 	}
 	
 	public List<SidebarPage> getPages(){

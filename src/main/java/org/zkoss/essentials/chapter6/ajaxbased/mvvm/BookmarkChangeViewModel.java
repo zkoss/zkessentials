@@ -6,13 +6,14 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter7.ajaxbased.mvvm;
+package org.zkoss.essentials.chapter6.ajaxbased.mvvm;
 
 import java.util.Collections;
 
 import org.zkoss.bind.BindUtils;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
+import org.zkoss.essentials.chapter6.ajaxbased.SidebarPageConfigAjaxBasedImpl;
 import org.zkoss.essentials.services.SidebarPage;
 import org.zkoss.essentials.services.SidebarPageConfig;
 

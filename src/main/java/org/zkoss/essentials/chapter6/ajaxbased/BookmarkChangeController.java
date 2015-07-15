@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter7.ajaxbased;
+package org.zkoss.essentials.chapter6.ajaxbased;
 
 import org.zkoss.essentials.services.SidebarPage;
 import org.zkoss.essentials.services.SidebarPageConfig;

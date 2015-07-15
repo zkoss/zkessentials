@@ -1,4 +1,4 @@
-package org.zkoss.essentials.chapter7.ajaxbased.mvvm;
+package org.zkoss.essentials.chapter6.ajaxbased.mvvm;
 
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.GlobalCommand;
@@ -8,7 +8,7 @@ import org.zkoss.zk.ui.Executions;
 
 public class NavigationViewModel {
 
-	private String includeSrc = "/chapter7/ajaxbased/home.zul";
+	private String includeSrc = "/chapter6/ajaxbased/home.zul";
 
 	@GlobalCommand("onNavigate")
 	@NotifyChange("includeSrc")
