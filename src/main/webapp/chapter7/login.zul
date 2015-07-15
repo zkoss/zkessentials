@@ -1,12 +1,12 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <!-- it is a login page, no authentication protection and use anonymous template -->
-<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template-anonymous.zul"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter7/layout/template-anonymous.zul"?>
 <zk>
 	<hbox self="@define(content)" vflex="1" hflex="1" align="center"
 		pack="center" spacing="20px">
 		<vlayout>
 			<window id="loginWin"
-				apply="org.zkoss.essentials.chapter8.LoginController"
+				apply="org.zkoss.essentials.chapter7.LoginController"
 				title="Login with you name" border="normal" hflex="min">
 				<vbox hflex="min" align="center">
 					<grid hflex="min">

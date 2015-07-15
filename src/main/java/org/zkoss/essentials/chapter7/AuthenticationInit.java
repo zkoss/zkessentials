@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter8;
+package org.zkoss.essentials.chapter7;
 
 import java.util.Map;
 
@@ -19,13 +19,13 @@ import org.zkoss.zk.ui.util.Initiator;
 public class AuthenticationInit implements Initiator {
 
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
+	AuthenticationService authService = new AuthenticationServiceChapter7Impl();
 	
 	public void doInit(Page page, Map<String, Object> args) throws Exception {
 		
 		UserCredential cre = authService.getUserCredential();
 		if(cre==null || cre.isAnonymous()){
-			Executions.sendRedirect("/chapter8/login.zul");
+			Executions.sendRedirect("/chapter7/login.zul");
 			return;
 		}
 	}

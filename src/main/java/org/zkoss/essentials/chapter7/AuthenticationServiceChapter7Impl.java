@@ -6,20 +6,20 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter8;
+package org.zkoss.essentials.chapter7;
 
-import org.zkoss.essentials.chapter3.AuthenticationServiceChapter5Impl;
-import org.zkoss.essentials.chapter3.UserInfoServiceChapter5Impl;
+import org.zkoss.essentials.chapter3.AuthenticationServiceChapter3Impl;
+import org.zkoss.essentials.chapter3.UserInfoServiceChapter3Impl;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.UserCredential;
 import org.zkoss.essentials.services.UserInfoService;
 import org.zkoss.zk.ui.Session;
 import org.zkoss.zk.ui.Sessions;
 
-public class AuthenticationServiceChapter8Impl extends AuthenticationServiceChapter5Impl{
+public class AuthenticationServiceChapter7Impl extends AuthenticationServiceChapter3Impl{
 	private static final long serialVersionUID = 1L;
 	
-	UserInfoService userInfoService = new UserInfoServiceChapter5Impl();
+	UserInfoService userInfoService = new UserInfoServiceChapter3Impl();
 	
 	@Override
 	public boolean login(String nm, String pd) {
