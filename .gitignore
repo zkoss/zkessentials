@@ -2,3 +2,5 @@
 assembly/
 target/
 /data
+*.classpath
+*.project
