@@ -1,2 +1,2 @@
 Please refer to
-http://books.zkoss.org/wiki/ZK_Essentials/Chapter_6:_Implementing_CRUD
+http://books.zkoss.org/wiki/ZK_Essentials/Chapter_7:_Navigation_and_Templating

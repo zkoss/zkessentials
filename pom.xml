@@ -5,7 +5,7 @@
 	<artifactId>essentials</artifactId>
 	<version>1.0.0</version>
 	<properties>
-		<zk.version>7.0.0</zk.version>
+		<zk.version>8.0.0-RC-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<spring.version>3.1.2.RELEASE</spring.version>
@@ -42,6 +42,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>${zk.version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
@@ -50,6 +55,7 @@
 			<artifactId>zkplus</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
+
 		<!-- Spring 3 dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -61,6 +67,12 @@
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+			<version>${zk.version}</version>
+		</dependency>		
+
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>

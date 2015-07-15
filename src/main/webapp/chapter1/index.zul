@@ -5,10 +5,10 @@
 			<include src="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter2/sidebar.zul"/>
+			<include src="/chapter1/sidebar.zul"/>
 		</west>
-		<center id="mainContent" autoscroll="true" border="none">
-			<include src="/chapter4/todolist-mvc.zul"/>
+		<center id="mainContent" autoscroll="true">
+			<include src="/chapter1/main.zul"/>
 		</center>
 		<south height="50px" border="none">
 			<include src="/chapter1/footer.zul"/>

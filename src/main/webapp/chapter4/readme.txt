@@ -1,2 +1,2 @@
-Please refer to 
-http://books.zkoss.org/wiki/ZK_Essentials/Chapter_4:_Controlling_Components
+Please refer to
+http://books.zkoss.org/wiki/ZK_Essentials/Chapter_6:_Implementing_CRUD

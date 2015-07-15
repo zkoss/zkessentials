@@ -1,9 +1,0 @@
-<?link rel="stylesheet" type="text/css" href="/style.css"?>
-<!-- protect page by the authentication init  -->
-<?init class="org.zkoss.essentials.chapter8.AuthenticationInit"?>
-<!-- authentication init have to locate before composition -->
-<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template.zul"?>
-
-<zk>
-	<include id="mainInclude" self="@define(content)" src="/chapter8/home.zul"/>
-</zk>
