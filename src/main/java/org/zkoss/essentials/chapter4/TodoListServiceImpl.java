@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter6;
+package org.zkoss.essentials.chapter4;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -17,7 +17,7 @@ import org.zkoss.essentials.entity.Priority;
 import org.zkoss.essentials.entity.Todo;
 import org.zkoss.essentials.services.TodoListService;
 
-public class TodoListServiceChapter6Impl implements TodoListService {
+public class TodoListServiceImpl implements TodoListService {
 
 	static int todoId = 0;
 	static List<Todo> todoList = new ArrayList<Todo>();  

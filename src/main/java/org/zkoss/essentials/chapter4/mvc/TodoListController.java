@@ -6,11 +6,11 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter6.mvc;
+package org.zkoss.essentials.chapter4.mvc;
 
 import java.util.List;
 
-import org.zkoss.essentials.chapter6.TodoListServiceChapter6Impl;
+import org.zkoss.essentials.chapter4.TodoListServiceImpl;
 import org.zkoss.essentials.entity.Priority;
 import org.zkoss.essentials.entity.Todo;
 import org.zkoss.essentials.services.TodoListService;
@@ -57,7 +57,7 @@ public class TodoListController extends SelectorComposer<Component>{
 	Button updateSelectedTodo;
 	
 	//services
-	TodoListService todoListService = new TodoListServiceChapter6Impl();
+	TodoListService todoListService = new TodoListServiceImpl();
 	
 	//data for the view
 	ListModelList<Todo> todoListModel;

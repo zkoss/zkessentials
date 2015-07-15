@@ -8,7 +8,7 @@
 			<include src="/chapter2/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none">
-			<include src="/chapter6/todolist-mvvm.zul"/>
+			<include src="/chapter4/todolist-mvc.zul"/>
 		</center>
 		<south height="50px" border="none">
 			<include src="/chapter1/footer.zul"/>

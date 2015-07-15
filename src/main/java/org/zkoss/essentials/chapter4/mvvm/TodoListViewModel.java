@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter6.mvvm;
+package org.zkoss.essentials.chapter4.mvvm;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -23,7 +23,7 @@ import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
 import org.zkoss.bind.validator.AbstractValidator;
-import org.zkoss.essentials.chapter6.TodoListServiceChapter6Impl;
+import org.zkoss.essentials.chapter4.TodoListServiceImpl;
 import org.zkoss.essentials.entity.Priority;
 import org.zkoss.essentials.entity.Todo;
 import org.zkoss.essentials.services.TodoListService;
@@ -35,7 +35,7 @@ public class TodoListViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//services
-	TodoListService todoListService = new TodoListServiceChapter6Impl();
+	TodoListService todoListService = new TodoListServiceImpl();
 	
 	//data for the view
 	String subject;

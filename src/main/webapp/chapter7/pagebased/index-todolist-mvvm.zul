@@ -3,6 +3,6 @@
 <div height="100%">
 	<template name="layout" src="/chapter7/pagebased/layout/template.zul"/>
 	<apply template="layout"/>
-	<template name="center" src="/chapter6/todolist-mvvm.zul"/>
+	<template name="center" src="/chapter4/todolist-mvvm.zul"/>
 </div>
 </zk>
