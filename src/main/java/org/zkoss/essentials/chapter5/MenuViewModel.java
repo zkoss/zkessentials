@@ -1,4 +1,4 @@
-package org.zkoss.essentials.chapter7.template;
+package org.zkoss.essentials.chapter5;
 
 import java.util.*;
 import org.zkoss.bind.annotation.*;

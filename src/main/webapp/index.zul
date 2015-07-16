@@ -29,6 +29,10 @@
 					<a href="/chapter4/index.zul">MVC</a>
 					<a href="/chapter4/index-mvvm.zul">MVVM</a>
 				</hlayout>
+				<label value="Chapter 5" sclass="head2"/>
+				<hlayout>
+					<a href="/chapter5/menu.zul">MVVM</a>
+				</hlayout>
 				
 				<label value="Chapter 6" sclass="head2"/>
 				<hlayout>
