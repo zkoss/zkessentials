@@ -1,0 +1,13 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<!-- protect page by the authentication init  -->
+<?init class="org.zkoss.essentials.chapter7.AuthenticationInit"?>
+
+<zk>
+<div height="100%">
+	<template name="layout" src="/chapter7/layout/template.zul"/>
+	<apply template="layout"/>
+	<template name="center">
+		<include id="mainInclude" src="/chapter7/home.zul"/>
+	</template>
+</div>
+</zk>

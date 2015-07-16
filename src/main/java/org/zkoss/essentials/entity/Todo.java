@@ -48,7 +48,8 @@ public class Todo implements Serializable, Cloneable {
 	
 	String description;
 	
-	public Todo(){}
+	public Todo(){
+    }
 	
 	public Todo(String subject) {
 		this.subject = subject;

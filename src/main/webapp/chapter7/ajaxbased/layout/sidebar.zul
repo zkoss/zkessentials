@@ -1,9 +1,0 @@
-<grid hflex="1" vflex="1" sclass="sidebar" 
-	id="fnList" 
-	apply="org.zkoss.essentials.chapter7.ajaxbased.SidebarAjaxbasedController">
-	<columns>
-		<column width="36px"/>
-		<column/>
-	</columns>
-	<rows/>
-</grid>

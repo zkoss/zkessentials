@@ -1,17 +1,48 @@
-<?link rel="stylesheet" type="text/css" href="/style.css"?>
 <zk>
-	<borderlayout hflex="1" vflex="1">
-		<north height="100px" border="none" >
-			<include src="/chapter3/banner.zul"/>
-		</north>
-		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter4/sidebar.zul"/>
-		</west>
-		<center id="mainContent" autoscroll="true" border="none">
-			<include src="/chapter5/profile-mvc.zul"/>
-		</center>
-		<south height="50px" border="none">
-			<include src="/chapter3/footer.zul"/>
-		</south>
-	</borderlayout>
+	<div id="container" sclass="vertical"
+		viewModel="@id('vm') @init('org.zkoss.essentials.chapter5.MenuViewModel')" >
+		<div  height="100%">
+			<div  style="float:left">
+				<navbar id="navbar" orient="horizontal" collapsed="false" onSelect="@command('navigate')" >
+					<apply template="iterate" menuItems="@ref(vm.menuHierarchy)"/>
+					<template name="iterate">
+						<forEach items="@load(menuItems)">
+							<apply template="@load(empty each.subMenus?'navitem':'nav')" menuItem="@ref(each)"/>
+							<!-- 
+							<choose>
+								<when test="@load(empty each.subMenus)">
+									<navitem label="@load(each.label)" />
+								</when>
+								<otherwise>
+									<nav label="@load(each.label)" iconSclass="@load(each.iconSclass)"/>
+								</otherwise>
+							</choose>
+							 -->
+						</forEach>
+					</template>
+				</navbar>
+				<template name="nav">
+					<nav label="@load(menuItem.label)" iconSclass="@load(menuItem.iconSclass)">
+						<apply template="iterate" menuItems="@ref(menuItem.subMenus)"/>
+					</nav>
+				</template>
+				<template name="navitem" >
+					<navitem label="@load(menuItem.label)" />
+				</template>
+				
+				<div style="margin-top:50px;height:50px; border:solid 1px">
+				<label value="@load(vm.currentPage)" style="font-size:30px"/>
+				</div>
+			</div>
+			<div style="float:left;margin-left:20px">
+				<groupbox>
+				<radiogroup orient="vertical">
+					<radio label="Menu Heirarchy 1" onCheck="@command('switchMenu', option=1)" checked="true"/>
+					<radio label="Menu Heirarchy 2" onCheck="@command('switchMenu', option=2)"/>
+				</radiogroup>
+				</groupbox>
+			</div>
+		</div>
+	</div>
+
 </zk>

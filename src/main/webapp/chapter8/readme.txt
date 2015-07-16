@@ -1,2 +1,6 @@
-Please refer to 
-http://books.zkoss.org/wiki/ZK_Essentials/Chapter_8:_Authentication
+Goal:
+	Chpater8 doesn't has its own pages. 
+	It demonstrates spring integration by rewriting previous chapters' code:  
+	* Wire Spring Bean in Controller / @WireVariable
+	* Wire Spring Bean in Initiator / @WireVariable with Selectors manually
+		

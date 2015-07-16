@@ -2,21 +2,21 @@
 <zk>
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
-			<include src="/chapter3/banner.zul"/>
+			<include src="/chapter1/banner.zul"/>
 		</north>
 		<center id="mainContent" autoscroll="true">
 			<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px"  sclass="demo-main">
 				<label value="Welcome to ZK Essentials" sclass="head1"/>
 				
-				<label value="Chapter 8" sclass="head2"/>
+				<label value="JPA Integration" sclass="head2"/>
 				<hlayout>
-					<a href="/chapter8/index.zul">Demo</a>
+					<a href="/chapter7/index.zul">Demo</a>
 				</hlayout>
 				
 			</vbox>
 		</center>
 		<south height="50px" border="none">
-			<include src="/chapter3/footer.zul"/>
+			<include src="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>
