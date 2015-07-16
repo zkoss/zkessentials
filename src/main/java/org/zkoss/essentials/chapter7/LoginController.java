@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter8;
+package org.zkoss.essentials.chapter7;
 
 import org.zkoss.essentials.services.AuthenticationService;
 import org.zkoss.essentials.services.UserCredential;
@@ -30,7 +30,7 @@ public class LoginController extends SelectorComposer<Component> {
 	Label message;
 	
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
+	AuthenticationService authService = new AuthenticationServiceChapter7Impl();
 
 	
 	@Listen("onClick=#login; onOK=#loginWin")
@@ -46,7 +46,7 @@ public class LoginController extends SelectorComposer<Component> {
 		message.setValue("Welcome, "+cre.getName());
 		message.setSclass("");
 		
-		Executions.sendRedirect("/chapter8/");
+		Executions.sendRedirect("/chapter7/");
 		
 	}
 }

@@ -6,7 +6,7 @@
 
 Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
-package org.zkoss.essentials.chapter8;
+package org.zkoss.essentials.chapter7;
 
 
 import org.zkoss.essentials.services.AuthenticationService;
@@ -19,11 +19,11 @@ public class LogoutController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 	
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter8Impl();
+	AuthenticationService authService = new AuthenticationServiceChapter7Impl();
 	
 	@Listen("onClick=#logout")
 	public void doLogout(){
 		authService.logout();		
-		Executions.sendRedirect("/chapter8/");
+		Executions.sendRedirect("/chapter7/");
 	}
 }
