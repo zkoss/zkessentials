@@ -30,12 +30,12 @@ public class AuthenticationServiceChapter3Impl implements AuthenticationService,
 	
 
 	public boolean login(String nm, String pd) {
-		// will be implemented in chapter 8
+		// will be implemented in chapter7
 		return false;
 	}
 
 
 	public void logout() {
-		// will be implemented in chapter 8
+		// will be implemented in chapter7
 	}
 }
