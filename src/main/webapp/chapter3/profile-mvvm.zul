@@ -1,6 +1,5 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
-<window apply="org.zkoss.bind.BindComposer"
-	viewModel="@id('vm') @init('org.zkoss.essentials.chapter3.mvvm.ProfileViewModel')" 
+<window viewModel="@id('vm') @init('org.zkoss.essentials.chapter3.mvvm.ProfileViewModel')" 
 	border="normal" hflex="1" vflex="1" contentStyle="overflow:auto">
 	<caption src="/imgs/profile.png" sclass="fn-caption" label="Profile (MVVM)"/>
 	<vlayout>
