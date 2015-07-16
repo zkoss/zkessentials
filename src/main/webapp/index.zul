@@ -35,11 +35,11 @@
 				</hlayout>
 				
 				<label value="Chapter 6" sclass="head2"/>
-				<hlayout>
+				<vlayout>
 					<a href="/chapter6/pagebased/index.zul">Page-based</a>
 					<a href="/chapter6/ajaxbased/index.zul">AJAX-based MVC</a>
 					<a href="/chapter6/ajaxbased_mvvm/index.zul">AJAX-based MVVM</a>
-				</hlayout>
+				</vlayout>
 				
 				<label value="Chapter 7" sclass="head2"/>
 				<hlayout>
