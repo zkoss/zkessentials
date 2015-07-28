@@ -5,28 +5,35 @@
 			<div  style="float:left">
 				<navbar id="navbar" orient="horizontal" collapsed="false" onSelect="@command('navigate')" >
 					<apply template="iterate" menuItems="@ref(vm.menuHierarchy)"/>
-					<template name="iterate">
-						<forEach items="@load(menuItems)">
-							<apply template="@load(empty each.subMenus?'navitem':'nav')" menuItem="@ref(each)"/>
-							<!-- 
-							<choose>
-								<when test="@load(empty each.subMenus)">
-									<navitem label="@load(each.label)" />
-								</when>
-								<otherwise>
-									<nav label="@load(each.label)" iconSclass="@load(each.iconSclass)"/>
-								</otherwise>
-							</choose>
-							 -->
-						</forEach>
-					</template>
+					<!-- 
+					<forEach items="@load(vm.menuHierarchy)">
+			            <navitem label="@load(each.label)"
+			                iconSclass="@load(each.iconSclass)">
+			            </navitem>
+		        	</forEach>
+					<forEach items="@load(vm.menuHierarchy)">
+						<choose>
+							<when test="@load(empty each.subMenus)">
+								<navitem label="@load(each.label)" />
+							</when>
+							<otherwise>
+								<nav label="@load(each.label)" iconSclass="@load(each.iconSclass)"/>
+							</otherwise>
+						</choose>
+					</forEach>
+					 -->
 				</navbar>
-				<template name="nav">
+				<template name="iterate">
+					<forEach items="@load(menuItems)">
+						<apply template="@load(empty each.subMenus?'menuitem':'menu')" menuItem="@ref(each)"/>
+					</forEach>
+				</template>
+				<template name="menu">
 					<nav label="@load(menuItem.label)" iconSclass="@load(menuItem.iconSclass)">
 						<apply template="iterate" menuItems="@ref(menuItem.subMenus)"/>
 					</nav>
 				</template>
-				<template name="navitem" >
+				<template name="menuitem" >
 					<navitem label="@load(menuItem.label)" />
 				</template>
 				
