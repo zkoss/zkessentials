@@ -1,0 +1,41 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+<div height="100%">
+	<template name="layout" src="/chapter7/layout/template.zul"/>
+	<apply template="layout"/>
+	<template name="center">
+		<hbox vflex="1" hflex="1" align="center"
+			pack="center" spacing="20px">
+			<vlayout>
+				<window id="loginWin"
+					apply="org.zkoss.essentials.chapter7.LoginController"
+					title="Login with you name" border="normal" hflex="min">
+					<vbox hflex="min" align="center">
+						<grid hflex="min">
+							<columns>
+								<column hflex="min" align="right" />
+								<column />
+							</columns>
+							<rows>
+								<row>
+									Account :
+									<textbox id="account" width="200px" />
+								</row>
+								<row>
+									Password :
+									<textbox id="password" type="password"
+										width="200px" />
+								</row>
+							</rows>
+						</grid>
+						<label id="message" sclass="warn" value="&#160;" />
+						<button id="login" label="Login" />
+						
+					</vbox>
+				</window>
+				(use account='zkoss' and password='1234' to login)
+			</vlayout>
+		</hbox>
+	</template>
+</div>	
+</zk>

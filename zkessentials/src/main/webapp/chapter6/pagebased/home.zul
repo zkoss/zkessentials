@@ -1,0 +1,4 @@
+<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px" >
+	<image src="/imgs/zklogo2.png" />
+	<label value="Page-based Navigation Application" sclass="head1"/>
+</vbox>

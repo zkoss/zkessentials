@@ -1,0 +1,68 @@
+.banner {
+	background-color:#102d35;
+	color: white;
+	padding: 5px 10px;
+}
+.banner-head{
+	font-size: 2.4em;
+}
+.banner .logout{
+	text-decoration: underline;
+	cursor: pointer;
+} 
+
+.footer {
+	background-color:#102d35;
+	color: white;
+	padding-top: 5px;
+}
+
+.footer a,.footer a:VISITED {
+	color: white;	
+}
+
+.sidebar a,.sidebar a:VISITED {
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar-fn{
+	cursor: pointer;
+}
+
+
+.head1{
+	font-size: large;
+}
+.head2{
+	font-size: medium;
+}
+
+.row-title .z-label{
+	font-weight: bold;
+	color:#636363;
+}
+
+.fn-caption .z-caption-l{
+	font-weight: bold;
+	font-size: medium;
+	color: #636363;
+}
+
+.complete-todo .z-label{
+	text-decoration: line-through;
+}
+
+.warn{
+	color:red;
+}
+
+.demo-main a,.demo-main a:VISITED{
+	color:#636363;
+	text-decoration: underline;
+	font-size: smaller;	
+}
+
+.todo-box {
+	padding-right:4px;
+}

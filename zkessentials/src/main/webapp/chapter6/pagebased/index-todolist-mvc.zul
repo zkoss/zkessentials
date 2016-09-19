@@ -1,0 +1,8 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+<div height="100%">
+	<template name="layout" src="/chapter6/pagebased/layout/template.zul"/>
+	<apply template="layout"/>
+	<template name="center" src="/chapter4/todolist-mvc.zul"/>
+</div>
+</zk>
