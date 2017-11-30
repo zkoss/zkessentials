@@ -8,19 +8,11 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.entity;
 
-import java.io.Serializable;
-import java.util.Date;
+import org.zkoss.bind.annotation.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
+import java.io.*;
+import java.util.*;
 
 /**
  * Todo entity 
@@ -88,6 +80,7 @@ public class Todo implements Serializable, Cloneable {
 		this.priority = priority;
 	}
 
+	@Immutable // avoid ZK creating proxy object for java.sql.Timestamp since it has no empty constructor
 	public Date getDate() {
 		return date;
 	}

@@ -8,15 +8,11 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.entity;
 
-import java.io.Serializable;
-import java.util.Date;
+import org.zkoss.bind.annotation.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
+import java.io.*;
+import java.util.*;
 /**
  * User entity
  */
@@ -44,7 +40,8 @@ public class User implements Serializable,Cloneable {
 	String country;
 	String bio;
 
-	public User(){}
+	public User(){
+	}
 	
 	public User(String account, String password, String fullName,String email) {
 		this.account = account;
@@ -73,6 +70,7 @@ public class User implements Serializable,Cloneable {
 		this.email = email;
 	}
 
+	@Immutable // avoid ZK creating proxy object for java.sql.Timestamp since it has no empty constructor
 	public Date getBirthday() {
 		return birthday;
 	}
