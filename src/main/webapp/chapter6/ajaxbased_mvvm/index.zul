@@ -8,8 +8,8 @@
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
 			<apply templateURI="/chapter6/ajaxbased_mvvm/sidebar.zul"/>
 		</west>
-		<center id="mainContent" autoscroll="true" border="none" >
-			<apply templateURI="/chapter6/ajaxbased_mvvm/mainContent.zul"/>
+		<center id="mainContent" autoscroll="true" border="none" viewModel="@id('vm') @init('org.zkoss.essentials.chapter6.ajaxbased.mvvm.NavigationViewModel')">
+			<apply templateURI="@load(vm.includeSrc)"/>
 		</center>
 		<south height="50px" border="none">
 			<apply templateURI="/chapter1/footer.zul"/>
