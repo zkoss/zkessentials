@@ -1,17 +1,23 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <zk>
+	<style>
+		.z-west-body{
+			padding: 0px; //make sidebar's top border align to content's top border
+		}
+	</style>
+	<custom-attributes org.zkoss.zul.image.preload="true"/>
 	<borderlayout hflex="1" vflex="1">
-		<north height="100px" border="none" >
-			<include src="/chapter1/banner.zul"/>
+		<north vflex="min" border="none" >
+			<apply templateURI="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter1/sidebar.zul"/>
+			<apply templateURI="/chapter1/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true">
-			<include src="/chapter1/main.zul"/>
+			<apply templateURI="/chapter1/main.zul"/>
 		</center>
-		<south height="50px" border="none">
-			<include src="/chapter1/footer.zul"/>
+		<south border="none">
+			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>

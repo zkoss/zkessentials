@@ -1,6 +1,6 @@
-<grid hflex="1" vflex="1" sclass="sidebar">
+<grid hflex="1" height="100%" sclass="sidebar">
 	<columns>
-		<column width="36px"/>
+		<column hflex="min"/>
 		<column/>
 	</columns>
 	<rows>

@@ -1,8 +1,8 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <zk>
 	<borderlayout hflex="1" vflex="1">
-		<north height="100px" border="none" >
-			<include src="/chapter1/banner.zul"/>
+		<north vflex="min" border="none" >
+			<apply templateURI="/chapter1/banner.zul"/>
 		</north>
 		<center id="mainContent" autoscroll="true">
 			<vbox vflex="1" hflex="1" align="center" spacing="20px"  sclass="demo-main">
@@ -48,8 +48,8 @@
 				
 			</vbox>
 		</center>
-		<south height="50px" border="none">
-			<include src="/chapter1/footer.zul"/>
+		<south vflex="min" border="none">
+			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>
