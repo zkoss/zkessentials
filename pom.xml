@@ -55,7 +55,12 @@
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zuti</artifactId>
 			<version>${zk.version}</version>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.theme</groupId>
+			<artifactId>breeze</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
