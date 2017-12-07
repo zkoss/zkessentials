@@ -2,16 +2,16 @@
 <zk>
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
-			<include src="/chapter1/banner.zul"/>
+			<apply templateURI="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
-			<include src="/chapter2/sidebar.zul"/>
+			<apply templateURI="/chapter2/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none">
-			<include src="/chapter4/todolist-mvc.zul"/>
+			<apply templateURI="/chapter4/todolist-mvc.zul"/>
 		</center>
 		<south height="50px" border="none">
-			<include src="/chapter1/footer.zul"/>
+			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>
 </zk>
