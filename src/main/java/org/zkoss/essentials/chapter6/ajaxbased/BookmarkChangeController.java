@@ -8,14 +8,11 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter6.ajaxbased;
 
-import org.zkoss.essentials.services.SidebarPage;
-import org.zkoss.essentials.services.SidebarPageConfig;
-import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.event.BookmarkEvent;
-import org.zkoss.zk.ui.event.SerializableEventListener;
-import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zul.Include;
+import org.zkoss.essentials.services.*;
+import org.zkoss.zk.ui.*;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zk.ui.select.*;
+import org.zkoss.zuti.zul.*;
 
 public class BookmarkChangeController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
@@ -40,9 +37,11 @@ public class BookmarkChangeController extends SelectorComposer<Component> {
 					SidebarPage page = pageConfig.getPage(p);
 					
 					if(page!=null){
-						//use iterable to find the first include only
-						Include include = (Include)Selectors.iterable(getPage(), "#mainInclude").iterator().next();
-						include.setSrc(page.getUri());
+						//change the URI of shadow element, apply
+						Apply apply = (Apply)Selectors.iterable(getPage(), "::shadow#content")
+								.iterator().next();
+						apply.setTemplateURI(page.getUri());
+						apply.recreate();
 					}
 				}
 			}

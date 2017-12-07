@@ -8,23 +8,13 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter6.ajaxbased;
 
-import org.zkoss.essentials.services.SidebarPage;
-import org.zkoss.essentials.services.SidebarPageConfig;
-import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Executions;
-import org.zkoss.zk.ui.event.Event;
-import org.zkoss.zk.ui.event.EventListener;
-import org.zkoss.zk.ui.event.Events;
-import org.zkoss.zk.ui.event.SerializableEventListener;
-import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zul.Grid;
-import org.zkoss.zul.Image;
-import org.zkoss.zul.Include;
-import org.zkoss.zul.Label;
-import org.zkoss.zul.Row;
-import org.zkoss.zul.Rows;
+import org.zkoss.essentials.services.*;
+import org.zkoss.zk.ui.*;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zk.ui.select.*;
+import org.zkoss.zk.ui.select.annotation.*;
+import org.zkoss.zul.*;
+import org.zkoss.zuti.zul.*;
 
 public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 
@@ -71,12 +61,12 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 					//open a new browser tab
 					Executions.getCurrent().sendRedirect(locationUri);
 				}else{
-					//use iterable to find the first include only
-					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainInclude")
+					//change the URI of shadow element, apply
+					Apply apply = (Apply)Selectors.iterable(event.getPage(), "::shadow#content")
 							.iterator().next();
-					include.setSrc(locationUri);
-					
-					//advance bookmark control, 
+					apply.setTemplateURI(locationUri);
+					apply.recreate();
+					//advance bookmark control,
 					//bookmark with a prefix
 					if(name!=null){
 						getPage().getDesktop().setBookmark("p_"+name);

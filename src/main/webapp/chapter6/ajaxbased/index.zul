@@ -8,9 +8,9 @@
 			<apply templateURI="/chapter6/ajaxbased/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none">
-			<apply templateURI="/chapter6/ajaxbased/mainContent.zul"/>
+			<apply id="content" templateURI="/chapter6/ajaxbased/home.zul" dynamicValue="true"/>
 		</center>
-		<south height="50px" border="none">
+				<south height="50px" border="none">
 			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
 	</borderlayout>

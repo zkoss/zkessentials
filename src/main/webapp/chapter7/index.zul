@@ -7,7 +7,7 @@
 	<template name="layout" src="/chapter7/layout/template.zul"/>
 	<apply template="layout"/>
 	<template name="center">
-		<include id="mainInclude" src="/chapter7/home.zul"/>
+		<apply id="content" templateURI="/chapter7/home.zul"  dynamicValue="true"/>
 	</template>
 </div>
 </zk>
