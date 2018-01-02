@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_3.dtd">
+
+<Configure id="zkApp" class="org.eclipse.jetty.webapp.WebAppContext">
+	<Set name="resourceBase">src/main/webapp</Set>
+	<!-- remove annotation scanning and enable websockets later (Optional for additional start speedup) -->
+	<Set name="configurationClasses">
+		<Array type="java.lang.String">
+			<Item>org.eclipse.jetty.webapp.WebInfConfiguration</Item>
+			<Item>org.eclipse.jetty.webapp.WebXmlConfiguration</Item>
+			<Item>org.eclipse.jetty.webapp.MetaInfConfiguration</Item>
+			<Item>org.eclipse.jetty.webapp.FragmentConfiguration</Item>
+			<Item>org.eclipse.jetty.plus.webapp.EnvConfiguration</Item>
+			<Item>org.eclipse.jetty.plus.webapp.PlusConfiguration</Item>
+ 			<!--<Item>org.eclipse.jetty.annotations.AnnotationConfiguration</Item>-->
+			<Item>org.eclipse.jetty.webapp.JettyWebXmlConfiguration</Item>
+		</Array>
+	</Set>
+
+ 	<!-- initialize websockets manually to avoid annotation scanning (Optional for additional start speedup) -->
+	<Set name="server">
+		<Ref refid="Server" />
+	</Set>
+	<Call class="org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer" name="configureContext">
+		<Arg>
+			<Ref refid="zkApp" />
+		</Arg>
+	</Call>
+
+	<!-- disable useFileMappedBuffer: allows updating static resource files on windows without restart -->
+	<Call name="setInitParameter">
+		<Arg>org.eclipse.jetty.servlet.Default.useFileMappedBuffer</Arg>
+		<Arg>false</Arg>
+	</Call>
+</Configure>
