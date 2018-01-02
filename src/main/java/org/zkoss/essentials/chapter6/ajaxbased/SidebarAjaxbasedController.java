@@ -20,7 +20,7 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
-	Grid fnList;
+	Grid sidebar;
 	
 	//wire service
 	SidebarPageConfig pageConfig = new SidebarPageConfigAjaxBasedImpl();
@@ -30,7 +30,7 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 		super.doAfterCompose(comp);
 		
 		//to initial view after view constructed.
-		Rows rows = fnList.getRows();
+		Rows rows = sidebar.getRows();
 		
 		for(SidebarPage page:pageConfig.getPages()){
 			Row row = constructSidebarRow(page.getName(),page.getLabel(),page.getIconUri(),page.getUri());

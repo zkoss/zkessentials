@@ -30,7 +30,7 @@ public class SidebarChapter2Controller extends SelectorComposer<Component>{
 	
 	//wire components
 	@Wire
-	Grid fnList;
+	Grid sidebar;
 	
 	//services
 	SidebarPageConfig pageConfig = new SidebarPageConfigChapter2Impl();
@@ -40,7 +40,7 @@ public class SidebarChapter2Controller extends SelectorComposer<Component>{
 		super.doAfterCompose(comp);
 		
 		//initialize view after view construction.
-		Rows rows = fnList.getRows();
+		Rows rows = sidebar.getRows();
 		
 		for(SidebarPage page:pageConfig.getPages()){
 			Row row = constructSidebarRow(page.getLabel(),page.getIconUri(),page.getUri());

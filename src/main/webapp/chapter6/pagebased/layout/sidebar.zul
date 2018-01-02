@@ -1,5 +1,5 @@
 <grid hflex="1" vflex="1" sclass="sidebar" 
-	id="fnList" 
+	id="sidebar"
 	apply="org.zkoss.essentials.chapter6.pagebased.SidebarPagebasedController">
 	<columns>
 		<column width="36px"/>
