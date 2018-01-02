@@ -33,7 +33,7 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	@Wire
-	Grid fnList;
+	Grid sidebar;
 	
 	//wire service
 	@WireVariable("sidebarPageConfigAjaxbased")
@@ -44,7 +44,7 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 		super.doAfterCompose(comp);
 		
 		//to initial view after view constructed.
-		Rows rows = fnList.getRows();
+		Rows rows = sidebar.getRows();
 		
 		for(SidebarPage page:pageConfig.getPages()){
 			Row row = constructSidebarRow(page.getName(),page.getLabel(),page.getIconUri(),page.getUri());
@@ -75,12 +75,12 @@ public class SidebarAjaxbasedController extends SelectorComposer<Component>{
 					//open a new browser tab
 					Executions.getCurrent().sendRedirect(locationUri);
 				}else{
-					//use iterable to find the first include only
-					Include include = (Include)Selectors.iterable(fnList.getPage(), "#mainInclude")
+					//change the URI of shadow element, apply
+					Apply apply = (Apply)Selectors.iterable(event.getPage(), "::shadow#content")
 							.iterator().next();
-					include.setSrc(locationUri);
-					
-					//advance bookmark control, 
+					apply.setTemplateURI(locationUri);
+					apply.recreate();
+					//advance bookmark control,
 					//bookmark with a prefix
 					if(name!=null){
 						getPage().getDesktop().setBookmark("p_"+name);
