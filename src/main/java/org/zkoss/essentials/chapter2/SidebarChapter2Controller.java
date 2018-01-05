@@ -30,10 +30,10 @@ public class SidebarChapter2Controller extends SelectorComposer<Component>{
 	
 	//wire components
 	@Wire
-	Grid sidebar;
+	private Grid sidebar;
 	
 	//services
-	SidebarPageConfig pageConfig = new SidebarPageConfigChapter2Impl();
+	private SidebarPageConfig pageConfig = new SidebarPageConfigChapter2Impl();
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception{

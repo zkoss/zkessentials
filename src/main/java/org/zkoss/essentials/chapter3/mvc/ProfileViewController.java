@@ -8,25 +8,16 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter3.mvc;
 
-import java.util.Set;
-
-import org.zkoss.essentials.chapter3.AuthenticationServiceChapter3Impl;
-import org.zkoss.essentials.chapter3.UserInfoServiceChapter3Impl;
+import org.zkoss.essentials.chapter3.*;
 import org.zkoss.essentials.entity.User;
-import org.zkoss.essentials.services.AuthenticationService;
-import org.zkoss.essentials.services.CommonInfoService;
-import org.zkoss.essentials.services.UserCredential;
-import org.zkoss.essentials.services.UserInfoService;
+import org.zkoss.essentials.services.*;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.annotation.Listen;
-import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.select.annotation.*;
 import org.zkoss.zk.ui.util.Clients;
-import org.zkoss.zul.Datebox;
-import org.zkoss.zul.Label;
-import org.zkoss.zul.ListModelList;
-import org.zkoss.zul.Listbox;
-import org.zkoss.zul.Textbox;
+import org.zkoss.zul.*;
+
+import java.util.Set;
 
 public class ProfileViewController extends SelectorComposer<Component>{
 	private static final long serialVersionUID = 1L;
@@ -64,8 +55,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	
 	@Listen("onClick=#saveProfile")
 	public void doSaveProfile(){
-		UserCredential cre = authService.getUserCredential();
-		User user = userInfoService.findUser(cre.getAccount());
+		UserCredential userCredential = authService.getUserCredential();
+		User user = userInfoService.findUser(userCredential.getAccount());
 		if(user==null){
 			//TODO handle un-authenticated access 
 			return;
@@ -91,7 +82,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		Clients.showNotification("Your profile is updated");
 	}
 	
-	@Listen("onClick=#reloadProfile")
+	@Listen("onClick = button[label = 'Reload']")
 	public void doReloadProfile(){
 		refreshProfileView();
 	}
