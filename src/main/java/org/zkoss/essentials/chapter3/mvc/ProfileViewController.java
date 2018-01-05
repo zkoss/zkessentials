@@ -11,23 +11,13 @@ package org.zkoss.essentials.chapter3.mvc;
 import java.util.Set;
 
 import org.zkoss.essentials.entity.User;
-import org.zkoss.essentials.services.AuthenticationService;
-import org.zkoss.essentials.services.CommonInfoService;
-import org.zkoss.essentials.services.UserCredential;
-import org.zkoss.essentials.services.UserInfoService;
+import org.zkoss.essentials.services.*;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.annotation.Listen;
-import org.zkoss.zk.ui.select.annotation.VariableResolver;
-import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zk.ui.select.annotation.WireVariable;
+import org.zkoss.zk.ui.select.annotation.*;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zkplus.spring.DelegatingVariableResolver;
-import org.zkoss.zul.Datebox;
-import org.zkoss.zul.Label;
-import org.zkoss.zul.ListModelList;
-import org.zkoss.zul.Listbox;
-import org.zkoss.zul.Textbox;
+import org.zkoss.zul.*;
 
 @VariableResolver(DelegatingVariableResolver.class)
 public class ProfileViewController extends SelectorComposer<Component>{
@@ -68,8 +58,8 @@ public class ProfileViewController extends SelectorComposer<Component>{
 	
 	@Listen("onClick=#saveProfile")
 	public void doSaveProfile(){
-		UserCredential cre = authService.getUserCredential();
-		User user = userInfoService.findUser(cre.getAccount());
+		UserCredential userCredential = authService.getUserCredential();
+		User user = userInfoService.findUser(userCredential.getAccount());
 		if(user==null){
 			//TODO handle un-authenticated access 
 			return;
@@ -95,7 +85,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		Clients.showNotification("Your profile is updated");
 	}
 	
-	@Listen("onClick=#reloadProfile")
+	@Listen("onClick = button[label = 'Reload']")
 	public void doReloadProfile(){
 		refreshProfileView();
 	}
