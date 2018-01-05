@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <zk>
+    <client-config>
+        <debug-js>true</debug-js>
+    </client-config>
     <library-property>
         <name>org.zkoss.theme.preferred</name>
         <value>breeze</value>
