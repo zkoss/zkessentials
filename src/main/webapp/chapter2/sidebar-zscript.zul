@@ -1,6 +1,6 @@
 <grid hflex="1" vflex="1" sclass="sidebar">
 	<zscript><![CDATA[
-		//zscript code, it runs on server site, use it for fast prototyping
+		//zscript code, it runs on server side, use it for fast prototyping
 		java.util.Map sites = new java.util.HashMap();
 		
 		sites.put("zk","http://www.zkoss.org/");

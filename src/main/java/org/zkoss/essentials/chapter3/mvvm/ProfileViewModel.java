@@ -8,30 +8,24 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter3.mvvm;
 
+import org.zkoss.bind.annotation.*;
+import org.zkoss.essentials.chapter3.*;
+import org.zkoss.essentials.entity.User;
+import org.zkoss.essentials.services.*;
+import org.zkoss.zk.ui.util.Clients;
+
 import java.io.Serializable;
 import java.util.List;
-
-import org.zkoss.bind.annotation.Command;
-import org.zkoss.bind.annotation.Init;
-import org.zkoss.bind.annotation.NotifyChange;
-import org.zkoss.essentials.chapter3.AuthenticationServiceChapter3Impl;
-import org.zkoss.essentials.chapter3.UserInfoServiceChapter3Impl;
-import org.zkoss.essentials.entity.User;
-import org.zkoss.essentials.services.AuthenticationService;
-import org.zkoss.essentials.services.CommonInfoService;
-import org.zkoss.essentials.services.UserCredential;
-import org.zkoss.essentials.services.UserInfoService;
-import org.zkoss.zk.ui.util.Clients;
 
 public class ProfileViewModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//services
-	AuthenticationService authService = new AuthenticationServiceChapter3Impl();
-	UserInfoService userInfoService = new UserInfoServiceChapter3Impl();
+	private AuthenticationService authService = new AuthenticationServiceChapter3Impl();
+	private UserInfoService userInfoService = new UserInfoServiceChapter3Impl();
 	
 	//data for the view
-	User currentUser;
+	private User currentUser;
 	
 	public User getCurrentUser(){
 		return currentUser;
@@ -45,10 +39,9 @@ public class ProfileViewModel implements Serializable{
 		return CommonInfoService.getCountryList();
 	}
 	
-	@Init // @Init annotates a initial method
-	public void init(){
-		UserCredential cre = authService.getUserCredential();
-		currentUser = userInfoService.findUser(cre.getAccount());
+	public ProfileViewModel(){
+		UserCredential userCredential = authService.getUserCredential();
+		currentUser = userInfoService.findUser(userCredential.getAccount());
 		if(currentUser==null){
 			//TODO handle un-authenticated access 
 			return;

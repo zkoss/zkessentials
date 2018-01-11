@@ -48,7 +48,6 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		
 		ListModelList<String> countryModel = new ListModelList<String>(CommonInfoService.getCountryList());
 		country.setModel(countryModel);
-		
 		refreshProfileView();
 	}
 	
