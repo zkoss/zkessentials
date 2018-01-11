@@ -1,0 +1,17 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<grid viewModel="@id('vm') @init('org.zkoss.essentials.chapter2.SidebarViewModel')"
+	hflex="1" vflex="1" sclass="sidebar"
+	model="@load(vm.sidebarPages)" >
+	<columns>
+		<column width="36px"/>
+		<column/>
+	</columns>
+	<rows>
+		<template name="model">
+			<row sclass="sidebar-fn" onClick="@command('navigate', page=each)">
+				<image src="@load(each.iconUri)"/>
+				<label value="@load(each.label)"/>
+			</row>
+		</template>
+	</rows>
+</grid>

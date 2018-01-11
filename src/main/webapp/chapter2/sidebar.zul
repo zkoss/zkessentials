@@ -1,4 +1,5 @@
-<grid hflex="1" vflex="1" sclass="sidebar" 
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<grid hflex="1" vflex="1" sclass="sidebar"
 	id="sidebar"
 	apply="org.zkoss.essentials.chapter2.SidebarChapter2Controller">
 	<columns>
