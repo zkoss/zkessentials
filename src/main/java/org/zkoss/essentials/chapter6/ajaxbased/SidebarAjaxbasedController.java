@@ -8,25 +8,13 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.chapter6.ajaxbased;
 
-import org.zkoss.essentials.services.SidebarPage;
-import org.zkoss.essentials.services.SidebarPageConfig;
-import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Executions;
-import org.zkoss.zk.ui.event.Event;
-import org.zkoss.zk.ui.event.EventListener;
-import org.zkoss.zk.ui.event.Events;
-import org.zkoss.zk.ui.event.SerializableEventListener;
-import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zk.ui.select.annotation.VariableResolver;
-import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zk.ui.select.annotation.WireVariable;
-import org.zkoss.zul.Grid;
-import org.zkoss.zul.Image;
-import org.zkoss.zul.Include;
-import org.zkoss.zul.Label;
-import org.zkoss.zul.Row;
-import org.zkoss.zul.Rows;
+import org.zkoss.essentials.services.*;
+import org.zkoss.zk.ui.*;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zk.ui.select.*;
+import org.zkoss.zk.ui.select.annotation.*;
+import org.zkoss.zul.*;
+import org.zkoss.zuti.zul.Apply;
 
 @VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
 public class SidebarAjaxbasedController extends SelectorComposer<Component>{
