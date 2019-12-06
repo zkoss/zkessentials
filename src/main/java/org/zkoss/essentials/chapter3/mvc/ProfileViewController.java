@@ -85,7 +85,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
 		Clients.showNotification("Your profile is updated");
 	}
 	
-	@Listen("onClick = button[label = 'Reload']")
+	@Listen("onClick = button[label='Reload']")
 	public void doReloadProfile(){
 		refreshProfileView();
 	}
