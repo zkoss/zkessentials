@@ -5,7 +5,7 @@
 	<borderlayout>
 		<center autoscroll="true" border="none">
 			<vlayout hflex="1" vflex="1">
-				<hbox align="center" hflex="1" sclass="todo-box">
+				<hbox align="center" width="100%" sclass="todo-box">
 					<textbox value="@bind(vm.subject)" onOK="@command('addTodo')" hflex="1" placeholder="What needs to be done?" />
 					<button onClick="@command('addTodo')" image="/imgs/plus.png" width="36px"/>
 				</hbox>		
