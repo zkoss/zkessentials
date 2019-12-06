@@ -5,7 +5,7 @@
 	<artifactId>zkessentials</artifactId>
 	<version>1.0.0</version>
 	<properties>
-		<zk.version>8.5.0-Eval</zk.version>
+		<zk.version>8.6.3-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<maven.compiler.source>1.6</maven.compiler.source>
