@@ -1,5 +1,6 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <zk>
+	<custom-attributes org.zkoss.zul.image.preload="true"/>
 	<borderlayout hflex="1" vflex="1">
 		<north height="100px" border="none" >
 			<include src="/chapter1/banner.zul"/>
