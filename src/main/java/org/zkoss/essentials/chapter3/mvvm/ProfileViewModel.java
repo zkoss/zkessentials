@@ -43,7 +43,7 @@ public class ProfileViewModel implements Serializable{
 		UserCredential userCredential = authService.getUserCredential();
 		currentUser = userInfoService.findUser(userCredential.getAccount());
 		if(currentUser==null){
-			//TODO handle un-authenticated access 
+			//TODO handle un-authenticated access
 			return;
 		}
 	}
@@ -61,4 +61,6 @@ public class ProfileViewModel implements Serializable{
 		UserCredential cre = authService.getUserCredential();
 		currentUser = userInfoService.findUser(cre.getAccount());
 	}
+
+
 }

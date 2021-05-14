@@ -1,11 +1,12 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <zk>
 	<custom-attributes org.zkoss.zul.image.preload="true"/>
-	<borderlayout hflex="1" vflex="1">
-		<north vflex="min" border="none" >
+	<borderlayout hflex="1" vflex="1">	<!--hflex：水平大小灵活性-->
+		<north vflex="min" border="none" > <!--vflex：垂直大小灵活性-->
 			<apply templateURI="/chapter1/banner.zul"/>
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+			<!--splittable为true可以让west通过箭头来折叠区域 minsize可限制调整的最小宽度-->
 			<apply templateURI="/chapter1/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true">
@@ -14,5 +15,6 @@
 		<south border="none">
 			<apply templateURI="/chapter1/footer.zul"/>
 		</south>
-	</borderlayout>
+	</borderlayout> <!--borderlayout：拉抻填充整个页面的宽度和高度上所有可用空间，为根组件-->
+	<!--north，west，center，south为borderlayout的子组件 可用通过指定像素值来固定组件的高度，以避免其高度因浏览器尺寸而改变-->
 </zk>

@@ -22,7 +22,7 @@
 				</row>
 				<row>
 					<cell sclass="row-title">Email :</cell>
-					<cell><textbox value="@bind(vm.currentUser.email)" constraint="/.+@.+\.[a-z]+/: Please enter an e-mail address" width="200px"/></cell>
+					<cell><textbox value="@bind(vm.currentUser.email)" constraint="/.+@.+\.[a-z]+/: Please enffter an e-mail address" width="200px"/></cell>
 				</row>
 				<row>
 					<cell sclass="row-title">Birthday :</cell>

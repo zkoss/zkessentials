@@ -17,7 +17,7 @@
 					<cell sclass="row-title">Full Name :</cell>
 					<cell>
 						<textbox value="@bind(fx.fullName)" width="200px"
-						constraint="no empty: Plean enter your full name" />
+						constraint="no empty: Please enter your full name" />
 					</cell>
 				</row>
 				<row>
