@@ -1,6 +1,7 @@
 <div hflex="1"  sclass="footer">
 	<vbox hflex="1" align="center">
+		可以在标签元素的主体或属性中使用EL表达式
 		ZK Essentials, you are using ZK ${desktop.webApp.version}
 		<a href="http://www.zkoss.org">http://www.zkoss.org</a>
-	</vbox>
+	</vbox> <!--vbox排子组件垂直-->
 </div>

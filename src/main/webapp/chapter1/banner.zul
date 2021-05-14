@@ -1,12 +1,12 @@
-<div hflex="1" sclass="banner">
-	<hbox hflex="1" align="center">
+<div hflex="1" sclass="banner">		<!--sclass指定CSS类选择器-->
+	<hbox hflex="1" align="center">		<!--hbox为布局组件，可以将其子组件水平排列。使用align属性控制垂直对齐方式-->
 		<a href="http://www.zkoss.org/">
 			<image src="/imgs/zklogo.png" width="90px" />
 		</a>
 		<div width="400px">
 			<label value="Application Name" sclass="banner-head" />
 		</div>
-		<hbox hflex="1" vflex="1" pack="end" align="end">
+		<hbox hflex="1" vflex="1" pack="end" align="end"> <!--pack控制水平对齐-->
 			Anonymous
 		</hbox>
 	</hbox>

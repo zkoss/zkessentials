@@ -2,6 +2,7 @@
 <grid hflex="1" vflex="1" sclass="sidebar"
 	id="sidebar"
 	apply="org.zkoss.essentials.chapter2.SidebarChapter2Controller">
+	<!--apply可以指定完全限定类的类名称，将控制器与zul的组件相关联。关联后该组件及其所有子组件都在控制器的控制之下-->
 	<columns>
 		<column width="36px"/>
 		<column/>

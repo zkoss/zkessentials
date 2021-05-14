@@ -1,4 +1,5 @@
 			<vbox vflex="1" hflex="1" align="center" pack="center" spacing="20px" >
+				<!--spacing控制控件包含的子组件之间的空间-->
 				<image src="/imgs/zklogo2.png" />
 				<label value="Chapter 1" sclass="head1"/>
 			</vbox>
