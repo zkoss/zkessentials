@@ -40,6 +40,9 @@ public class ProfileViewModel implements Serializable{
 	}
 	
 	public ProfileViewModel(){
+		/**
+		 * 初始化服务，初始化其成员字段
+		 * */
 		UserCredential userCredential = authService.getUserCredential();
 		currentUser = userInfoService.findUser(userCredential.getAccount());
 		if(currentUser==null){
@@ -61,6 +64,12 @@ public class ProfileViewModel implements Serializable{
 		UserCredential cre = authService.getUserCredential();
 		currentUser = userInfoService.findUser(cre.getAccount());
 	}
+
+	/**通知属性的更改
+	 *一个属性：@NotifyChange("oneProperty")
+	 * 多种属性：@NotifyChange(“propertyOne”,"propertyTwo")
+	 * ViewModel中的所有属性：@NotifyChange("*")
+	 * */
 
 
 }

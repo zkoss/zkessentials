@@ -1,4 +1,5 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
+<!--@id()设置绑定调用的别名 @init()用来设置绑定调用的类 将组件的属性绑定到ViewModel的属性-->
 <grid viewModel="@id('vm') @init('org.zkoss.essentials.chapter2.SidebarViewModel')"
 	hflex="1" vflex="1" sclass="sidebar"
 	model="@load(vm.sidebarPages)" >
@@ -7,7 +8,7 @@
 		<column/>
 	</columns>
 	<rows>
-		<template name="model">
+		<template name="model">						<!--@command绑定后台方法-->
 			<row sclass="sidebar-fn" onClick="@command('navigate', page=each)">
 				<image src="@load(each.iconUri)"/>
 				<label value="@load(each.label)"/>
