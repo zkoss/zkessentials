@@ -1,9 +1,9 @@
-<grid hflex="1" height="100%" sclass="sidebar">
-	<columns>
+<grid hflex="1" height="100%" sclass="sidebar"> <!--grid为矩阵布局排列子组件-->
+	<columns> <!--column 列-->
 		<column hflex="min"/>
 		<column/>
 	</columns>
-	<rows>
+	<rows> <!--row 行-->
 		<row>
 			<image src="/imgs/site.png"/><a href="http://www.zkoss.org/">ZK</a>
 		</row>

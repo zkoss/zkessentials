@@ -23,14 +23,19 @@ import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.Rows;
-
+//SelectorComposer 实现ZK的Composer 在MVC中扮演Controller,需要继承org.zkoss.zk.ui.select.SelectorComposer
 public class SidebarChapter2Controller extends SelectorComposer<Component>{
 
 	private static final long serialVersionUID = 1L;
 	
 	//wire components
+	/**
+	 * @wire 在字段或setter方法上指定注释时，SelectorComposer将自动找到该组件将其分配给该字段或将其传递到setter方法中
+	 * 默认情况下SelectorComposer在zul中找到ID和类型都与变量名称和类型匹配的组件
+	 * wire还支持连接选择器语法
+	 * */
 	@Wire
-	private Grid sidebar;
+	private Grid sidebar;//SelectorComposer查找Grid其ID为"sidebar"的ID，并将其分配给变量sidebar
 	
 	//services
 	private SidebarPageConfig pageConfig = new SidebarPageConfigChapter2Impl();

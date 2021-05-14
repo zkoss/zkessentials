@@ -1,4 +1,6 @@
 <grid hflex="1" vflex="1" sclass="sidebar">
+	<!--zscript：存放解析代码Java之类，适合于快速原型制作，但是在性能以及集群环境中存在问题，不推荐在生成环境中使用-->
+	<!--最好使用<![CDATA[]]>包括代码-->
 	<zscript><![CDATA[
 		//zscript code, it runs on server side, use it for fast prototyping
 		java.util.Map sites = new java.util.HashMap();

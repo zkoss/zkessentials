@@ -7,7 +7,8 @@
 		</north>
 		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
 			<!--splittable为true可以让west通过箭头来折叠区域 minsize可限制调整的最小宽度-->
-			<apply templateURI="/chapter1/sidebar.zul"/>
+			<apply templateURI="/chapter1/sidebar.zul"/> <!--apply类似于include标签以分离页面结合，不消耗额外的服务器内存-->
+			<!--templateURI指定引入文件路径-->
 		</west>
 		<center id="mainContent" autoscroll="true">
 			<apply templateURI="/chapter1/main.zul"/>
