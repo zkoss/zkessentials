@@ -44,8 +44,6 @@ dependencies {
 //	compile "org.zkoss.zk:zhtml:${zkVersion}"   /*optional enable for xhtml component support */
 //	compile "org.zkoss.zk:zkplus:${zkVersion}"  /*optional enable for 3rd party framework integration support */
 
-	compile "commons-io:commons-io:${commonsIoVersion}"
-
 	testCompile "org.zkoss.zats:zats-mimic-ext7:${zatsVersion}"
 	testCompile "junit:junit:${junitVersion}"
 
