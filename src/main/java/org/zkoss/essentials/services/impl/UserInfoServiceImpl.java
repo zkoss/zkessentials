@@ -8,18 +8,16 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.services.impl;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import org.zkoss.essentials.entity.User;
 import org.zkoss.essentials.services.UserInfoService;
 
+import java.io.Serializable;
+import java.util.*;
+
 @Service("userInfoService")
-@Scope(value="singleton",proxyMode=ScopedProxyMode.TARGET_CLASS)
+@Scope
 public class UserInfoServiceImpl implements UserInfoService,Serializable{
 	private static final long serialVersionUID = 1L;
 	

@@ -8,20 +8,15 @@ Copyright (C) 2012 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.essentials.services.impl;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
-import org.zkoss.essentials.entity.Priority;
-import org.zkoss.essentials.entity.Todo;
+import org.zkoss.essentials.entity.*;
 import org.zkoss.essentials.services.TodoListService;
 
+import java.util.*;
+
 @Service("todoListService")
-@Scope(value="singleton",proxyMode=ScopedProxyMode.TARGET_CLASS)
+@Scope
 public class TodoListServiceImpl implements TodoListService {
 
 	static int todoId = 0;
